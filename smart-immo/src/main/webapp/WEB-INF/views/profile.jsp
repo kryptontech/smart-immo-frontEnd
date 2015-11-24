@@ -474,7 +474,7 @@
 					  <div class="tab-pane"id="bookings">
 						<div class="padding40">
 								<div class="col-md-4 col-md-offset-8">
-									<img src="resources/images/IMG_0091.jpg" alt="" class="left margright20 profile"/>
+									<img src="resources/images/IMG_0091.jpg" alt="" class="left margright20 smallimg"/>
 									<p class="size12 grey margtop10">
 										Salut <span class="lred">Cisse</span><br/>
 										<a href="#" class="lblue">Changer votre photo de profil</a>
@@ -662,7 +662,7 @@
 					  <div class="tab-pane active" id="history">
 						<div class="padding40">	
 								<div class="col-md-4 col-md-offset-8">
-									<img src="resources/images/IMG_0091.jpg" alt="" class="left margright20 profile"/>
+									<img src="resources/images/IMG_0091.jpg" alt="" class="left margright20 smallimg"/>
 									<p class="size12 grey margtop10">
 										Salut <span class="lred">Cisse</span><br/>
 										<a href="#" class="lblue">Changer votre photo de profil</a>
@@ -768,7 +768,7 @@
 					  <div class="tab-pane" id="password">
 						<div class="padding40">
 								<div class="col-md-4 col-md-offset-8">
-									<img src="resources/images/IMG_0091.jpg" alt="" class="left margright20 profile"/>
+									<img src="resources/images/IMG_0091.jpg" alt="" class="left margright20 smallimg"/>
 									<p class="size12 grey margtop10">
 										Salut <span class="lred">Cisse</span><br/>
 										<a href="#" class="lblue">Changer votre photo de profil</a>
