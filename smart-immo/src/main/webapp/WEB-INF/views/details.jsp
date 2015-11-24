@@ -63,7 +63,7 @@
 		</div> <!-- /c-carousel -->
 			
 			
-			vue
+			
 			
 			
 			</div>
@@ -232,7 +232,7 @@
 				<div class="pagecontainer2 mt20 alsolikebox">
 					<div class="cpadding1">
 						<span class="icon-location"></span>
-						<h3 class="opensans"Ces biens pourraient également vous interresser</h3>
+						<h3 class="opensans"> Ces biens pourraient également vous interresser</h3>
 						<div class="clearfix"></div>
 					</div>
 					<div class="cpadding1 ">
