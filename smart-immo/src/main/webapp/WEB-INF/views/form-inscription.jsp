@@ -47,7 +47,7 @@
 				  <div class="col-lg-4 ">
 					<div class="form-group">
 						<Label class="radio">
-						 <input type="radio" name="fournisseur" value="2">
+						 <input type="radio" name="fournisseur" value="2" data-toggle="collapse" data-target="#fieldset2">
 						Agent particulier</label> 
 					</div>
 				  </div>
@@ -114,7 +114,7 @@
 			  </div>
 			 </fieldset>
 			 </br>
-			 <fieldset>
+			 <fieldset id="fieldset2" class="collapse">
 			    <legend>Agence agrée</legend>
 				<br>
 				<div class="container">
