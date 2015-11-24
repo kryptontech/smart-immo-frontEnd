@@ -63,7 +63,7 @@
 		</div> <!-- /c-carousel -->
 			
 			
-			
+			vue
 			
 			
 			</div>
