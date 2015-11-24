@@ -137,7 +137,7 @@
 						  6 chambres (entre 18 et 30m²), 2 salles d'eau dont une de 19m² avec baignoire en plus. Grand garage et dépendances. 
 						  Le tout sur un terrain de plus de 2800 m² clos et arboré. Chauffage bois et gaz.
 						  Nombreuses possibilités. Dpe : c, ges : d. Prix 250 000€fai. Pour plus d'informations, 
-						  votre agent-commerciale viviane savry au 06 33 49 70 85. BELLIS IMMO TRANSACTIONS Tél. 03 80 37 84 21 Réf. annonce : 205vs84
+						  votre agent-commerciale Louise au 06 33 49 70 85. BELLIS IMMO TRANSACTIONS Tél. 03 80 37 84 21 Réf. annonce : 205vs84
 
 						</p>
 						<div class="line4"></div>
