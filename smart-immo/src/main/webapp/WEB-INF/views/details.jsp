@@ -36,22 +36,20 @@
 				<div id="inner">
 					<div id="caroufredsel_wrapper2">
 						<div id="carousel">
-							<img src="resources/images/details-slider/slide1.jpg" alt="Photo bien"/>
-							<img src="resources/images/details-slider/slide2.jpg" alt=""/>
-							<img src="resources/images/details-slider/slide3.jpg" alt=""/>
-							<img src="resources/images/details-slider/slide4.jpg" alt=""/>
-							<img src="resources/images/details-slider/slide5.jpg" alt=""/>
-							<img src="resources/images/details-slider/slide6.jpg" alt=""/>						
+							<img src="resources/images/index.jpg" alt="Photo bien"/>
+							<img src="resources/images/A46A0121.jpg" alt=""/>
+							<img src="resources/images/A46B0121.jpg" alt=""/>
+							<img src= "resources/images/A46C0121.jpg"alt=""/>
+							<img src="resources/images/A46D0121.jpg" alt=""/>						
 						</div>
 					</div>
 					<div id="pager-wrapper">
 						<div id="pager">
-							<img src="resources/images/details-slider/slide1.jpg" width="120" height="68" alt=""/>
-							<img src="resources/images/details-slider/slide2.jpg" width="120" height="68" alt=""/>
-							<img src="resources/images/details-slider/slide3.jpg" width="120" height="68" alt=""/>
-							<img src="resources/images/details-slider/slide4.jpg" width="120" height="68" alt=""/>
-							<img src="resources/images/details-slider/slide5.jpg" width="120" height="68" alt=""/>
-							<img src="resources/images/details-slider/slide6.jpg" width="120" height="68" alt=""/>						
+							<img src="resources/images/index.jpg" width="120" height="68" alt=""/>
+							<img src="resources/images/A46A0121.jpg" width="120" height="68" alt=""/>
+							<img src="resources/images/A46B0121.jpg" width="120" height="68" alt=""/>
+							<img src="resources/images/A46C0121.jpg" width="120" height="68" alt=""/>
+							<img src="resources/images/A46D0121.jpg" width="120" height="68" alt=""/>					
 						</div>
 					</div>
 				</div>
@@ -152,24 +150,22 @@
 						<div id="collapse1" class="collapse in">
 							 <div class="container">
 						      <div class="col-lg-12 table-responsive ">
-							 		<table class="table table-bordered table-striped tablecondensed">
+							 		<table class="table  table-striped tablecondensed">
 										<thead>
-										
+											<tr>
+							 				   <td>Surperficie</td>
+							 				   <td>Nombre de pièces</td>
+							 				   <td>Disponibilité</td>
+							 				</tr>
 										</thead>
 										</tbody>
-										</tbody>
-							 				<tr>
-							 				   <td>Nombre de pièces Totales:</td>
-							 				   <td>4</td>
-							 				   <td>Disponiblité:</td>
-							 				   <td>1 mois</td>
-							 				</tr>
 											<tr>
-							 				   <td>Garage</td>
-							 				   <td>oui</td>
-							 				   <td>Piscine</td>
-							 				   <td>oui</td>
+							 				   <td>25m2</td>
+							 				   <td>5</td>
+							 				   <td>Immédiate</td>
 							 				</tr>
+										</tbody>
+							 				
 											
 										<tbody>
 							 		</table>
@@ -179,48 +175,6 @@
 						</div>
 						<!-- End of collapse 1 -->	
 						
-						<div class="line4"></div>						
-						
-						<!-- Collapse 2 -->	
-						<button type="button" class="collapsebtn2" data-toggle="collapse" data-target="#collapse2">
-						 Détail sur le bien
-						</button>
-						
-						<div id="collapse2" class="collapse in">
-							<div class="container">
-						      <div class="col-lg-12 table-responsive ">
-							 		<table class="table table-bordered table-striped tablecondensed">
-										<thead>
-										
-										</thead>
-										</tbody>
-										</tbody>
-							 				<tr>
-							 				   <td>Renové</td>
-							 				   <td>Oui</td>
-							 				   <td>Cave</td>
-							 				   <td>oui</td>
-							 				</tr>
-											<tr>
-							 				   <td>Ascenceur</td>
-							 				   <td>Oui</td>
-							 				   <td>Piscine:</td>
-							 				   <td>Oui</td>
-							 				</tr>
-											
-											<tr>
-							 				   <td>Salle de bain privé</td>
-							 				   <td>Oui</td>
-							 				   <td>Climatisation:</td>
-							 				   <td>Oui</td>
-							 				</tr>
-											
-										<tbody>
-							 		</table>
-							 </div>
-						    </div>
-						</div>
-						<!-- End of collapse 2 -->	
 						
 						<div class="line4"></div>						
 						
@@ -232,28 +186,29 @@
 				<div class="pagecontainer2 mt20 alsolikebox">
 					<div class="cpadding1">
 						<span class="icon-location"></span>
-						<h3 class="opensans"> Ces biens pourraient également vous interresser</h3>
+						<h4 class="opensans"> Ces biens vous interresseront</h4>
 						<div class="clearfix"></div>
 					</div>
-					<div class="cpadding1 ">
-						<a href="#"><img src="resources/images/smallthumb-1.jpg" class="left mr20" alt=""/></a>
-						<a href="#" class="dark"><b>Hotel Amaragua</b></a><br/>
-						<span class="opensans green bold size14">$36-$160</span> <span class="grey">avg/night</span><br/>
-						<img src="resources/images/filter-rating-5.png" alt=""/>
+					<div class="line5"></div> 
+					<div class="container ">
+						<a href="#"><img src="resources/images/index.jpg" class="left mr20 smallimg" alt=""/></a>
+						<a href="#" class="dark"><b>Appartement</b></a><br/>
+						<span class="opensans green bold size14">$125000</span> <br/>
+						<span class="grey">Yopougon-Millionnaire</span>
 					</div>
 					<div class="line5"></div>
-					<div class="cpadding1 ">
-						<a href="#"><img src="resources/images/smallthumb-2.jpg" class="left mr20" alt=""/></a>
-						<a href="#" class="dark"><b>Hotel Amaragua</b></a><br/>
-						<span class="opensans green bold size14">$36-$160</span> <span class="grey">avg/night</span><br/>
-						<img src="resources/images/filter-rating-5.png" alt=""/>
+					<div class="container ">
+						<a href="#"><img src="resources/images/A46A0121.jpg" class="left mr20  smallimg" alt=""/></a>
+						<a href="#" class="dark"><b>Appartement</b></a><br/>
+						<span class="opensans green bold size14">$125000</span> <br/>
+						<span class="grey">Yopougon-Millionnaire</span>
 					</div>
 					<div class="line5"></div>			
-					<div class="cpadding1 ">
-						<a href="#"><img src="resources/images/smallthumb-3.jpg" class="left mr20" alt=""/></a>
-						<a href="#" class="dark"><b>Hotel Amaragua</b></a><br/>
-						<span class="opensans green bold size14">$36-$160</span> <span class="grey">avg/night</span><br/>
-						<img src="resources/images/filter-rating-5.png" alt=""/>
+					<div class="container ">
+						<a href="#"><img src="resources/images/A46B0121.jpg" class="left mr20  smallimg" alt=""/></a>
+						<a href="#" class="dark"><b>Appartement</b></a><br/>
+						<span class="opensans green bold size14">$105000</span> <br/>
+						<span class="grey">Riveria</span>
 					</div>
 					<br/>
 				

@@ -1,7 +1,38 @@
-
-    <!-- Javascript -->
 	
-    <!-- This page JS -->
+	<!-- Googlemap -->	
+	<script src="resources/assets/js/initialize-google-map.js"></script>
+	
+    <!-- Custom Select -->
+	<script type='text/javascript' src='resources/assets/js/jquery.customSelect.js'></script>
+	
+    <!-- Custom functions -->
+    <script src="resources/assets/js/functions.js"></script>
+
+    <!-- Nicescroll  -->	
+	<script src="resources/assets/js/jquery.nicescroll.min.js"></script>
+	
+    <!-- jQuery KenBurn Slider  -->
+    <script type="text/javascript" src="resources/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+	
+    <!-- CarouFredSel -->
+    <script src="resources/assets/js/jquery.carouFredSel-6.2.1-packed.js"></script>
+    <script src="resources/assets/js/helper-plugins/jquery.touchSwipe.min.js"></script>
+	
+	<script type="text/javascript" src="resources/assets/js/helper-plugins/jquery.mousewheel.min.js"></script>
+	<script type="text/javascript" src="resources/assets/js/helper-plugins/jquery.transit.min.js"></script>
+	<script type="text/javascript" src="resources/assets/js/helper-plugins/jquery.ba-throttle-debounce.min.js"></script>
+
+    <!-- Counter -->	
+    <script src="resources/assets/js/counter.js"></script>	
+	
+    <!-- Carousel-->	
+    <script src="resources/assets/js/initialize-carousel-detailspage.js"></script>		
+	
+    <!-- Js Easing-->	
+    <script src="resources/assets/js/jquery.easing.js"></script>
+	 
+    <!-- page JS -->
+     <script src="resources/assets/js/js-details.js"></script>
 	<script src="resources/assets/js/js-index3.js"></script>	
 	
     <!-- Custom functions -->
