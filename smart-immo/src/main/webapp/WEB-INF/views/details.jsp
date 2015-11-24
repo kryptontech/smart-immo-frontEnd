@@ -20,7 +20,7 @@
 			</div>
 			<a class="backbtn right" href="#"></a>
 		</div>
-		<div class="clearfix"></div>
+		<div class="clearfix"></div> 
 		<div class="brlines"></div>
 	</div>	
 
@@ -165,10 +165,10 @@
 							 				   <td>1 mois</td>
 							 				</tr>
 											<tr>
-							 				   <td>Nombre de chambres:</td>
-							 				   <td>3</td>
-							 				   <td>Nombre de salles d'eau:</td>
-							 				   <td>2</td>
+							 				   <td>Garage</td>
+							 				   <td>oui</td>
+							 				   <td>Piscine</td>
+							 				   <td>oui</td>
 							 				</tr>
 											
 										<tbody>
@@ -196,16 +196,23 @@
 										</tbody>
 										</tbody>
 							 				<tr>
-							 				   <td>Nombre de pièces Totales:</td>
-							 				   <td>4</td>
-							 				   <td>Disponiblité:</td>
-							 				   <td>1 mois</td>
+							 				   <td>Renové</td>
+							 				   <td>Oui</td>
+							 				   <td>Cave</td>
+							 				   <td>oui</td>
 							 				</tr>
 											<tr>
-							 				   <td>Nombre de chambres:</td>
-							 				   <td>3</td>
-							 				   <td>Nombre de salles d'eau:</td>
-							 				   <td>2</td>
+							 				   <td>Ascenceur</td>
+							 				   <td>Oui</td>
+							 				   <td>Piscine:</td>
+							 				   <td>Oui</td>
+							 				</tr>
+											
+											<tr>
+							 				   <td>Salle de bain privé</td>
+							 				   <td>Oui</td>
+							 				   <td>Climatisation:</td>
+							 				   <td>Oui</td>
 							 				</tr>
 											
 										<tbody>
@@ -217,114 +224,15 @@
 						
 						<div class="line4"></div>						
 						
-						<!-- Collapse 3 -->	
-						<button type="button" class="collapsebtn2 collapsed" data-toggle="collapse" data-target="#collapse3">
-						  Complimentary Wi-Fi <span class="collapsearrow"></span>
-						</button>
-						
-						<div id="collapse3" class="collapse">
-							<div class="hpadding20">
-								Yes
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<!-- End of collapse 3 -->	
-						
-						<div class="line4"></div>							
-						
-						<!-- Collapse 4 -->	
-						<button type="button" class="collapsebtn2 collapsed" data-toggle="collapse" data-target="#collapse4">
-						  Internet <span class="collapsearrow"></span>
-						</button>
-						
-						<div id="collapse4" class="collapse">
-							<div class="hpadding20">
-								Yes
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<!-- End of collapse 4 -->		
-
-						<div class="line4"></div>								
-
-						<!-- Collapse 5 -->	
-						<button type="button" class="collapsebtn2 collapsed" data-toggle="collapse" data-target="#collapse5">
-						  Parking <span class="collapsearrow"></span>
-						</button>
-						
-						<div id="collapse5" class="collapse">
-							<div class="hpadding20">
-								Yes
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<!-- End of collapse 5 -->				
-
-						<div class="line4"></div>								
-
-						<!-- Collapse 6 -->	
-						<button type="button" class="collapsebtn2" data-toggle="collapse" data-target="#collapse6">
-						  Room Amenities <span class="collapsearrow"></span>
-						</button>
-						
-						<div id="collapse6" class="collapse in">
-							<div class="hpadding20">
-								<div class="col-md-4">
-									<ul class="checklist">
-										<li>Climate control</li>
-										<li>Air conditioning</li>
-										<li>Direct-dial phone</li>
-										<li>Minibar</li>
-									</ul>
-								</div>
-								<div class="col-md-4">
-									<ul class="checklist">
-										<li>Wake-up calls</li>
-										<li>Daily housekeeping</li>
-										<li>Private bathroom</li>
-										<li>Hair dryer</li>	
-									</ul>									
-								</div>	
-								<div class="col-md-4">
-									<ul class="checklist">								
-										<li>Makeup/shaving mirror</li>
-										<li>Shower/tub combination</li>
-										<li>Satellite TV service</li>
-										<li>Electronic/magnetic keys</li>	
-									</ul>									
-								</div>									
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<!-- End of collapse 6 -->								
-				
-						
 				</div>
 			</div>
 			
 			<div class="col-md-4" >
 				
-				<div class="pagecontainer2 testimonialbox">
-					<div class="cpadding0 mt-10">
-						<span class="icon-quote"></span>
-						<p class="opensans size16 grey2">It was very comfortable to stay and staff were pleasant and welcoming.<br/>
-						<span class="lato orange bold size13"><i>by Ellison from United Kingdom</i></span></p> 
-					</div>
-				</div>
-				
-				<div class="pagecontainer2 mt20 needassistancebox">
-					<div class="cpadding1">
-						<span class="icon-help"></span>
-						<h3 class="opensans">Need Assistance?</h3>
-						<p class="size14 grey">Our team is 24/7 at your service to help you with your booking issues or answer any related questions</p>
-						<p class="opensans size30 green xslim">1-866-599-6674</p>
-					</div>
-				</div><br/>
-				
 				<div class="pagecontainer2 mt20 alsolikebox">
 					<div class="cpadding1">
 						<span class="icon-location"></span>
-						<h3 class="opensans">You May Also Like</h3>
+						<h3 class="opensans"Ces biens pourraient également vous interresser</h3>
 						<div class="clearfix"></div>
 					</div>
 					<div class="cpadding1 ">
