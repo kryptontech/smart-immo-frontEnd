@@ -336,7 +336,7 @@ a {
 
 a:hover,
 a:focus {
-  color: #ff9900;
+  color: #e30513;
   text-decoration: underline;
 }
 
@@ -3836,7 +3836,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 
 .nav > li.active > a {
-  color:#ff9900;
+  color:#e30513;
 }
 
 .nav > li > a:hover,
@@ -3884,7 +3884,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li {
   float: left;
   margin-bottom: -1px;
-  border-right:1px solid #ff9900;
+  border-right:1px solid e30513;
 }
 
 .nav-tabs > li > a {
@@ -3915,8 +3915,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .nav-tabs > li > a:hover {
   border:0px solid transparent;
-  background:#ff9900;
-  box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.2);
+
+  box-shadow: inset 0px 0px 5px 0px black;
 }
 
 .nav-tabs > li.active > a,
