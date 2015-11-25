@@ -19,55 +19,37 @@
 					<!-- FADE -->
 					<li data-transition="fade" data-slotamount="1" data-masterspeed="300"> 										
 						
-						<img src="resources/images/slider/paris.jpg" alt=""/>
+						<img src="resources/images/slider/slide1.jpg" alt=""/>
 						<div class="tp-caption scrolleffect sft"
 							 data-x="center"
 							 data-y="120"
 							 data-speed="1000"
 							 data-start="800"
 							 data-easing="easeOutExpo"  >
-							 <div class="sboxpurple textcenter">
-								<span class="lato size28 slim caps white">France</span><br/><br/><br/>
-								<span class="lato size100 slim caps white">Paris</span><br/>
-								<span class="lato size20 normal caps white">from</span><br/><br/>
-								<span class="lato size48 slim uppercase yellow">$1500</span><br/>
-							 </div>
 						</div>	
 					</li>	
 					
 					<!-- FADE -->
 					<li data-transition="fade" data-slotamount="1" data-masterspeed="300"> 										
-						<img src="resources/images/slider/rome.jpg" alt=""/>
+						<img src="resources/images/slider/slide2.jpg" alt=""/>
 						<div class="tp-caption scrolleffect sft"
 							 data-x="center"
 							 data-y="120"
 							 data-speed="1000"
 							 data-start="800"
 							 data-easing="easeOutExpo">
-							 <div class="sboxpurple textcenter">
-								<span class="lato size28 slim caps white">Italy</span><br/><br/><br/>
-								<span class="lato size100 slim caps white">Rome</span><br/>
-								<span class="lato size20 normal caps white">from</span><br/><br/>
-								<span class="lato size48 slim uppercase yellow">$1500</span><br/>
-							 </div>
 						</div>	
 					</li>	
 				
 					<!-- FADE -->
 					<li data-transition="fade" data-slotamount="1" data-masterspeed="300"> 										
-						<img src="resources/images/slider/santorini.jpg" alt=""/>
+						<img src="resources/images/slider/slide3.jpg"" alt=""/>
 						<div class="tp-caption scrolleffect sft"
 							 data-x="center"
 							 data-y="120"
 							 data-speed="1000"
 							 data-start="800"
 							 data-easing="easeOutExpo">
-							 <div class="sboxpurple textcenter">
-								<span class="lato size28 slim caps white">Greece</span><br/><br/><br/>
-								<span class="lato size100 slim caps white">Santorini</span><br/>
-								<span class="lato size20 normal caps white">from</span><br/><br/>
-								<span class="lato size48 slim uppercase yellow">$1500</span><br/>
-							 </div>
 						</div>	
 					</li>
 
@@ -175,11 +157,11 @@
 								
 									<form class="form-inline col-lg-12">
 								<div class="form-group col-lg-3">
-									<span class="opensans size13"><b>L'endroit</b></span>
+									<span class="opensans size13"><b>L'endroit</b><br><br></span>
 									<input type="text" class="form-control" style="text-align:left" placeholder="saisir au moins 3 caractères">
 								</div>	
 								<div class="form-group col-lg-3">
-									<span class="opensans size13"><b>Sous Categorie Bien</b></span>
+									<span class="opensans size13"><b>Sous Categorie Bien</b><br><br></span>
 									<select class="form-control mySelectBoxClass">
 										<option selected>0</option>
 										<option>1</option>
@@ -191,7 +173,7 @@
 								</div>	
 								
 								<div class="form-group col-lg-3">
-									<span class="opensans size13"><b>Prix minimum</b></span>
+									<span class="opensans size13"><b>Prix minimum</b><br><br></span>
 									<div class="input-group">
 										<input type="text" class="form-control" style="text-align:left" placeholder="prix min">
 										<span class="input-group-addon">Fcfa</span>
@@ -199,7 +181,7 @@
 								</div>
 								
 								<div class="form-group col-lg-3">
-									<span class="opensans size13"><b>Prix manimum</b></span>
+									<span class="opensans size13"><b>Prix manimum</b><br><br></span>
 									<div class="input-group">
 										<input type="text" class="form-control" style="text-align:left" placeholder="prix max">
 										<span class="input-group-addon">Fcfa</span>
@@ -279,9 +261,9 @@
 					</div>
 					
 					<div class="searchbg2">
-						<div class="left ca01"><a href="#">Mieux chercher, Mieux trouver</a></div>
+						<h2 class="left ca01">Mieux chercher, Mieux trouver</h2>
 						<form action="list4.html">
-							<button type="submit" class="btn-search right mr30">Search</button>
+							<button type="search" class="btn-search right mr30">Chercher</button>
 						</form>
 					</div>
 						

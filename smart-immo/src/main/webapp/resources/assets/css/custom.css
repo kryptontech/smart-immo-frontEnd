@@ -147,7 +147,6 @@ img.smallimg {width:70px; height:70px;}
 .size100{font-size:100px;}
 
 
-
 /*COLORS*/
 .white{color:#fff;}
 .dark{color:#333;}
@@ -292,7 +291,11 @@ height:30px;
 
 .pt-6{position:relative;top:-6px;}
 
-.ca01{margin: 20px 0 0 30px;}
+.ca01{margin: 20px 0 0 30px;
+		color:#e30513;
+		text-shadow: 0.3px 0.3px 0.2px black;
+		font-style:normal;
+		font-family:"open_sans"}
 .ca02{position:relative; top:-10px; margin:8px 10px 0 0;color:#999;}
 .ca03{position:relative; top:-5px; margin:7px 10px 0 0;color:#999;}
 
@@ -405,7 +408,7 @@ z-index:100;
 	margin-left:30px;
 	margin-top:12px;
   
-	border: 1px solid ##8B0000;
+	border: 1px solid #8B0000;
 	background: #e30513;
 	background: -webkit-gradient(linear, left top, left bottom, from(#8B0000), to(#e30513));
 	background: -webkit-linear-gradient(top, #8B0000, #e30513);
