@@ -39,7 +39,7 @@
 			     <div class="col-lg-3">
 					<div class="form-group">
 						<Label class="radio">
-						 <input type="radio" name="fournisseur" value="1">
+						 <input type="radio" name="fournisseur" value="1" id="option1" checked>
 						Particulier</label> 
 					</div>
 				  </div>
@@ -47,7 +47,7 @@
 				  <div class="col-lg-4 ">
 					<div class="form-group">
 						<Label class="radio">
-						 <input type="radio" name="fournisseur" value="2" data-toggle="collapse" data-target="#fieldset2">
+						 <input type="radio" name="fournisseur" value="2" id="option2">
 						Agent particulier</label> 
 					</div>
 				  </div>
@@ -114,7 +114,7 @@
 			  </div>
 			 </fieldset>
 			 </br>
-			 <fieldset id="fieldset2" class="collapse">
+			 <fieldset id="fieldset2">
 			    <legend>Agence agrée</legend>
 				<br>
 				<div class="container">
@@ -160,7 +160,7 @@
 					<div class="form-group">
 						<Label for="logo" class="col-lg-6">Logo*</label> 
 						<div class="col-lg-12">
-						   <input type="file" id="logo">
+						   <input type="file" id="logo" name="photo" enctype= "multipart/form-data">
 						</div>
 					</div>
 				 </div>

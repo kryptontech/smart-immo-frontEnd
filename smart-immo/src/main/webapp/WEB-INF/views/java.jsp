@@ -52,6 +52,7 @@
 	
     <!-- CarouFredSel -->
     <script src="resources/assets/js/jquery.carouFredSel-6.2.1-packed.js"></script>
+    <script src="resources/assets/js/form-inscription.js"></script>
     <script src="resources/assets/js/helper-plugins/jquery.touchSwipe.min.js"></script>
 	<script type="text/javascript" src="resources/assets/js/helper-plugins/jquery.mousewheel.min.js"></script>
 	<script type="text/javascript" src="resources/assets/js/helper-plugins/jquery.transit.min.js"></script>
