@@ -1,6 +1,6 @@
 
 //------------------------------
-//Change Tabs
+//ajouter formulaire agent
 //------------------------------
 $(document).ready(function(){
 
@@ -20,6 +20,7 @@ $(document).ready(function(){
 	$( "#option2" ).click(function() {
 		$('#fieldset2').removeClass('none');
 		mySelectUpdate();
-	});						
+	});				
+	
 	
 	});
