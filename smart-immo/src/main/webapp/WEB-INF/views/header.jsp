@@ -17,8 +17,7 @@
 				<ul class="nav navbar-nav">
 				  <li><a href="#">Acheter</a></li>
 				  <li><a href="#">Louer</a></li>
-				  <li><a href="#">Villes</a></li>
-				  <li><a href="#">Agences Immobilières</a></li>			  		
+				  <li><a href="#">Agences Agrées</a></li>			  		
 				</ul>
 				
 				<ul class="nav navbar-nav navbar-right">

@@ -1816,15 +1816,16 @@
      	<div class="footerbg">
 		<div class="container">		
 			<div class="col-md-3">
-				<span class="ftitleblack">Suivez toute l'actualité de smartImmo.net sur:</span>
+				<span class="ftitle">Suivez toute l'actualité de smartImmo.net sur:</span>
+				<br/><br/>
 				<div class="scont">
 					<a href="#" class="social1b"><img src="resources/images/icon-facebook.png" alt=""/></a>
 					<a href="#" class="social2b"><img src="resources/images/icon-twitter.png" alt=""/></a>
 					<a href="#" class="social4b"><img src="resources/images/icon-youtube.png" alt=""/></a>
 					<br/><br/><br/>
 					<a href="#"><img src="resources/images/logo.png" alt="" /></a><br/>
-					<span class="grey2">&copy; 2015  |  <a href="#">Privacy Policy</a><br/>
-					All Rights Reserved </span>
+					<span class="grey2">&copy; 2015  |  <a href="#"> Tous droits réservé</a><br/>
+					</span>
 					<br/><br/>
 					
 				</div>
@@ -1832,43 +1833,36 @@
 			<!-- End of column 1-->
 			
 			<div class="col-md-3">
-				<span class="ftitleblack">Travel Specialists</span>
+				<span class="ftitle">Nos Annonces de vente</span>
 				<br/><br/>
 				<ul class="footerlistblack">
-					<li><a href="#">Golf Vacations</a></li>
-					<li><a href="#">Ski & Snowboarding</a></li>
-					<li><a href="#">Disney Parks Vacations</a></li>
-					<li><a href="#">Disneyland Vacations</a></li>
-					<li><a href="#">Disney World Vacations</a></li>
-					<li><a href="#">Vacations As Advertised</a></li>
+					<li><a href="#">Vente de maison</a></li>
+					<li><a href="#">Vente de terrain</a></li>
+					<li><a href="#">Vente de local commercial</a></li>
 				</ul>
 			</div>
 			<!-- End of column 2-->		
 			
 			<div class="col-md-3">
-				<span class="ftitleblack">Travel Specialists</span>
+				<span class="ftitle">Nos annonces de location</span>
 				<br/><br/>
 				<ul class="footerlistblack">
-					<li><a href="#">Weddings</a></li>
-					<li><a href="#">Accessible Travel</a></li>
-					<li><a href="#">Disney Parks</a></li>
-					<li><a href="#">Cruises</a></li>
-					<li><a href="#">Round the World</a></li>
-					<li><a href="#">First Class Flights</a></li>
+					<li><a href="#">Appartement</a></li>
+					<li><a href="#">Studio</a></li>
+					<li><a href="#">Villa</a></li>
+					<li><a href="#">Terrain</a></li>
 				</ul>				
 			</div>
 			<!-- End of column 3-->		
 			
 			<div class="col-md-3 grey">
-				<span class="ftitleblack">Newsletter</span>
+				<span class="ftitle">Recevez les meilleurs offres du marché</span>
+				<br/><br/>
 				<div class="relative">
-					<input type="email" class="form-control fccustom2black" id="exampleInputEmail1" placeholder="Enter email">
+					<input type="email" class="form-control fccustom2" id="exampleInputEmail1" placeholder="Enter email">
 					<button type="submit" class="btn btn-default btncustom">Submit<img src="images/arrow.png" alt=""/></button>
 				</div>
 				<br/><br/>
-				<span class="ftitleblack">Customer support</span><br/>
-				<span class="pnr">1-866-599-6674</span><br/>
-				<span class="grey2">office@travel.com</span>
 			</div>			
 			<!-- End of column 4-->			
 		

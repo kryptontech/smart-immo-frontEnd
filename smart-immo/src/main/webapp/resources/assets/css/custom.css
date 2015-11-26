@@ -1424,7 +1424,7 @@ button:hover.next2   img {width:14px;height:18px; display:block; background:url(
 
 
 /*FOOTER BG*/
-.footerbg{width:100%; background:#f2f2f2;padding:60px 0; margin-top:80px; overflow:hidden;}
+.footerbg{width:100%; background:#f2f2f2;padding:20px 0; margin-top:80px; overflow:hidden;}
 .footerbg2{width:100%; background:#f2f2f2;padding:30px 0; overflow:hidden;}
 .footerbg2 a{color:#999;}
 .footerbg2 a:hover{color:#ff9900; text-decoration:none;}
@@ -1438,7 +1438,7 @@ button:hover.next2   img {width:14px;height:18px; display:block; background:url(
 .footer a:hover{color:#72BF66; font-size:14px; font-weight:normal; text-decoration:none;}
 
 .scont{text-align:left;color:#999; font-size:14px;}
-.scont a{color:#ff9900; font-size:14px; font-weight:normal;   -webkit-transition:.3s;-moz-transition:.3s;transition:.3s}
+.scont a{color:#e30513; font-size:14px; font-weight:normal;   -webkit-transition:.3s;-moz-transition:.3s;transition:.3s}
 .scont a:hover{color:#72bf66; font-size:14px; font-weight:normal; text-decoration:none;}
 
 ul.footerlist {padding-left:20px; list-style-image:url('../../images/li.png');}
@@ -1449,17 +1449,17 @@ ul.footerlist li a:hover{color:#ff9900; text-decoration:none;}
 ul.footerlistblack {padding-left:20px; list-style-image:url('../../images/li2.png');}
 ul.footerlistblack li{line-height:24px; }
 ul.footerlistblack li a{color:#999; }
-ul.footerlistblack li a:hover{color:#72bf66; text-decoration:none;}
+ul.footerlistblack li a:hover{color:#e30513; text-decoration:none;}
 
 
 .pnr{font-family:"Open Sans"; font-size:30px; color:#ff9900; font-weight:300;}
 
 .fccustom{background:#f2f2f2; height:32px; border:0px; -webkit-border-radius: 0px;-moz-border-radius: 0px;border-radius: 0px;}
-.fccustom2{background:#ffffff; height:32px; border:0px; -webkit-border-radius: 0px;-moz-border-radius: 0px;border-radius: 0px;}
+.fccustom2{background:#ffffff; height:32px; border:1px solid #e30513; -webkit-border-radius: 0px;-moz-border-radius: 0px;border-radius: 0px;}
 .btncustom{
 width:32px; 
 height:32px; 
-background:url('../../images/arrow.png') #ff9900 -5px -5px;
+background:url('../../images/arrow.png') #e30513 -5px -5px;
 border:0px; 
 text-indent:-100px;
 -webkit-border-radius: 0px;
@@ -1475,8 +1475,8 @@ right:0px;
 overflow:hidden;
 }
 .btncustom:hover{
-background:url('../../images/arrow.png') #72bf66 37px -5px; 
-border:0px; 
+background:url('../../images/arrow.png') #e30513 37px -5px; 
+box-shadow: inset 0px 0px 10px 0px black;
 -webkit-border-radius: 0px;
 -moz-border-radius: 0px;
 border-radius: 0px; 
