@@ -3,7 +3,7 @@
   <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Travel Agency - HTML5 Booking template</title>
+	<title>Smartimmo - Annonces immobilieres en ligne</title>
 	
 	<!-- Bootstrap -->
 	<link href="resources/dist/css/bootstrap.css" rel="stylesheet" media="screen">
@@ -44,14 +44,14 @@
 				<div class="cpadding50">
 					<input type="text" class="form-control logpadding" placeholder="Pseudo">
 					<br/>
-					<input type="text" class="form-control logpadding" placeholder="Mot de passe">
+					<input type="password" class="form-control logpadding" placeholder="Mot de passe">
 				</div>
 			</div>
 			<div class="login-c2">
 				<div class="logmargfix">
 					<div class="chpadding50">
 							<div class="alignbottom">
-								<button class="btn-search4"  type="submit" onclick="errorMessage()">Valider</button>							
+								<button class="btngrd"  type="submit" onclick="errorMessage()">Valider</button>							
 							</div>
 							<div class="alignbottom2">
 							  <div class="checkbox">
@@ -63,9 +63,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="login-c3">
+			<div class="login-c3 size12">
 				<div class="left"><a href="#" class="whitelink"><span></span>Acceuil</a></div>
-				<div class="right"><a href="#" class="whitelink">Mot de passe oublié?</a></div>
+				<div class="right"><a href="#" class="whitelink">Mot de passe oublie?</a></div>
 			</div>			
 		</div>
 		<!-- End of Login Wrap  -->

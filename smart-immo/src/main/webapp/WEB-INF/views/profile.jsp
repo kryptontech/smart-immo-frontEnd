@@ -1,5 +1,7 @@
-<%@include file="head.jsp" %>
-<%@include file="header.jsp" %>
+<%@ include file ="head.jsp" %>
+	
+  <body id="top" class="thebg" >
+    <%@ include file="header.jsp" %>
 	<!-- /Top wrapper -->
 	<div class="container breadcrub">
 	    <div>
@@ -67,26 +69,6 @@
 					  <!-- TAB 1 -->
 					  <div class="tab-pane padding40 " id="profile">
 
-						  <!-- Admin top -->
-						 
-						  <div class="col-md-4">
-						  </div>
-						   <div class="col-md-4 col-md-offset-4">
-							<img src="resources/images/IMG_0091.jpg" alt="" class="left margright20 smallimg"/>
-							<p class="size12 grey margtop10">
-							Salut <span class="lred">Cisse</span><br/>
-							<a href="#" class="lblue">Changer votre photo de profil</a>
-							<a href="#" class="lrouge">Deconnexion</a>
-							</p>
-							<div class="clearfix"></div>
-						  </div>
-						  <!-- End of Admin top -->
-						   </br>
-						  </br>
-						  </br>
-						  </br>
-						  </br>
-						  
 						<div class="clearfix"></div>
 							<br/>
 						
@@ -473,21 +455,6 @@
 					  <!-- TAB 2 -->					  
 					  <div class="tab-pane"id="bookings">
 						<div class="padding40">
-								<div class="col-md-4 col-md-offset-8">
-									<img src="resources/images/IMG_0091.jpg" alt="" class="left margright20 smallimg"/>
-									<p class="size12 grey margtop10">
-										Salut <span class="lred">Cisse</span><br/>
-										<a href="#" class="lblue">Changer votre photo de profil</a>
-										<a href="#" class="lrouge">Deconnexion</a>
-									</p>
-								</div>
-							
-						  <!-- End of Admin top -->
-						   </br>
-						  </br>
-						  </br>
-						  </br>
-						  </br>
 						  
 						<div class="clearfix"></div>
 							<br/>
@@ -661,104 +628,56 @@
 					  <!-- TAB 3 -->					  
 					  <div class="tab-pane active" id="history">
 						<div class="padding40">	
-								<div class="col-md-4 col-md-offset-8">
-									<img src="resources/images/IMG_0091.jpg" alt="" class="left margright20 smallimg"/>
-									<p class="size12 grey margtop10">
-										Salut <span class="lred">Cisse</span><br/>
-										<a href="#" class="lblue">Changer votre photo de profil</a>
-										<a href="#" class="lrouge">Deconnexion</a>
-									</p>
-								</div>
-							
-						  <!-- End of Admin top -->
-						  </br>
-						  </br>
-						  </br>
-						  </br>
-						  </br>
-						  
 						<div class="clearfix"></div>
 							<br/>
 							
-							<div class="col-md-3 bold">Type bien</div>
-							<div class="col-md-3 bold">Type Offre</div>
-							<div class="col-md-2 bold">Lieux</div>
-							<div class="col-md-2 bold">Date</div>
-							<div class="col-md-2 bold">Action</div>
+							<div class="col-md-3 bold">Date</div>
+							<div class="col-md-3 bold">Destination</div>
+							<div class="col-md-3 bold">Service</div>
+							<div class="col-md-3 bold textright">Action</div>
 							<div class="clearfix"></div>
 							<div class="line4"></div>
 							
-							<div class="col-md-3">XXXXX</div>
+							<div class="col-md-3">01.05.09</div>
 							<div class="col-md-3">Grece - Zakynthos</div>
-							<div class="col-md-2">XXXX</div>
-							<div class="col-md-2">XXXl</div>
-							<div class="col-md-2 textright">
-							<div class="row">
-							<div class="col-md-5"><button type="submit" class="btn-search5"><span class="glyphicon glyphicon-plus"></span> </button></div>
-							<div class="col-md-5"><button type="submit" class="btn-search5"><span class="glyphicon glyphicon-remove"></span> </button></div>
-							</div>
-							</div><div class="clearfix"></div>
-							
-							<div class="line4"></div>
-							<div class="col-md-3">XXXX</div>
-							<div class="col-md-3">Spain - Malaga</div>
-							<div class="col-md-2">XXXX</div>
-							<div class="col-md-2">17.07.10</div>
-							<div class="col-md-2">
-							<div class="row">
-							<div class="col-md-5"><button type="submit" class="btn-search5"><span class="glyphicon glyphicon-plus"></span> </button></div>
-							<div class="col-md-5"><button type="submit" class="btn-search5"><span class="glyphicon glyphicon-remove"></span> </button></div>
-							</div>
-							</div>
+							<div class="col-md-3">Hotel</div>
+							<div class="col-md-3 textright"><button type="submit" class="btn-search5"><span class="glyphicon glyphicon-plus"></span></button></div>
 							<div class="clearfix"></div>
 							
 							<div class="line4"></div>
-							<div class="col-md-3">XXXX</div>
+							<div class="col-md-3">17.07.10</div>
 							<div class="col-md-3">Spain - Malaga</div>
-							<div class="col-md-2">XXXX</div>
-							<div class="col-md-2">17.07.10</div>
-							<div class="col-md-2">
-							<div class="row">
-							<div class="col-md-5"><button type="submit" class="btn-search5"><span class="glyphicon glyphicon-plus"></span> </button></div>
-							<div class="col-md-5"><button type="submit" class="btn-search5"><span class="glyphicon glyphicon-remove"></span> </button></div>
-							</div>
-							</div><div class="clearfix"></div>
+							<div class="col-md-3">Flight Tickets</div>
+							<div class="col-md-3 textright"><button type="submit" class="btn-search5"><span class="glyphicon glyphicon-plus"></span></button></div>
+							<div class="clearfix"></div>
 							
 							<div class="line4"></div>
-							<div class="col-md-3">XXXX</div>
-							<div class="col-md-3">Spain - Malaga</div>
-							<div class="col-md-2">XXXX</div>
-							<div class="col-md-2">17.07.10</div>
-							<div class="col-md-2">
-							<div class="row">
-							<div class="col-md-5"><button type="submit" class="btn-search5"><span class="glyphicon glyphicon-plus"></span> </button></div>
-							<div class="col-md-5"><button type="submit" class="btn-search5"><span class="glyphicon glyphicon-remove"></span> </button></div>
-							</div>
-							</div><div class="clearfix"></div>
+							<div class="col-md-3">01.05.09</div>
+							<div class="col-md-3">Bulgary - Sunny Beach</div>
+							<div class="col-md-3">Flight Tickets</div>
+							<div class="col-md-3 textright"><button type="submit" class="btn-search5"><span class="glyphicon glyphicon-plus"></span></button></div>
+							<div class="clearfix"></div>
 							
 							<div class="line4"></div>
-							<div class="col-md-3">XXXX</div>
-							<div class="col-md-3">Spain - Malaga</div>
-							<div class="col-md-2">XXXX</div>
-							<div class="col-md-2">17.07.10</div>
-							<div class="col-md-2">
-							<div class="row">
-							<div class="col-md-5"><button type="submit" class="btn-search5"><span class="glyphicon glyphicon-plus"></span> </button></div>
-							<div class="col-md-5"><button type="submit" class="btn-search5"><span class="glyphicon glyphicon-remove"></span> </button></div>
-							</div>
-							</div><div class="clearfix"></div>
+							<div class="col-md-3">01.05.09</div>
+							<div class="col-md-3">France - Paris</div>
+							<div class="col-md-3">Rent a car</div>
+							<div class="col-md-3 textright"><button type="submit" class="btn-search5"><span class="glyphicon glyphicon-plus"></span></button></div>
+							<div class="clearfix"></div>
 							
 							<div class="line4"></div>
-							<div class="col-md-3">XXXX</div>
-							<div class="col-md-3">Spain - Malaga</div>
-							<div class="col-md-2">XXXX</div>
-							<div class="col-md-2">17.07.10</div>
-							<div class="col-md-2">
-							<div class="row">
-							<div class="col-md-5"><button type="submit" class="btn-search5"><span class="glyphicon glyphicon-plus"></span> </button></div>
-							<div class="col-md-5"><button type="submit" class="btn-search5"><span class="glyphicon glyphicon-remove"></span> </button></div>
-							</div>
-							</div><div class="clearfix"></div>
+							<div class="col-md-3">15.03.11</div>
+							<div class="col-md-3">U.A.E. - Dubai</div>
+							<div class="col-md-3">Car + Hotel + Flight</div>
+							<div class="col-md-3 textright"><button type="submit" class="btn-search5"><span class="glyphicon glyphicon-plus"></span></button></div>
+							<div class="clearfix"></div>
+							
+							<div class="line4"></div>
+							<div class="col-md-3">15.06.12</div>
+							<div class="col-md-3">Grand Britain - London</div>
+							<div class="col-md-3">Car + Hotel + Flight</div>
+							<div class="col-md-3 textright"><button type="submit" class="btn-search5"><span class="glyphicon glyphicon-plus"></span></button></div>
+							<div class="clearfix"></div>
 							
 						</div>
 					  </div>
@@ -767,36 +686,25 @@
 					  <!-- TAB 4 -->					  
 					  <div class="tab-pane" id="password">
 						<div class="padding40">
-								<div class="col-md-4 col-md-offset-8">
-									<img src="resources/images/IMG_0091.jpg" alt="" class="left margright20 smallimg"/>
-									<p class="size12 grey margtop10">
-										Salut <span class="lred">Cisse</span><br/>
-										<a href="#" class="lblue">Changer votre photo de profil</a>
-										<a href="#" class="lrouge">Deconnexion</a>
-									</p>
-								</div>
-							
-						  <!-- End of Admin top -->
-						   </br>
-						  </br>
-						  </br>
-						  </br>
-						  </br>
-						  
 						<div class="clearfix"></div>
 							<br/>
 							
-							<span class="dark size18">Changer votre mot de passe</span>
+							<span class="dark size18">Change password</span>
 							<div class="line4"></div>
 							
-							Pseudo<br/>
+							Username<br/>
 							<input type="text" class="form-control " placeholder="">
 							<br/>
-							Mot de passe actuel<br/>
+							Old Password<br/>
 							<input type="text" class="form-control " placeholder="">
 							<br/>
-							Nouveau mot de passe<br/>
+							New Password<br/>
 							<input type="text" class="form-control " placeholder="">
+							<br/>
+							<button type="submit" class="btn-search5">Save changes</button>
+							
+							<br/>
+							<br/>
 							<br/>
 							<span class="dark size18">Security</span>
 							<div class="line4"></div>
@@ -823,7 +731,6 @@
 							<br/>
 							<button type="submit" class="btn-search5">Save changes</button>
 							
-							
 						</div>
 					  </div>
 					  <!-- END OF TAB 4 -->	
@@ -846,6 +753,10 @@
 		
 	</div>
 	<!-- END OF CONTENT -->
+	
 
-<%@include file="footer.jsp" %>	
-<%@include file="java.jsp"%>
+	
+	
+<%@ include file="footer.jsp" %>>
+    
+<%@ include file ="java.jsp" %>
