@@ -23,9 +23,9 @@
 				
 				<ul class="nav navbar-nav navbar-right">
 					
-				  <li class="right-menu"><a href="#">Publier un bien</a></li>	
-				  <li class="right-menu"><a href="#">Inscription</a></li>
-				  <li class="right-menu"><a href="#">Connexion</a></li>
+				  <li ><div><a href="#" class="btn btngrd">Publier un bien</a></div></li>	
+				  <li ><div><a href="#" class="btn btngrd">Inscription</a></div></li>
+				  <li ><div><a href="#" class="btn btngrd">Connexion</a></div></li>
 				  			  		
 				</ul>
 			  </div>

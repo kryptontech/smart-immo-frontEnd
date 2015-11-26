@@ -1660,185 +1660,145 @@
 				<div class="clearfix"></div>
 				
 
-				<div class="itemscontainer offset-1">
+				<div class="row offset-1">
 
 
 					<div class="col-md-4">
+					  <div class="list-box">
 						<div class="listitem">
-							<img src="resources/images/items/item1.jpg" alt=""/>
+							<img src="resources/images/A46A0121.jpg" alt=""/>
 							<div class="liover"></div>
 						</div>
 						<div class="itemlabel">
-							<b><span class="glyphicons glyphicon-screenshot"></span>photo</b></br></br>
-							<b class=" lightgrey right mt1 green size14 ">$36.00</b>
-							<b>Sous categorie bien</b><br/></br>
+							<span class="right  lred2 size14 ">Mise à jour le:25/11/2015</span>
+							<span><span class="glyphicon glyphicon-camera" aria-hidden="true"></span>4</span></br><br>
+							<span class=" lightgrey right mt1 green size20 ">170000</span>
+							<span class=" size20">Appartement</span><br/></br>
 							
-							<b class="right" >Type Offre</b>
-							<b>Ville </b><br/><br/>
+							<span class="right size20" >Location</span>
+							<span class="size20">Rivera 2 </span><br/><br/>
 							
-							<button href="#" class="btn btn-xs right btn-default">Detail</button>
-							<b>publié le:date publié</b>
+							<button href="#" class="btn btn-xs right btngrd">Detail</button>
+							<span class="size14">5<span class="glyphicon glyphicon-bed"></span></span>
+							<span class="size14">Surface 65m2</span>
 						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="listitem">
-							<img src="resourcesimages/items/item2.jpg" alt=""/>
-							<div class="liover"></div>
-							<a class="fav-icon" href="#"></a>
-							<a class="book-icon" href="#"></a>							
 						</div>
-						<div class="itemlabel">
-							<button class="bookbtn right mt1">Book</button>						
-							<b>Mabely Grand Hotel</b><br/>
-							<p class="lightgrey"><span class="green size14"><b>$37.00</b></span> avg/night</p>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="listitem">
-							<img src="resources/images/items/item3.jpg" alt=""/>
-							<div class="liover"></div>
-							<a class="fav-icon" href="#"></a>
-							<a class="book-icon" href="#"></a>							
-						</div>
-						<div class="itemlabel">
-							<button class="bookbtn right mt1">Book</button>						
-							<b>Mabely Grand Hotel</b><br/>
-							<p class="lightgrey"><span class="green size14"><b>$37.50</b></span> avg/night</p>
-						</div>					
-					</div>
-
-					<div class="clearfix"></div>
-					<div class="offset-2"><hr class="featurette-divider3"></div>
-					
-					<div class="col-md-4">
-						<div class="listitem">
-							<img src="images/items/item4.jpg" alt=""/>
-							<div class="liover"></div>
-							<a class="fav-icon" href="#"></a>
-							<a class="book-icon" href="#"></a>								
-						</div>
-						<div class="itemlabel">
-							<button class="bookbtn right mt1">Book</button>						
-							<b>Mabely Grand Hotel</b><br/>
-							<p class="lightgrey"><span class="green size14"><b>$41.00</b></span> avg/night</p>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="listitem">
-							<img src="images/items/item5.jpg" alt=""/>
-							<div class="liover"></div>
-							<a class="fav-icon" href="#"></a>
-							<a class="book-icon" href="#"></a>								
-						</div>
-						<div class="itemlabel">
-							<button class="bookbtn right mt1">Book</button>						
-							<b>Mabely Grand Hotel</b><br/>
-							<p class="lightgrey"><span class="green size14"><b>$45.00</b></span> avg/night</p>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="listitem">
-							<img src="images/items/item6.jpg" alt=""/>
-							<div class="liover"></div>
-							<a class="fav-icon" href="#"></a>
-							<a class="book-icon" href="#"></a>									
-						</div>
-						<div class="itemlabel">
-							<button class="bookbtn right mt1">Book</button>						
-							<b>Mabely Grand Hotel</b><br/>
-							<p class="lightgrey"><span class="green size14"><b>$45.50</b></span> avg/night</p>
-						</div>					
-					</div>		
-
-					<div class="clearfix"></div>
-					<div class="offset-2"><hr class="featurette-divider3"></div>
-					
-					<div class="col-md-4">
-						<div class="listitem">
-							<img src="images/items/item7.jpg" alt=""/>
-							<div class="liover"></div>
-							<a class="fav-icon" href="#"></a>
-							<a class="book-icon" href="#"></a>									
-						</div>
-						<div class="itemlabel">
-							<button class="bookbtn right mt1">Book</button>						
-							<b>Mabely Grand Hotel</b><br/>
-							<p class="lightgrey"><span class="green size14"><b>$45.90</b></span> avg/night</p>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="listitem">
-							<img src="images/items/item8.jpg" alt=""/>
-							<div class="liover"></div>
-							<a class="fav-icon" href="#"></a>
-							<a class="book-icon" href="#"></a>									
-						</div>
-						<div class="itemlabel">
-							<button class="bookbtn right mt1">Book</button>						
-							<b>Mabely Grand Hotel</b><br/>
-							<p class="lightgrey"><span class="green size14"><b>$50.00</b></span> avg/night</p>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="listitem">
-							<img src="images/items/item9.jpg" alt=""/>
-							<div class="liover"></div>
-							<a class="fav-icon" href="#"></a>
-							<a class="book-icon" href="#"></a>									
-						</div>
-						<div class="itemlabel">
-							<button class="bookbtn right mt1">Book</button>						
-							<b>Mabely Grand Hotel</b><br/>
-							<p class="lightgrey"><span class="green size14"><b>$55.00</b></span> avg/night</p>
-						</div>					
 					</div>
 					
-					<div class="clearfix"></div>
-					<div class="offset-2"><hr class="featurette-divider3"></div>
 					
 					<div class="col-md-4">
+					  <div class="list-box">
 						<div class="listitem">
-							<img src="images/items/item10.jpg" alt=""/>
+							<img src="resources/images/A46A0121.jpg" alt=""/>
 							<div class="liover"></div>
-							<a class="fav-icon" href="#"></a>
-							<a class="book-icon" href="#"></a>									
 						</div>
 						<div class="itemlabel">
-							<button class="bookbtn right mt1">Book</button>						
-							<b>Mabely Grand Hotel</b><br/>
-							<p class="lightgrey"><span class="green size14"><b>$55.00</b></span> avg/night</p>
+							<span class="right  lred2 size14 ">Mise à jour le:25/11/2015</span>
+							<span><span class="glyphicon glyphicon-camera" aria-hidden="true"></span>4</span></br><br>
+							<span class=" lightgrey right mt1 green size20 ">170000</span>
+							<span class=" size20">Appartement</span><br/></br>
+							
+							<span class="right size20" >Location</span>
+							<span class="size20">Rivera 2 </span><br/><br/>
+							
+							<button href="#" class="btn btn-xs right btngrd">Detail</button>
+							<span class="size14">5<span class="glyphicon glyphicon-bed"></span></span>
+							<span class="size14">Surface 65m2</span>
+						</div>
 						</div>
 					</div>
+					
+					
 					<div class="col-md-4">
+					  <div class="list-box">
 						<div class="listitem">
-							<img src="images/items/item11.jpg" alt=""/>
+							<img src="resources/images/A46A0121.jpg" alt=""/>
 							<div class="liover"></div>
-							<a class="fav-icon" href="#"></a>
-							<a class="book-icon" href="#"></a>									
 						</div>
 						<div class="itemlabel">
-							<button class="bookbtn right mt1">Book</button>						
-							<b>Mabely Grand Hotel</b><br/>
-							<p class="lightgrey"><span class="green size14"><b>$59.00</b></span> avg/night</p>
+							<span class="right  lred2 size14 ">Mise à jour le:25/11/2015</span>
+							<span><span class="glyphicon glyphicon-camera" aria-hidden="true"></span>4</span></br><br>
+							<span class=" lightgrey right mt1 green size20 ">170000</span>
+							<span class=" size20">Appartement</span><br/></br>
+							
+							<span class="right size20" >Location</span>
+							<span class="size20">Rivera 2 </span><br/><br/>
+							
+							<button href="#" class="btn btn-xs right btngrd">Detail</button>
+							<span class="size14">5<span class="glyphicon glyphicon-bed"></span></span>
+							<span class="size14">Surface 65m2</span>
+						</div>
 						</div>
 					</div>
+					
+					
 					<div class="col-md-4">
+					  <div class="list-box">
 						<div class="listitem">
-							<img src="images/items/item12.jpg" alt=""/>
+							<img src="resources/images/A46A0121.jpg" alt=""/>
 							<div class="liover"></div>
-							<a class="fav-icon" href="#"></a>
-							<a class="book-icon" href="#"></a>									
 						</div>
 						<div class="itemlabel">
-							<button class="bookbtn right mt1">Book</button>						
-							<b>Mabely Grand Hotel</b><br/>
-							<p class="lightgrey"><span class="green size14"><b>$61.00</b></span> avg/night</p>
-						</div>					
+							<span class="right  lred2 size14 ">Mise à jour le:25/11/2015</span>
+							<span><span class="glyphicon glyphicon-camera" aria-hidden="true"></span>4</span></br><br>
+							<span class=" lightgrey right mt1 green size20 ">170000</span>
+							<span class=" size20">Appartement</span><br/></br>
+							
+							<span class="right size20" >Location</span>
+							<span class="size20">Rivera 2 </span><br/><br/>
+							
+							<button href="#" class="btn btn-xs right btngrd">Detail</button>
+							<span class="size14">5<span class="glyphicon glyphicon-bed"></span></span>
+							<span class="size14">Surface 65m2</span>
+						</div>
+						</div>
 					</div>
-
-					<div class="clearfix"></div>
-					<div class="offset-2"><hr class="featurette-divider3"></div>
-
+					
+					<div class="col-md-4">
+					  <div class="list-box">
+						<div class="listitem">
+							<img src="resources/images/A46A0121.jpg" alt=""/>
+							<div class="liover"></div>
+						</div>
+						<div class="itemlabel">
+							<span class="right  lred2 size14 ">Mise à jour le:25/11/2015</span>
+							<span><span class="glyphicon glyphicon-camera" aria-hidden="true"></span>4</span></br><br>
+							<span class=" lightgrey right mt1 green size20 ">170000</span>
+							<span class=" size20">Appartement</span><br/></br>
+							
+							<span class="right size20" >Location</span>
+							<span class="size20">Rivera 2 </span><br/><br/>
+							
+							<button href="#" class="btn btn-xs right btngrd">Detail</button>
+							<span class="size14">5<span class="glyphicon glyphicon-bed"></span></span>
+							<span class="size14">Surface 65m2</span>
+						</div>
+						</div>
+					</div>
+					
+					<div class="col-md-4">
+					  <div class="list-box">
+						<div class="listitem">
+							<img src="resources/images/A46A0121.jpg" alt=""/>
+							<div class="liover"></div>
+						</div>
+						<div class="itemlabel">
+							<span class="right  lred2 size14 ">Mise à jour le:25/11/2015</span>
+							<span><span class="glyphicon glyphicon-camera" aria-hidden="true"></span>4</span></br><br>
+							<span class=" lightgrey right mt1 green size20 ">170000</span>
+							<span class=" size20">Appartement</span><br/></br>
+							
+							<span class="right size20" >Location</span>
+							<span class="size20">Rivera 2 </span><br/><br/>
+							
+							<button href="#" class="btn btn-xs right btngrd">Detail</button>
+							<span class="size14">5<span class="glyphicon glyphicon-bed"></span></span>
+							<span class="size14">Surface 65m2</span>
+						</div>
+						</div>
+					</div>
+					
+					
 				</div>	
 				<!-- End of offset1-->		
 
@@ -1852,8 +1812,70 @@
 		
 	</div>
 			<!-- END OF CONTENT -->
-	
+	         <!---footer-->
+     	<div class="footerbg">
+		<div class="container">		
+			<div class="col-md-3">
+				<span class="ftitleblack">Suivez toute l'actualité de smartImmo.net sur:</span>
+				<div class="scont">
+					<a href="#" class="social1b"><img src="resources/images/icon-facebook.png" alt=""/></a>
+					<a href="#" class="social2b"><img src="resources/images/icon-twitter.png" alt=""/></a>
+					<a href="#" class="social4b"><img src="resources/images/icon-youtube.png" alt=""/></a>
+					<br/><br/><br/>
+					<a href="#"><img src="resources/images/logo.png" alt="" /></a><br/>
+					<span class="grey2">&copy; 2015  |  <a href="#">Privacy Policy</a><br/>
+					All Rights Reserved </span>
+					<br/><br/>
+					
+				</div>
+			</div>
+			<!-- End of column 1-->
+			
+			<div class="col-md-3">
+				<span class="ftitleblack">Travel Specialists</span>
+				<br/><br/>
+				<ul class="footerlistblack">
+					<li><a href="#">Golf Vacations</a></li>
+					<li><a href="#">Ski & Snowboarding</a></li>
+					<li><a href="#">Disney Parks Vacations</a></li>
+					<li><a href="#">Disneyland Vacations</a></li>
+					<li><a href="#">Disney World Vacations</a></li>
+					<li><a href="#">Vacations As Advertised</a></li>
+				</ul>
+			</div>
+			<!-- End of column 2-->		
+			
+			<div class="col-md-3">
+				<span class="ftitleblack">Travel Specialists</span>
+				<br/><br/>
+				<ul class="footerlistblack">
+					<li><a href="#">Weddings</a></li>
+					<li><a href="#">Accessible Travel</a></li>
+					<li><a href="#">Disney Parks</a></li>
+					<li><a href="#">Cruises</a></li>
+					<li><a href="#">Round the World</a></li>
+					<li><a href="#">First Class Flights</a></li>
+				</ul>				
+			</div>
+			<!-- End of column 3-->		
+			
+			<div class="col-md-3 grey">
+				<span class="ftitleblack">Newsletter</span>
+				<div class="relative">
+					<input type="email" class="form-control fccustom2black" id="exampleInputEmail1" placeholder="Enter email">
+					<button type="submit" class="btn btn-default btncustom">Submit<img src="images/arrow.png" alt=""/></button>
+				</div>
+				<br/><br/>
+				<span class="ftitleblack">Customer support</span><br/>
+				<span class="pnr">1-866-599-6674</span><br/>
+				<span class="grey2">office@travel.com</span>
+			</div>			
+			<!-- End of column 4-->			
 		
+			
+			
+		</div>	
+	</div>		
 <%@ include file="footer.jsp" %>>
     
 <%@ include file ="java.jsp" %>
