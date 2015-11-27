@@ -1,3 +1,5 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="f" %>
 <%@ include file ="head.jsp" %>
 
   <body id="top">
@@ -143,8 +145,8 @@
 				<div class="bs-example bs-example-tabs cstyle04">
 				
 					<ul class="nav nav-tabs myTab2pos" id="myTab2">
-								<li onclick="mySelectUpdate()" class="active"><a data-toggle="tab" href="#airtab3"><span class="hidetext">Acheter</span>&nbsp;</a></li>
-								<li onclick="mySelectUpdate()" class=""><a data-toggle="tab" href="#hoteltab3"><span class="hidetext">Louer</span>&nbsp;</a></li>
+								<li onclick="mySelectUpdate()" class="active"><a data-toggle="tab" href="<c:url value='/' />"><span class="hidetext">Acheter</span>&nbsp;</a></li>
+								<li onclick="mySelectUpdate()" class=""><a data-toggle="tab" href="<c:url value='/' />"><span class="hidetext">Louer</span>&nbsp;</a></li>
 								<!--
 									<li onclick="mySelectUpdate()" class=""><a data-toggle="tab" href="#vacationstab3"><span class="suitcasetab3"></span><span class="hidetext">Vacations</span>&nbsp;</a></li>
 								-->
@@ -155,25 +157,37 @@
 								<!-- Tab airtab3 -->
 								<div class="tab-pane  active" id="airtab3">
 								
-									<form class="form-inline col-lg-12">
+									<f:form method="post" modelAttribute="formSearch"class="form-inline col-lg-12">
 								<div class="form-group col-lg-3">
-									<span class="opensans size13"><b>L'endroit</b><br><br></span>
+									<span class="opensans size13"><b>VILLE</b><br><br></span>
 									<input type="text" class="form-control" style="text-align:left" placeholder="saisir au moins 3 caractères">
-								</div>	
-								<div class="form-group col-lg-3">
-									<span class="opensans size13"><b>Sous Categorie Bien</b><br><br></span>
-									<select class="form-control mySelectBoxClass">
-										<option selected>0</option>
-										<option>1</option>
-                                        <option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-                                    </select>
+									<div class="has-error">
+                        				<f:errors path="ville" class="help-inline"/>
+                  				    </div>
 								</div>	
 								
 								<div class="form-group col-lg-3">
-									<span class="opensans size13"><b>Prix minimum</b><br><br></span>
+									<span class="opensans size13"><b>QUARTIER</b><br><br></span>
+									<div class="input-group">
+										<input type="text" class="form-control" style="text-align:left" placeholder="prix min">
+										<span class="input-group-addon">Fcfa</span>
+									</div>
+									<div class="has-error">
+                        				<f:errors path="quartier" class="help-inline"/>
+                  				    </div>
+								</div>
+								
+								<div class="form-group col-lg-3">
+									<span class="opensans size13"><b>TYPE DE BIEN</b><br><br></span>
+									<f:select path="sousCategorie" items="${listSousCategorie}" class="form-control mySelectBoxClass">
+                                    </f:select>
+                                    <div class="has-error">
+                        				<f:errors path="sousCategorie" class="help-inline"/>
+                  				    </div>
+								</div>	
+								
+								<div class="form-group col-lg-3">
+									<span class="opensans size13"><b>PRIX MINIMUM</b><br><br></span>
 									<div class="input-group">
 										<input type="text" class="form-control" style="text-align:left" placeholder="prix min">
 										<span class="input-group-addon">Fcfa</span>
@@ -181,22 +195,26 @@
 								</div>
 								
 								<div class="form-group col-lg-3">
-									<span class="opensans size13"><b>Prix manimum</b><br><br></span>
+									<span class="opensans size13"><b>PRIX MAXIMUM</b><br><br></span>
 									<div class="input-group">
 										<input type="text" class="form-control" style="text-align:left" placeholder="prix max">
 										<span class="input-group-addon">Fcfa</span>
 									</div>
 								</div>
 									
-							</form>
+							</f:form>
 								</div>
 								<!-- End of Tab airtab3 -->
 								
 								<!-- Tab hoteltab3 -->
 								<div class="tab-pane " id="hoteltab3">
-									<form class="form-inline col-lg-12">
-								<div class="form-group col-lg-2">
-									<span class="opensans size13"><b>Ville</b></span>
+							<form class="form-inline col-lg-12">
+								<div class="form-group col-lg-3">
+									<span class="opensans size13"><b>VILLE</b><br><br></span>
+									<input type="text" class="form-control" style="text-align:left" placeholder="saisir au moins 3 caractères">
+								</div>	
+								<div class="form-group col-lg-3">
+									<span class="opensans size13"><b>TYPE DE BIEN</b><br><br></span>
 									<select class="form-control mySelectBoxClass">
 										<option selected>0</option>
 										<option>1</option>
@@ -206,49 +224,17 @@
 										<option>5</option>
                                     </select>
 								</div>	
-								<div class="form-group col-lg-2">
-									<span class="opensans size13"><b>Categorie Bien</b></span>
-									<select class="form-control mySelectBoxClass">
-										<option selected>0</option>
-										<option>1</option>
-                                        <option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-                                    </select>
-								</div>	
-								<div class="form-group col-lg-2">
-									<span class="opensans size13"><b>Sous categorie bien</b></span>
-									<select class="form-control mySelectBoxClass">
-										<option selected>0</option>
-										<option>1</option>
-                                        <option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-                                    </select>
-								</div>	
-								<div class="form-group col-lg-2">
-									<span class="opensans size13"><b>Sous categorie bien</b></span>
-									<select class="form-control mySelectBoxClass">
-										<option selected>0</option>
-										<option>1</option>
-                                        <option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-                                    </select>
-								</div>	
-								<div class="form-group col-lg-2">
-									<span class="opensans size13"><b>Prix minimum</b></span>
+								
+								<div class="form-group col-lg-3">
+									<span class="opensans size13"><b>PRIX MINIMUM</b><br><br></span>
 									<div class="input-group">
 										<input type="text" class="form-control" style="text-align:left" placeholder="prix min">
 										<span class="input-group-addon">Fcfa</span>
 									</div>
 								</div>
 								
-								<div class="form-group col-lg-2">
-									<span class="opensans size13"><b>Prix manimum</b></span>
+								<div class="form-group col-lg-3">
+									<span class="opensans size13"><b>PRIX MAXIMUM</b><br><br></span>
 									<div class="input-group">
 										<input type="text" class="form-control" style="text-align:left" placeholder="prix max">
 										<span class="input-group-addon">Fcfa</span>

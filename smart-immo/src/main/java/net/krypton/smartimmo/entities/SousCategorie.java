@@ -1,22 +1,17 @@
 package net.krypton.smartimmo.entities;
 
 import java.io.Serializable;
-import java.util.Collection;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class SousCategorie implements Serializable {
 	/**
 	 * 
@@ -28,7 +23,7 @@ public class SousCategorie implements Serializable {
 	private int idSousCat;
 	private String libelleSousCat;
 
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "id_categorie")
 	private Categorie categorie;
 
@@ -56,20 +51,21 @@ public class SousCategorie implements Serializable {
 		this.categorie = categorie;
 	}
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
+	public SousCategorie() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 
 	public SousCategorie(String libelleSousCat, Categorie categorie) {
 		super();
 		this.libelleSousCat = libelleSousCat;
-
 		this.categorie = categorie;
 	}
 
-	public SousCategorie() {
-		super();
-		// TODO Auto-generated constructor stub
+	@Override
+	public String toString()
+	{
+		return getLibelleSousCat();
 	}
 
 }

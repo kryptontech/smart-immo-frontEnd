@@ -2,6 +2,7 @@ package net.krypton.smartimmo.entities;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -25,7 +26,7 @@ public class Commune implements Serializable{
 	@Column(name="id_commune")
 	private int idCommune;
 	private String libelleCommune;
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="id_ville")
 	private Ville ville;
 

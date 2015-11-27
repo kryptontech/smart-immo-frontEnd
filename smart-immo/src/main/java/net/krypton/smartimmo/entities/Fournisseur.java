@@ -7,6 +7,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 public class Fournisseur implements Serializable{
@@ -19,13 +23,20 @@ public class Fournisseur implements Serializable{
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id_fournisseur")
 	private int idFournisseur;
+	@NotEmpty
 	private String pseudoFournisseur;
+	@NotEmpty
 	private String nomFournisseur;
+	@NotEmpty
 	private String emailFournisseur;
+	@NotEmpty
 	private String mdpFournisseur;
-	private int statuFournisseur;
+	@NotNull
+	private boolean statuFournisseur;
 	
+	@Size(min=8)
 	private String telFixeFournisseur;
+	@NotEmpty
 	private String telMobileFournisseur;
 	
 
@@ -40,11 +51,11 @@ public class Fournisseur implements Serializable{
 		this.telMobileFournisseur = telMobileFournisseur;
 	}
 
-	public int getStatuFournisseur() {
+	public boolean getStatuFournisseur() {
 		return statuFournisseur;
 	}
 
-	public void setStatuFournisseur(int statuFournisseur) {
+	public void setStatuFournisseur(boolean statuFournisseur) {
 		this.statuFournisseur = statuFournisseur;
 	}
 
@@ -110,4 +121,10 @@ public class Fournisseur implements Serializable{
 		// TODO Auto-generated constructor stub
 	}
 	
+	@Override
+	public String toString()
+	{
+		return getNomFournisseur();
+	}
+
 }

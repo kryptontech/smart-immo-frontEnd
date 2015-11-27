@@ -2,6 +2,7 @@ package net.krypton.smartimmo.entities;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -25,20 +26,20 @@ public class User implements Serializable{
 	private String nomUser;
 	private String prenomUser;
 	private String pseudoUser;
-	private int statuUser;
+	private boolean statuUser;
 	private String mdpUser;
 	private String mailUser;
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="id_admin")
 	private Admin admin;
 	
 	
 	
-	public int getStatuUser() {
+	public boolean getStatuUser() {
 		return statuUser;
 	}
 
-	public void setStatuUser(int statuUser) {
+	public void setStatuUser(boolean statuUser) {
 		this.statuUser = statuUser;
 	}
 

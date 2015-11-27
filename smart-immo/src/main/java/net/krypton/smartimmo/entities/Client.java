@@ -8,6 +8,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 @Entity
 
 	
@@ -23,6 +25,7 @@ public class Client implements Serializable{
 	private int idClient;
 	private String nomClient;
 	private String prenomClient;
+	@NotEmpty
 	private String mailClient;
 	private String telClient;
 	

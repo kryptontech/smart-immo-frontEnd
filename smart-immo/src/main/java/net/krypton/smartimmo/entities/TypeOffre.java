@@ -1,15 +1,14 @@
 package net.krypton.smartimmo.entities;
 
 import java.io.Serializable;
-import java.util.Collection;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+
+import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 public class TypeOffre implements Serializable {
@@ -22,6 +21,7 @@ public class TypeOffre implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_typeoffre")
 	private int idTypeOffre;
+	@NotEmpty
 	private String libelleTypeOffre;
 
 	public int getIdTypeOffre() {
@@ -50,4 +50,9 @@ public class TypeOffre implements Serializable {
 		this.libelleTypeOffre = libelleTypeOffre;
 	}
 
+	@Override
+	public String toString()
+	{
+		return getLibelleTypeOffre();
+	}
 }

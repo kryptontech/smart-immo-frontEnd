@@ -56,4 +56,6 @@ public class BienDaoImpl implements BienDao{
 		List<Bien> listBiens = req.getResultList();
 		return listBiens;
 	}
+	
+	
 }

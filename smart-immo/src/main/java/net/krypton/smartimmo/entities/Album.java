@@ -2,6 +2,7 @@ package net.krypton.smartimmo.entities;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -25,7 +26,7 @@ public class Album implements Serializable {
 	@Column(name="id_album")
 	private int idAlbum;
 	private String pathAlbum;
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="id_bien")
 	private Bien bien;
 	

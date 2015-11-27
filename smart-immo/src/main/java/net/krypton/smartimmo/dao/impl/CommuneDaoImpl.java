@@ -6,8 +6,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
-import org.springframework.transaction.annotation.Transactional;
-
 import net.krypton.smartimmo.dao.CommuneDao;
 import net.krypton.smartimmo.entities.Commune;
 

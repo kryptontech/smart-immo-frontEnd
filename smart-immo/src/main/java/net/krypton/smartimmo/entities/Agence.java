@@ -3,6 +3,8 @@ package net.krypton.smartimmo.entities;
 
 import javax.persistence.Entity;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 @Entity
 public class Agence extends Fournisseur {
 
@@ -11,7 +13,9 @@ public class Agence extends Fournisseur {
 	 */
 	private static final long serialVersionUID = 4901531876191679728L;
 	private String siteWebAgence;
+	@NotEmpty
 	private String logoAgence;
+	@NotEmpty
 	private String adresseAgence;
 	
 	

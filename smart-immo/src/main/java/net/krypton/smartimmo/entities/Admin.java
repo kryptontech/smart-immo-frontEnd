@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 @Entity
 @Inheritance(strategy=InheritanceType.SINGLE_TABLE)
 public class Admin implements Serializable{
@@ -21,7 +23,10 @@ public class Admin implements Serializable{
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id_admin")
 	private int idAdmin;
+	@NotEmpty
 	private String typeUser;
+	
+	private boolean status;
 	
 
 	public Admin(String typeUser) {
@@ -46,10 +51,23 @@ public class Admin implements Serializable{
 	}
 
 
+
+	public boolean isStatus() {
+		return status;
+	}
+
+	public void setStatus(boolean status) {
+		this.status = status;
+	}
+
 	public Admin() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	
-	
+	@Override
+	public String toString()
+	{
+		return getTypeUser();
+	}
 }

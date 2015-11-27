@@ -3,6 +3,7 @@ package net.krypton.smartimmo.entities;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -31,27 +32,28 @@ public class Bien implements Serializable {
 	private String quartierBien;
 	private String descriptionBien;
 	private int nbPieceBien;
-	private String statutBien;
+	private boolean statutBien;
 	private Date datePubBien;
 	
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="id_fournisseur")
 	private Fournisseur fournisseur;
+	
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="Ville")
+	private Ville Ville;
 
 	
-	@ManyToOne
-	@JoinColumn(name="id_commune")
-	private Commune commune;
 	
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="id_disponibilite")
 	private Disponibilite disponibilite;
 	
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="id_typeoffre")
 	private TypeOffre typeoffre;
 	
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="id_souscategorie")
 	private SousCategorie souscategorie;
 
@@ -111,11 +113,11 @@ public class Bien implements Serializable {
 		this.nbPieceBien = nbPieceBien;
 	}
 
-	public String getStatutBien() {
+	public boolean getStatutBien() {
 		return statutBien;
 	}
 
-	public void setStatutBien(String statutBien) {
+	public void setStatutBien(boolean statutBien) {
 		this.statutBien = statutBien;
 	}
 
@@ -129,13 +131,6 @@ public class Bien implements Serializable {
 
 
 
-	public Commune getCommune() {
-		return commune;
-	}
-
-	public void setCommune(Commune commune) {
-		this.commune = commune;
-	}
 
 	public Disponibilite getDisponibilite() {
 		return disponibilite;
@@ -162,7 +157,7 @@ public class Bien implements Serializable {
 	}
 
 	public Bien(String titreBien, double superficieBien, int prixBien, String quartierBien, String descriptionBien,
-			int nbPieceBien, String statutBien, Date datePubBien) {
+			int nbPieceBien, boolean statutBien, Date datePubBien) {
 		super();
 		this.titreBien = titreBien;
 		this.superficieBien = superficieBien;
@@ -186,5 +181,19 @@ public class Bien implements Serializable {
 		this.datePubBien = datePubBien;
 	}
 	
+
+	public Ville getVille() {
+		return Ville;
+	}
+
+	public void setVille(Ville ville) {
+		Ville = ville;
+	}
+	
+	@Override
+	public String toString()
+	{
+		return getTitreBien();
+	}
 	
 }

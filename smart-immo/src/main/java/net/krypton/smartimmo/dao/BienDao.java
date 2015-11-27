@@ -11,4 +11,5 @@ public interface BienDao {
 	public void supprimerBien (int idBien);
 	public Bien consulterBien(int idBien);
 	public List<Bien> consulterBiens();
+	
 }
