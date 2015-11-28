@@ -1,11 +1,12 @@
 package net.krypton.smartimmo.model;
 
 import net.krypton.smartimmo.entities.SousCategorie;
+import net.krypton.smartimmo.entities.TypeOffre;
 import net.krypton.smartimmo.entities.Ville;
 
 public class FormSearch {
 	
-	private boolean to;
+	private TypeOffre to;
 	private Ville ville;
 	private SousCategorie sousCategorie;
 	private double prixMini;
@@ -14,12 +15,13 @@ public class FormSearch {
 	
 	
 	
-	public boolean isTo() {
+	public TypeOffre getTo() {
 		return to;
 	}
-	public void setTo(boolean to) {
+	public void setTo(TypeOffre to) {
 		this.to = to;
 	}
+	
 	public String getQuartier() {
 		return quartier;
 	}
