@@ -5,7 +5,7 @@ import net.krypton.smartimmo.entities.Ville;
 
 public class FormSearch {
 	
-	
+	private boolean to;
 	private Ville ville;
 	private SousCategorie sousCategorie;
 	private double prixMini;
@@ -14,6 +14,12 @@ public class FormSearch {
 	
 	
 	
+	public boolean isTo() {
+		return to;
+	}
+	public void setTo(boolean to) {
+		this.to = to;
+	}
 	public String getQuartier() {
 		return quartier;
 	}

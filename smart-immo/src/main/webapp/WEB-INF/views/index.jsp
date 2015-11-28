@@ -45,7 +45,7 @@
 				
 					<!-- FADE -->
 					<li data-transition="fade" data-slotamount="1" data-masterspeed="300"> 										
-						<img src="resources/images/slider/slide3.jpg"" alt=""/>
+						<img src="resources/images/slider/slide3.jpg" alt=""/>
 						<div class="tp-caption scrolleffect sft"
 							 data-x="center"
 							 data-y="120"
@@ -145,8 +145,8 @@
 				<div class="bs-example bs-example-tabs cstyle04">
 				
 					<ul class="nav nav-tabs myTab2pos" id="myTab2">
-								<li onclick="mySelectUpdate()" class="active"><a data-toggle="tab" href="<c:url value='/' />"><span class="hidetext">Acheter</span>&nbsp;</a></li>
-								<li onclick="mySelectUpdate()" class=""><a data-toggle="tab" href="<c:url value='/' />"><span class="hidetext">Louer</span>&nbsp;</a></li>
+								<li onclick="mySelectUpdate()" class="active"><a data-toggle="tab" href="#airtab3"><span class="hidetext">Acheter</span>&nbsp;</a></li>
+								<li onclick="mySelectUpdate()" class=""><a data-toggle="tab" href="#hoteltab3"><span class="hidetext">Louer</span>&nbsp;</a></li>
 								<!--
 									<li onclick="mySelectUpdate()" class=""><a data-toggle="tab" href="#vacationstab3"><span class="suitcasetab3"></span><span class="hidetext">Vacations</span>&nbsp;</a></li>
 								-->
@@ -157,10 +157,10 @@
 								<!-- Tab airtab3 -->
 								<div class="tab-pane  active" id="airtab3">
 								
-									<f:form method="post" modelAttribute="formSearch"class="form-inline col-lg-12">
-								<div class="form-group col-lg-3">
+									<f:form method="post" modelAttribute="formSearch" class="form-inline col-lg-12">
+								<div class="form-group col-lg-2">
 									<span class="opensans size13"><b>VILLE</b><br><br></span>
-									<input type="text" class="form-control" style="text-align:left" placeholder="saisir au moins 3 caractères">
+									<f:input type="text" path="ville" id="ville" class="form-control" style="text-align:left" placeholder="la ville" />
 									<div class="has-error">
                         				<f:errors path="ville" class="help-inline"/>
                   				    </div>
@@ -169,89 +169,113 @@
 								<div class="form-group col-lg-3">
 									<span class="opensans size13"><b>QUARTIER</b><br><br></span>
 									<div class="input-group">
-										<input type="text" class="form-control" style="text-align:left" placeholder="prix min">
-										<span class="input-group-addon">Fcfa</span>
+										<f:input path="quartierBien" id="quartierBien" type="text" class="form-control" style="text-align:left" placeholder="le quartier" />
 									</div>
 									<div class="has-error">
-                        				<f:errors path="quartier" class="help-inline"/>
+                        				<f:errors path="quartierBien" class="help-inline"/>
                   				    </div>
 								</div>
 								
 								<div class="form-group col-lg-3">
 									<span class="opensans size13"><b>TYPE DE BIEN</b><br><br></span>
-									<f:select path="sousCategorie" items="${listSousCategorie}" class="form-control mySelectBoxClass">
+									<f:select path="souscategorie" items="${listSousCategorie}" class="form-control ">
                                     </f:select>
                                     <div class="has-error">
-                        				<f:errors path="sousCategorie" class="help-inline"/>
+                        				<f:errors path="souscategorie" class="help-inline"/>
                   				    </div>
 								</div>	
 								
-								<div class="form-group col-lg-3">
+								<div class="form-group col-lg-2">
 									<span class="opensans size13"><b>PRIX MINIMUM</b><br><br></span>
 									<div class="input-group">
-										<input type="text" class="form-control" style="text-align:left" placeholder="prix min">
+										<f:input path="prixBien" type="text" class="form-control" style="text-align:left" placeholder="prix min" />
 										<span class="input-group-addon">Fcfa</span>
+										<div class="has-error">
+                        				<f:errors path="prixBien" class="help-inline"/>
+                  				    </div>
 									</div>
 								</div>
 								
-								<div class="form-group col-lg-3">
+								<div class="form-group col-lg-2">
 									<span class="opensans size13"><b>PRIX MAXIMUM</b><br><br></span>
 									<div class="input-group">
-										<input type="text" class="form-control" style="text-align:left" placeholder="prix max">
+										<f:input type="text" path="prixBien" class="form-control" style="text-align:left" placeholder="prix max" />
 										<span class="input-group-addon">Fcfa</span>
+									<div class="has-error">
+                        				<f:errors path="prixBien" class="help-inline"/>
+                  				    </div>
 									</div>
-								</div>
-									
+								</div>	
+									<h2 class="left ca01">Mieux chercher, Mieux trouver</h2>
+									<button type="search" class="btn-search right mr30">Chercher</button>
 							</f:form>
 								</div>
 								<!-- End of Tab airtab3 -->
 								
 								<!-- Tab hoteltab3 -->
 								<div class="tab-pane " id="hoteltab3">
-							<form class="form-inline col-lg-12">
-								<div class="form-group col-lg-3">
+							<f:form method="post" modelAttribute="formSearch" class="form-inline col-lg-12">
+								<div class="form-group col-lg-2">
 									<span class="opensans size13"><b>VILLE</b><br><br></span>
-									<input type="text" class="form-control" style="text-align:left" placeholder="saisir au moins 3 caractères">
+									<f:input type="text" path="ville" id="ville" class="form-control" style="text-align:left" placeholder="la ville" />
+									<div class="has-error">
+                        				<f:errors path="ville" class="help-inline"/>
+                  				    </div>
 								</div>	
+								
+								<div class="form-group col-lg-3">
+									<span class="opensans size13"><b>QUARTIER</b><br><br></span>
+									<div class="input-group">
+										<f:input path="quartierBien" id="quartierBien" type="text" class="form-control" style="text-align:left" placeholder="le quartier" />
+									</div>
+									<div class="has-error">
+                        				<f:errors path="quartierBien" class="help-inline"/>
+                  				    </div>
+								</div>
+								
 								<div class="form-group col-lg-3">
 									<span class="opensans size13"><b>TYPE DE BIEN</b><br><br></span>
-									<select class="form-control mySelectBoxClass">
-										<option selected>0</option>
-										<option>1</option>
-                                        <option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-                                    </select>
+									<f:select path="souscategorie" items="${listSousCategorie}" class="form-control">
+                                    </f:select>
+                                    <div class="has-error">
+                        				<f:errors path="souscategorie" class="help-inline"/>
+                  				    </div>
 								</div>	
 								
-								<div class="form-group col-lg-3">
+								<div class="form-group col-lg-2">
 									<span class="opensans size13"><b>PRIX MINIMUM</b><br><br></span>
 									<div class="input-group">
-										<input type="text" class="form-control" style="text-align:left" placeholder="prix min">
+										<f:input path="prixBien" type="text" class="form-control" style="text-align:left" placeholder="prix min" />
 										<span class="input-group-addon">Fcfa</span>
+										<div class="has-error">
+                        				<f:errors path="prixBien" class="help-inline"/>
+                  				    </div>
 									</div>
 								</div>
 								
-								<div class="form-group col-lg-3">
+								<div class="form-group col-lg-2">
 									<span class="opensans size13"><b>PRIX MAXIMUM</b><br><br></span>
 									<div class="input-group">
-										<input type="text" class="form-control" style="text-align:left" placeholder="prix max">
+										<f:input type="text" path="prixBien" class="form-control" style="text-align:left" placeholder="prix max" />
 										<span class="input-group-addon">Fcfa</span>
+									<div class="has-error">
+                        				<f:errors path="prixBien" class="help-inline"/>
+                  				    </div>
 									</div>
 								</div>
-									
-							</form>								
+									<h2 class="left ca01">Mieux chercher, Mieux trouver</h2>
+									<button type="search" class="btn-search right mr30">Chercher</button>
+							</f:form>							
 						</div>
 					
 					</div>
 					
-					<div class="searchbg2">
+					<%-- <div class="searchbg2">
 						<h2 class="left ca01">Mieux chercher, Mieux trouver</h2>
 						<form action="list4.html">
 							<button type="search" class="btn-search right mr30">Chercher</button>
 						</form>
-					</div>
+					</div> --%>
 						
 				</div>
 			

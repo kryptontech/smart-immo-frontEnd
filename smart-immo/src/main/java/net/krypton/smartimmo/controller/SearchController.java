@@ -1,17 +1,22 @@
 package net.krypton.smartimmo.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import net.krypton.smartimmo.model.AllMethods;
-import net.krypton.smartimmo.service.BienService;
+import net.krypton.smartimmo.model.FormSearch;
 
-@Controller
+
 public class SearchController {
 
-	@Autowired
-	BienService bienService;
+	AllMethods  search;
 	
-	@Autowired
-	AllMethods allMethods;
+	@RequestMapping(value="recherche", method= RequestMethod.POST)
+	public String Recherche(FormSearch fs)
+	{
+		
+		
+		return "bien-list";
+	}
+	
 }

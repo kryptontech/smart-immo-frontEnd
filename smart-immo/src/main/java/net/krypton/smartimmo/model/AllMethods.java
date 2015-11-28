@@ -15,8 +15,8 @@ public class AllMethods {
 	private final static double PRIX_MIN = 0;
 	
 	@Autowired
-	static
-	BienService bienService;
+	static BienService bienService;
+	
 	
 	public static List<Bien> listeDesBiensParTypeOffre(String libTO)
 	{
@@ -571,7 +571,6 @@ public class AllMethods {
 	  return listBiens; 
 	 }
 
-	
 	public static List<Bien> listeDesBiensParQuartierEtPrix(String libTO, String quartier, double prixMin, double prixMax)
 	{
 		List<Bien> BVP = listeDesBiensParPrix(libTO, prixMin, prixMax);
