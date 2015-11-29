@@ -2,6 +2,8 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="f"%>
 <%@ include file="head.jsp"%>>
 
+
+
 <body id="top" class="thebg">
 
 	<!-- --------- Header -->
