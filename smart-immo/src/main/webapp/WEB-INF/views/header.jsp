@@ -11,7 +11,7 @@
 				  <span class="icon-bar"></span>
 				  <span class="icon-bar"></span>
 				</button>
-				<a href="index3.jsp" class="navbar-brand"><img src="resources/images/logo.png" alt="Smartimmo Logo" class="logo"/></a>
+				<a href="index3.jsp" class="navbar-brand"><img src="<%=request.getContextPath()%>/resources/images/logo.png" alt="Smartimmo Logo" class="logo"/></a>
 			  </div>
 			  <div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">

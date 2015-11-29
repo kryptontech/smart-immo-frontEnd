@@ -16,6 +16,6 @@
 		<p>Mentions légales - Protection des données personnelles - Tous droits réservés © 2015</p>
 		<p>L'extraction et l'utilisation à des fins professionnelles ou commerciales de tout ou partie de la présente base de données sont interdites. </p>
 		<br/><br/>
-		<a href="#top" class="gotop scroll"><img src="images/spacer.png" alt=""/></a>
+		<a href="#top" class="gotop scroll"><img src="<%=request.getContextPath()%>/resources/images/spacer.png" alt=""/></a>
 		</div>
 	</div>

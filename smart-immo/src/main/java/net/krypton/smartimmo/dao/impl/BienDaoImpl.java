@@ -43,10 +43,8 @@ public class BienDaoImpl implements BienDao{
 	@Override
 	public Bien consulterBien(int idBien)
 	{
-		Query req = em.createQuery("From Bien where idBien=:idBien");
-		req.setParameter(idBien, idBien);
-		Bien Biens = (Bien) req.getSingleResult();
-		return Biens;
+		
+		return  em.find(Bien.class, idBien);
 	}
 	
 	@Override

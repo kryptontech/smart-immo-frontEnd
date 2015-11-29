@@ -1672,141 +1672,30 @@
 
 				<div class="row offset-1">
 
-
+					<c:forEach items="${listBiensHome}" var="bien">
 					<div class="col-md-4">
 					  <div class="list-box">
 						<div class="listitem">
-							<img src="resources/images/A46A0121.jpg" alt=""/>
+							<img src="${bien.album}" alt=""/>
 							<div class="liover"></div>
 						</div>
 						<div class="itemlabel">
-							<span class="right  lred2 size14 ">Mise à jour le:25/11/2015</span>
+							<span class="right  lred2 size14 ">${bien.datePuBien}</span>
 							<span><span class="glyphicon glyphicon-camera" aria-hidden="true"></span>4</span></br><br>
-							<span class=" lightgrey right mt1 green size20 ">170000</span>
-							<span class=" size20">Appartement</span><br/></br>
+							<span class=" lightgrey right mt1 green size20 ">${bien.prix}</span>
+							<span class=" size20">DUPLEX</span><br/></br>
 							
-							<span class="right size20" >Location</span>
-							<span class="size20">Rivera 2 </span><br/><br/>
+							<span class="right size20" >LOCATION</span>
+							<span class="size20">${bien.quartier} </span><br/><br/>
 							
-							<button href="#" class="btn btn-xs right btngrd">Detail</button>
+							<a href="<c:url value='/detailsBien-${bien.idBien}' />" class="btn btn-xs right btngrd">Detail</a>
 							<span class="size14">5<span class="glyphicon glyphicon-bed"></span></span>
-							<span class="size14">Surface 65m2</span>
+							<span class="size14">${bien.superfie}</span>
 						</div>
 						</div>
 					</div>
-					
-					
-					<div class="col-md-4">
-					  <div class="list-box">
-						<div class="listitem">
-							<img src="resources/images/A46A0121.jpg" alt=""/>
-							<div class="liover"></div>
-						</div>
-						<div class="itemlabel">
-							<span class="right  lred2 size14 ">Mise à jour le:25/11/2015</span>
-							<span><span class="glyphicon glyphicon-camera" aria-hidden="true"></span>4</span></br><br>
-							<span class=" lightgrey right mt1 green size20 ">170000</span>
-							<span class=" size20">Appartement</span><br/></br>
-							
-							<span class="right size20" >Location</span>
-							<span class="size20">Rivera 2 </span><br/><br/>
-							
-							<button href="#" class="btn btn-xs right btngrd">Detail</button>
-							<span class="size14">5<span class="glyphicon glyphicon-bed"></span></span>
-							<span class="size14">Surface 65m2</span>
-						</div>
-						</div>
-					</div>
-					
-					
-					<div class="col-md-4">
-					  <div class="list-box">
-						<div class="listitem">
-							<img src="resources/images/A46A0121.jpg" alt=""/>
-							<div class="liover"></div>
-						</div>
-						<div class="itemlabel">
-							<span class="right  lred2 size14 ">Mise à jour le:25/11/2015</span>
-							<span><span class="glyphicon glyphicon-camera" aria-hidden="true"></span>4</span></br><br>
-							<span class=" lightgrey right mt1 green size20 ">170000</span>
-							<span class=" size20">Appartement</span><br/></br>
-							
-							<span class="right size20" >Location</span>
-							<span class="size20">Rivera 2 </span><br/><br/>
-							
-							<button href="#" class="btn btn-xs right btngrd">Detail</button>
-							<span class="size14">5<span class="glyphicon glyphicon-bed"></span></span>
-							<span class="size14">Surface 65m2</span>
-						</div>
-						</div>
-					</div>
-					
-					
-					<div class="col-md-4">
-					  <div class="list-box">
-						<div class="listitem">
-							<img src="resources/images/A46A0121.jpg" alt=""/>
-							<div class="liover"></div>
-						</div>
-						<div class="itemlabel">
-							<span class="right  lred2 size14 ">Mise à jour le:25/11/2015</span>
-							<span><span class="glyphicon glyphicon-camera" aria-hidden="true"></span>4</span></br><br>
-							<span class=" lightgrey right mt1 green size20 ">170000</span>
-							<span class=" size20">Appartement</span><br/></br>
-							
-							<span class="right size20" >Location</span>
-							<span class="size20">Rivera 2 </span><br/><br/>
-							
-							<button href="#" class="btn btn-xs right btngrd">Detail</button>
-							<span class="size14">5<span class="glyphicon glyphicon-bed"></span></span>
-							<span class="size14">Surface 65m2</span>
-						</div>
-						</div>
-					</div>
-					
-					<div class="col-md-4">
-					  <div class="list-box">
-						<div class="listitem">
-							<img src="resources/images/A46A0121.jpg" alt=""/>
-							<div class="liover"></div>
-						</div>
-						<div class="itemlabel">
-							<span class="right  lred2 size14 ">Mise à jour le:25/11/2015</span>
-							<span><span class="glyphicon glyphicon-camera" aria-hidden="true"></span>4</span></br><br>
-							<span class=" lightgrey right mt1 green size20 ">170000</span>
-							<span class=" size20">Appartement</span><br/></br>
-							
-							<span class="right size20" >Location</span>
-							<span class="size20">Rivera 2 </span><br/><br/>
-							
-							<button href="#" class="btn btn-xs right btngrd">Detail</button>
-							<span class="size14">5<span class="glyphicon glyphicon-bed"></span></span>
-							<span class="size14">Surface 65m2</span>
-						</div>
-						</div>
-					</div>
-					
-					<div class="col-md-4">
-					  <div class="list-box">
-						<div class="listitem">
-							<img src="resources/images/A46A0121.jpg" alt=""/>
-							<div class="liover"></div>
-						</div>
-						<div class="itemlabel">
-							<span class="right  lred2 size14 ">Mise à jour le:25/11/2015</span>
-							<span><span class="glyphicon glyphicon-camera" aria-hidden="true"></span>4</span></br><br>
-							<span class=" lightgrey right mt1 green size20 ">170000</span>
-							<span class=" size20">Appartement</span><br/></br>
-							
-							<span class="right size20" >Location</span>
-							<span class="size20">Rivera 2 </span><br/><br/>
-							
-							<button href="#" class="btn btn-xs right btngrd">Detail</button>
-							<span class="size14">5<span class="glyphicon glyphicon-bed"></span></span>
-							<span class="size14">Surface 65m2</span>
-						</div>
-						</div>
-					</div>
+					</c:forEach>
+				
 					
 					
 				</div>	
