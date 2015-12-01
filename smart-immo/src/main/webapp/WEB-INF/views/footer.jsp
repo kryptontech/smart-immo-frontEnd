@@ -1,21 +1,57 @@
-	<!-- FOOTER -->
-
-	
-	<div class="footerbg3black">
-		<div class="container center grey"> 
-		<a href="#">Accueil</a> | 
-		<a href="#">Plan du site</a> | 
-		<a href="#">Qui sommes nous?</a> | 
-		<a href="#">Nous contacter</a> | 
-		<br/></br>
-		<p>Smartimmo.net est une startup ivoirienne qui propose des annonces de location et de vente immobilières entre particuliers. 
-		   Vous trouverez sur Smartimmo.net de nombreuses annonces : des locations d'appartements, des locations de maisons, 
-		   des locations de lofts, des maisons à vendre, des annonces de ventes d'appartement. Ces annonces immobilières sont mises à 
-		   jour régulièrement afin de vous apporter un service optimum.
-		</p>
-		<p>Mentions légales - Protection des données personnelles - Tous droits réservés © 2015</p>
-		<p>L'extraction et l'utilisation à des fins professionnelles ou commerciales de tout ou partie de la présente base de données sont interdites. </p>
-		<br/><br/>
-		<a href="#top" class="gotop scroll"><img src="<%=request.getContextPath()%>/resources/images/spacer.png" alt=""/></a>
-		</div>
-	</div>
+<div class="footerbg3black">
+  <div class="container">  
+   <div class="col-md-3">
+    <span class="ftitle">Suivez toute l'actualité de smartImmo.net sur:</span>
+    <br/><br/>
+    <div class="scont">
+     <a href="#" class="social1b"><img src="resources/images/icon-facebook.png" alt=""/></a>
+     <a href="#" class="social2b"><img src="resources/images/icon-twitter.png" alt=""/></a>
+     <a href="#" class="social4b"><img src="resources/images/icon-youtube.png" alt=""/></a>
+     <br/><br/><br/>
+     <a href="#"><img src="resources/images/logo.png" alt="" /></a><br/>
+     <span class="white">&copy; 2015  |  <a href="#"> Tous droits réservé</a><br/>
+     </span>
+     <br/><br/>
+     
+    </div>
+   </div>
+   <!-- End of column 1-->
+   
+   <div class="col-md-3">
+    <span class="ftitle">Nos Annonces de vente</span>
+    <br/><br/>
+    <ul class="footerlistblack">
+     <li><a href="<c:url value='/Resultat'/>">Vente de maison</a></li>
+     <li><a href="<c:url value='/Resultat'/>">Vente de terrain</a></li>
+     <li><a href="<c:url value='/Resultat'/>">Vente de local commercial</a></li>
+    </ul>
+   </div>
+   <!-- End of column 2-->  
+   
+   <div class="col-md-3">
+    <span class="ftitle">Nos annonces de location</span>
+    <br/><br/>
+    <ul class="footerlistblack">
+     <li><a href="<c:url value='/Resultat'/>">Appartement</a></li>
+     <li><a href="<c:url value='/Resultat'/>">Studio</a></li>
+     <li><a href="<c:url value='/Resultat'/>">Villa</a></li>
+     <li><a href="<c:url value='/Resultat'/>">Terrain</a></li>
+    </ul>    
+   </div>
+   <!-- End of column 3-->  
+   
+   <div class="col-md-3 white">
+    <span class="ftitle">Recevez les meilleurs offres du marché</span>
+    <br/><br/>
+    <div class="relative">
+     <input type="email" class="form-control fccustom2" id="exampleInputEmail1" placeholder="Enter email">
+     <button type="submit" class="btn btn-default btncustom">Submit<img src="images/arrow.png" alt=""/></button>
+    </div>
+    <br/><br/>
+   </div>   
+   <!-- End of column 4-->   
+  
+   
+   
+  </div> 
+ </div>

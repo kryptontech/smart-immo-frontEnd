@@ -1,5 +1,4 @@
 <%@ include file ="head.jsp" %>
-	
   <body id="top" class="thebg" >
     <%@ include file="header.jsp" %>
 	<!-- /Top wrapper -->
@@ -26,7 +25,7 @@
 			
 			
 			<!-- CONTENT -->
-			<div class="col-md-12 pagecontainer2 offset-0">
+			<div class="col-md-12 pagecontainer2 space offset-0">
 				
 				<!-- LEFT MENU -->
 				<div class="col-md-1 offset-0">
@@ -72,387 +71,46 @@
 						<div class="clearfix"></div>
 							<br/>
 						
-						<span class="size16 bold">Mes informations personnelles</span>
-						<div class="line2"></div>
+						
+						
+	<!-- MODIFIER LES INFO DU FOURNISSEUR  -->					
+						
+						<legend class="size20 bold red">Mes informations personnelles</legend>
+						
 						  
 
 						<!-- COL 1 -->
+						<f:form method="post" modelAttribute="fFournisseur" class="well" >
 						<div class="col-md-12 offset-0">
-							<table>
-								<tr>
-									<td>
-										<div class="radio left">
-										  <label>
-											<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-											Ms. 
-										  </label>
-										</div>
-									</td>
-									<td>
-										<div class="radio">
-										  <label>
-											<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-											Mr. 
-										  </label>
-										</div>
-									</td>
-								</tr>
-							</table>
-							
 							
 							<br/>
-							Name*:
-							<input type="text" class="form-control" placeholder="John Doe" rel="popover" id="name" data-content="This field is mandatory" data-original-title="Here you can edit your name">
+							Nom*:
+							<f:input path="nomFournisseur" id="nomFournisseur" type="text" class="form-control" placeholder="John Doe" rel="popover"  data-content="This field is mandatory" data-original-title="Here you can edit your name"/>
 							<br/>
-							Username*:
-							<input type="text" class="form-control" placeholder="Jack" rel="popover" id="username" data-content="This field is mandatory" data-original-title="Here you can edit your username">						  
+							Pseudo*:
+							<f:input path="pseudoFournisseur"
+							id="pseudoFournisseur" type="text" class="form-control" placeholder="Jack" rel="popover"  data-content="This field is mandatory" data-original-title="Here you can edit your username"/>						  
 							<br/>
 							E-mail*:
-							<input type="text" class="form-control" placeholder="office@email.com" id="email" data-content="This field is mandatory" data-original-title="Edit your email address">
+							<f:input path="emailFournisseur"
+							id="emailFournisseur" type="text" class="form-control" placeholder="office@email.com"  data-content="This field is mandatory" data-original-title="Edit your email address"/>
 							<br/>
-							Phone number:
-							<input type="text" class="form-control" placeholder="">	
+							telephone:
+							<f:input path="telMobileFournisseur"
+							id="telMobileFournisseur" type="text" class="form-control" placeholder=""/>	
 							
 							<br/>
-							Birth date:<br/>
-							<div class="row">
-								<div class="col-md-4">
-									<select class="form-control mySelectBoxClass">
-									  <option>12:00 AM</option>
-									</select>
-								</div>
-								<div class="col-md-4">
-									<select class="form-control mySelectBoxClass">
-									  <option>12:00 AM</option>
-									</select>
-								</div>
-								<div class="col-md-4">
-									<select class="form-control mySelectBoxClass">
-									  <option>12:00 AM</option>
-									</select>
-								</div>
-							</div>
-
-
-						
-				
 						<br/>
-						<br/>						
-						<span class="size16 bold">Your address</span>
-						<div class="line2"></div>
-						
-						<br/>
-						Company name:
-						<input type="text" class="form-control" placeholder="">	
-						
-						<br/>
-						Address*:
-						<input type="text" class="form-control" placeholder="">							
-						
-						<br/>
-						Zip Code*:
-						<input type="text" class="form-control" placeholder="">
-
-						<br/>
-						Country*:
-						<select class="form-control mySelectBoxClass">
-						  <option value="">Country...</option>
-							<option value="AF">Afghanistan</option>
-							<option value="AL">Albania</option>
-							<option value="DZ">Algeria</option>
-							<option value="AS">American Samoa</option>
-							<option value="AD">Andorra</option>
-							<option value="AG">Angola</option>
-							<option value="AI">Anguilla</option>
-							<option value="AG">Antigua &amp; Barbuda</option>
-							<option value="AR">Argentina</option>
-							<option value="AA">Armenia</option>
-							<option value="AW">Aruba</option>
-							<option value="AU">Australia</option>
-							<option value="AT">Austria</option>
-							<option value="AZ">Azerbaijan</option>
-							<option value="BS">Bahamas</option>
-							<option value="BH">Bahrain</option>
-							<option value="BD">Bangladesh</option>
-							<option value="BB">Barbados</option>
-							<option value="BY">Belarus</option>
-							<option value="BE">Belgium</option>
-							<option value="BZ">Belize</option>
-							<option value="BJ">Benin</option>
-							<option value="BM">Bermuda</option>
-							<option value="BT">Bhutan</option>
-							<option value="BO">Bolivia</option>
-							<option value="BL">Bonaire</option>
-							<option value="BA">Bosnia &amp; Herzegovina</option>
-							<option value="BW">Botswana</option>
-							<option value="BR">Brazil</option>
-							<option value="BC">British Indian Ocean Ter</option>
-							<option value="BN">Brunei</option>
-							<option value="BG">Bulgaria</option>
-							<option value="BF">Burkina Faso</option>
-							<option value="BI">Burundi</option>
-							<option value="KH">Cambodia</option>
-							<option value="CM">Cameroon</option>
-							<option value="CA">Canada</option>
-							<option value="IC">Canary Islands</option>
-							<option value="CV">Cape Verde</option>
-							<option value="KY">Cayman Islands</option>
-							<option value="CF">Central African Republic</option>
-							<option value="TD">Chad</option>
-							<option value="CD">Channel Islands</option>
-							<option value="CL">Chile</option>
-							<option value="CN">China</option>
-							<option value="CI">Christmas Island</option>
-							<option value="CS">Cocos Island</option>
-							<option value="CO">Colombia</option>
-							<option value="CC">Comoros</option>
-							<option value="CG">Congo</option>
-							<option value="CK">Cook Islands</option>
-							<option value="CR">Costa Rica</option>
-							<option value="CT">Cote D'Ivoire</option>
-							<option value="HR">Croatia</option>
-							<option value="CU">Cuba</option>
-							<option value="CB">Curacao</option>
-							<option value="CY">Cyprus</option>
-							<option value="CZ">Czech Republic</option>
-							<option value="DK">Denmark</option>
-							<option value="DJ">Djibouti</option>
-							<option value="DM">Dominica</option>
-							<option value="DO">Dominican Republic</option>
-							<option value="TM">East Timor</option>
-							<option value="EC">Ecuador</option>
-							<option value="EG">Egypt</option>
-							<option value="SV">El Salvador</option>
-							<option value="GQ">Equatorial Guinea</option>
-							<option value="ER">Eritrea</option>
-							<option value="EE">Estonia</option>
-							<option value="ET">Ethiopia</option>
-							<option value="FA">Falkland Islands</option>
-							<option value="FO">Faroe Islands</option>
-							<option value="FJ">Fiji</option>
-							<option value="FI">Finland</option>
-							<option value="FR">France</option>
-							<option value="GF">French Guiana</option>
-							<option value="PF">French Polynesia</option>
-							<option value="FS">French Southern Ter</option>
-							<option value="GA">Gabon</option>
-							<option value="GM">Gambia</option>
-							<option value="GE">Georgia</option>
-							<option value="DE">Germany</option>
-							<option value="GH">Ghana</option>
-							<option value="GI">Gibraltar</option>
-							<option value="GB">Great Britain</option>
-							<option value="GR">Greece</option>
-							<option value="GL">Greenland</option>
-							<option value="GD">Grenada</option>
-							<option value="GP">Guadeloupe</option>
-							<option value="GU">Guam</option>
-							<option value="GT">Guatemala</option>
-							<option value="GN">Guinea</option>
-							<option value="GY">Guyana</option>
-							<option value="HT">Haiti</option>
-							<option value="HW">Hawaii</option>
-							<option value="HN">Honduras</option>
-							<option value="HK">Hong Kong</option>
-							<option value="HU">Hungary</option>
-							<option value="IS">Iceland</option>
-							<option value="IN">India</option>
-							<option value="ID">Indonesia</option>
-							<option value="IA">Iran</option>
-							<option value="IQ">Iraq</option>
-							<option value="IR">Ireland</option>
-							<option value="IM">Isle of Man</option>
-							<option value="IL">Israel</option>
-							<option value="IT">Italy</option>
-							<option value="JM">Jamaica</option>
-							<option value="JP">Japan</option>
-							<option value="JO">Jordan</option>
-							<option value="KZ">Kazakhstan</option>
-							<option value="KE">Kenya</option>
-							<option value="KI">Kiribati</option>
-							<option value="NK">Korea North</option>
-							<option value="KS">Korea South</option>
-							<option value="KW">Kuwait</option>
-							<option value="KG">Kyrgyzstan</option>
-							<option value="LA">Laos</option>
-							<option value="LV">Latvia</option>
-							<option value="LB">Lebanon</option>
-							<option value="LS">Lesotho</option>
-							<option value="LR">Liberia</option>
-							<option value="LY">Libya</option>
-							<option value="LI">Liechtenstein</option>
-							<option value="LT">Lithuania</option>
-							<option value="LU">Luxembourg</option>
-							<option value="MO">Macau</option>
-							<option value="MK">Macedonia</option>
-							<option value="MG">Madagascar</option>
-							<option value="MY">Malaysia</option>
-							<option value="MW">Malawi</option>
-							<option value="MV">Maldives</option>
-							<option value="ML">Mali</option>
-							<option value="MT">Malta</option>
-							<option value="MH">Marshall Islands</option>
-							<option value="MQ">Martinique</option>
-							<option value="MR">Mauritania</option>
-							<option value="MU">Mauritius</option>
-							<option value="ME">Mayotte</option>
-							<option value="MX">Mexico</option>
-							<option value="MI">Midway Islands</option>
-							<option value="MD">Moldova</option>
-							<option value="MC">Monaco</option>
-							<option value="MN">Mongolia</option>
-							<option value="MS">Montserrat</option>
-							<option value="MA">Morocco</option>
-							<option value="MZ">Mozambique</option>
-							<option value="MM">Myanmar</option>
-							<option value="NA">Nambia</option>
-							<option value="NU">Nauru</option>
-							<option value="NP">Nepal</option>
-							<option value="AN">Netherland Antilles</option>
-							<option value="NL">Netherlands (Holland, Europe)</option>
-							<option value="NV">Nevis</option>
-							<option value="NC">New Caledonia</option>
-							<option value="NZ">New Zealand</option>
-							<option value="NI">Nicaragua</option>
-							<option value="NE">Niger</option>
-							<option value="NG">Nigeria</option>
-							<option value="NW">Niue</option>
-							<option value="NF">Norfolk Island</option>
-							<option value="NO">Norway</option>
-							<option value="OM">Oman</option>
-							<option value="PK">Pakistan</option>
-							<option value="PW">Palau Island</option>
-							<option value="PS">Palestine</option>
-							<option value="PA">Panama</option>
-							<option value="PG">Papua New Guinea</option>
-							<option value="PY">Paraguay</option>
-							<option value="PE">Peru</option>
-							<option value="PH">Philippines</option>
-							<option value="PO">Pitcairn Island</option>
-							<option value="PL">Poland</option>
-							<option value="PT">Portugal</option>
-							<option value="PR">Puerto Rico</option>
-							<option value="QA">Qatar</option>
-							<option value="ME">Republic of Montenegro</option>
-							<option value="RS">Republic of Serbia</option>
-							<option value="RE">Reunion</option>
-							<option value="RO">Romania</option>
-							<option value="RU">Russia</option>
-							<option value="RW">Rwanda</option>
-							<option value="NT">St Barthelemy</option>
-							<option value="EU">St Eustatius</option>
-							<option value="HE">St Helena</option>
-							<option value="KN">St Kitts-Nevis</option>
-							<option value="LC">St Lucia</option>
-							<option value="MB">St Maarten</option>
-							<option value="PM">St Pierre &amp; Miquelon</option>
-							<option value="VC">St Vincent &amp; Grenadines</option>
-							<option value="SP">Saipan</option>
-							<option value="SO">Samoa</option>
-							<option value="AS">Samoa American</option>
-							<option value="SM">San Marino</option>
-							<option value="ST">Sao Tome &amp; Principe</option>
-							<option value="SA">Saudi Arabia</option>
-							<option value="SN">Senegal</option>
-							<option value="RS">Serbia</option>
-							<option value="SC">Seychelles</option>
-							<option value="SL">Sierra Leone</option>
-							<option value="SG">Singapore</option>
-							<option value="SK">Slovakia</option>
-							<option value="SI">Slovenia</option>
-							<option value="SB">Solomon Islands</option>
-							<option value="OI">Somalia</option>
-							<option value="ZA">South Africa</option>
-							<option value="ES">Spain</option>
-							<option value="LK">Sri Lanka</option>
-							<option value="SD">Sudan</option>
-							<option value="SR">Suriname</option>
-							<option value="SZ">Swaziland</option>
-							<option value="SE">Sweden</option>
-							<option value="CH">Switzerland</option>
-							<option value="SY">Syria</option>
-							<option value="TA">Tahiti</option>
-							<option value="TW">Taiwan</option>
-							<option value="TJ">Tajikistan</option>
-							<option value="TZ">Tanzania</option>
-							<option value="TH">Thailand</option>
-							<option value="TG">Togo</option>
-							<option value="TK">Tokelau</option>
-							<option value="TO">Tonga</option>
-							<option value="TT">Trinidad &amp; Tobago</option>
-							<option value="TN">Tunisia</option>
-							<option value="TR">Turkey</option>
-							<option value="TU">Turkmenistan</option>
-							<option value="TC">Turks &amp; Caicos Is</option>
-							<option value="TV">Tuvalu</option>
-							<option value="UG">Uganda</option>
-							<option value="UA">Ukraine</option>
-							<option value="AE">United Arab Emirates</option>
-							<option value="GB">United Kingdom</option>
-							<option value="US">United States of America</option>
-							<option value="UY">Uruguay</option>
-							<option value="UZ">Uzbekistan</option>
-							<option value="VU">Vanuatu</option>
-							<option value="VS">Vatican City State</option>
-							<option value="VE">Venezuela</option>
-							<option value="VN">Vietnam</option>
-							<option value="VB">Virgin Islands (Brit)</option>
-							<option value="VA">Virgin Islands (USA)</option>
-							<option value="WK">Wake Island</option>
-							<option value="WF">Wallis &amp; Futana Is</option>
-							<option value="YE">Yemen</option>
-							<option value="ZR">Zaire</option>
-							<option value="ZM">Zambia</option>
-							<option value="ZW">Zimbabwe</option>
-						</select>
-						
-						<br/><br/>
-						City*:
-						<input type="text" class="form-control" placeholder="ex: London">
-
-						<br/>
-						Region/State*:
-						<input type="text" class="form-control" placeholder="">
-
-					    <button type="submit" class="bluebtn margtop20">Update</button>	
-						</div>
-						<!-- END OF COL 1 -->
-						
-						<div class="clearfix"></div><br/><br/><br/>
 						
 						
-						<div class="row">
-							<div class="col-md-4 grey">
-								<span class="size16 bold dark">Personal details</span>
-								<div class="line2"></div>
-								<a href="#" class="clblue">New York Marriott Marquis</a> from <span class="bold green">$150</span><br/>
-								<a href="#" class="clblue">The Jade Hotel</a> from <span class="bold green">$49</span><br/>
-								<a href="#">See all</a>
-							</div>
-							<div class="col-md-4">
-								<span class="size16 bold dark">Wish lists</span>
-								<div class="line2"></div>
-								<a href="#" class="clblue">Incredible places</a> (1)<br/>
-								<a href="#" class="clblue">My next places</a> (0)<br/>
-								<a href="#">+ Add new category</a>							
-							</div>						
-							<div class="col-md-4">
-								<span class="size16 bold dark">Your past bookings</span>
-								<div class="line2"></div>				
-								<a href="#" class="clblue">Solita Soho Hotel</a> from <span class="bold green">$150</span><br/>
-								<a href="#" class="clblue">Helmsley Park Lane Hotel</a> from <span class="bold green">$49</span><br/>
-								<a href="#">See all</a>							
-							</div>			
-						</div>
-						
-						
-						
-						
-						
+					    <button type="submit" class="btn btn-custom margtop20">Modifier</button>					    
+					    </div>	
+						</f:form>		
 					  </div>
-					  <!-- END OF TAB 1 -->	
 					  
-					  <!-- TAB 2 -->					  
+ <!-- FIN DES INFO SUR LE FOURNISSEUR  -->	
+<!-- TAB BIEN POUR UN FOURNISSEUR   -->
+					  					  
 					  <div class="tab-pane"id="bookings">
 						<div class="padding40">
 						  
@@ -460,191 +118,199 @@
 							<br/>
 							
 							<div class="relative margtop10">
-							<ul class="nav nav-tabs myTab2pos" id="myTab2">
-								<li onclick="mySelectUpdate()" class="active"><a data-toggle="tab" href="#airtab3"><span class="hidetext">Type d'offre</span>&nbsp;</a></li>
-								<li onclick="mySelectUpdate()" class=""><a data-toggle="tab" href="#hoteltab3"><span class="hidetext">Description du bien</span>&nbsp;</a></li>
-								<!--
-									<li onclick="mySelectUpdate()" class=""><a data-toggle="tab" href="#vacationstab3"><span class="suitcasetab3"></span><span class="hidetext">Vacations</span>&nbsp;</a></li>
-								-->
-								</ul>
-						
-							<div class="tab-content6">
+							 <f:form method="POST" action="profileAddBien" modelAttribute="formBien" class="form-horizontal col-lg-12">
 							
-								<!-- Tab airtab3 -->
-								<div class="tab-pane row active" id="airtab3">
-									<form class="form-inline col-lg-12">
-									  <div class="row">
-										<div class="form-group col-lg-6">
-											<span class="opensans" for="typ01"><b>Mettre un bien en location</b></span>
-											<input type="radio" class="radio" name="id_typeoffre" value="1" id="typ01">
-										</div>
-										<div class="form-group  col-lg-6">
-											<span class="opensans" for="typ02"><b>Mettre un bien en vente</b></span>
-											<input type="radio" class="radio" name="id_typeoffre" value="2" id="typ02">
-										</div>
-									   </div>
-										<div class="row">
-										 <button type="submit" class="btn-search4 right mr30">suivant</button>
-									   </div>
-									
-									</form>
-									
-								</div>
-								<!-- End of Tab airtab3 -->
-								
-								<!-- Tab hoteltab3 -->
-								<div class="tab-pane  row" id="hoteltab3">
-									<form class="form-horizontal col-lg-12">
-									   <div class="row">
+									   <div class=" row well">
+									   
+									   <div class="container">
 											<div class="form-group">
 												<label class="col-lg-3">Titre du bien:</label>
 												<div class="col-lg-8">
-													<input type="text" class="form-control" placeholder="donner un titre clair à votre bien"/>
+													<f:input type="text" path="titreBien" id="titreBien" class="form-control input-sm"/>
+			                                         <div class="has-error">
+			                                           <f:errors path="titreBien" class="help-inline"/>
+			                                          </div>
 												</div>
 											</div>
 									   </div>
-									  
-									    <div class="row">
+									   <br>
+												
+										<div class="container">
+											<div class="form-group">
+												<label class="col-lg-3">Type Offre</label>
+												<div class="col-lg-8">
+													<f:select path="typeoffre" items="${listTypeOffre}" class="form-control">
+   					                                 </f:select>
+                                                     <div class="has-error">
+                                                       <f:errors path="typeoffre" class="help-inline"/>
+                    								</div>
+												</div>
+											</div>
+									   </div>
+									  <br>
+												
+										<div class="container">
+											<div class="form-group">
+												<label class="col-lg-3">Type de bien</label>
+												<div class="col-lg-8">
+													<f:select path="souscategorie" class="form-control" items="${listSousCategorie}">
+   													</f:select>
+                  									  <div class="has-error">
+                        								<f:errors path="souscategorie" class="help-inline"/>
+                   									 </div>
+												</div>
+											</div>
+									   </div>
+									   </div>
+									   
+										<div class=" row well">		
+									    <div class="container">
 											<div class="form-group">
 												<label class="col-lg-3">Ville:</label>
 												<div class="col-lg-8">
-													<select class="form-control">
-														<option>Ville1</option>
-														<option>Ville2</option>
-														<option>Ville3</option>
-													</select>
+													 <f:select path="ville" class="form-control" items="${listVille}">
+   													</f:select>
+                   										 <div class="has-error">
+                     							   <f:errors path="ville" class="help-inline"/>
+                   									 </div>
 												</div>
 											</div>
 									   </div>
-									   
-									   <div class="row">
-											<div class="form-group">
-												<label class="col-lg-3">Commune:</label>
-												<div class="col-lg-8">
-													<select class="form-control">
-														<option>Commune1</option>
-														<option>Commune2</option>
-														<option>Commune3</option>
-													</select>
-												</div>
-											</div>
-									   </div>
-									    <div class="row">
+									   <br>
+												
+									    <div class="container">
 											<div class="form-group">
 												<label class="col-lg-3">Quartier:</label>
 												<div class="col-lg-8">
-													<input  type="text"class="form-control">
+													<f:input type="text" path="quartierBien" id="quartierBien" class="form-control"/>
+                   								<div class="has-error">
+                     							  <f:errors path="quartierBien" class="help-inline"/>
+                    							</div>
 												</div>
 											</div>
 									   </div>
-									    <div class="row">
-											<div class="form-group">
-												<label class="col-lg-3">Categorie du bien:</label>
-												<div class="col-lg-8">
-													<select class="form-control">
-														<option>Que proposez-vous?</option>
-														<option>Appartement</option>
-														<option>Terrain</option>
-													</select>
-												</div>
-											</div>
-									   </div>
-									    <div class="row">
-											<div class="form-group">
-												<label class="col-lg-3">Sous Categorie du bien:</label>
-												<div class="col-lg-8">
-													<select class="form-control">
-														<option>Faites un choix</option>
-														<option>Appartement</option>
-														<option>Terrain</option>
-													</select>
-												</div>
-											</div>
-									   </div>
-									   <div class="row">
+									    <br>
+												
+									   <div class="container">
 											<div class="form-group">
 											 <label class="col-lg-3">Superficie:</label>
 											 <div class="input-group col-lg-4">
-												<input type="text" class="form-control">
+												<f:input type="number" path="superficieBien" id="superficieBien" class="form-control "/>
+							                   	<div class="has-error">
+							                        <f:errors path="superficieBien" class="help-inline"/>
+							                    </div>
 												<span class="input-group-addon">m2</span>
 											</div>
 											</div>
 									   </div>
-									   <div class="row">
+									   </div>
+									  
+										<div class=" row well">
+									   <div class="container">
 											<div class="form-group">
 											 <label class="col-lg-3">nombre de pieces</label>
 											 <div class="col-lg-4">
-											 	<input type="number" class="form-control" />
+											 	 <f:input type="number" path="nbPieceBien" id="nbPieceBien" class="form-control "/>
+							                    <div class="has-error">
+							                        <f:errors path="nbPieceBien" class="help-inline"/>
+							                    </div>
 											</div>
 											</div>
 									   </div>
-									   
-									   <div class="row">
+									   <br>
+												
+									   <div class="container">
 											<div class="form-group">
 											 <label class="col-lg-3">Entrer une description pour votre bien:</label>
 											 <div class="col-lg-8">
-											 	<textarea name="ameliorer"  class="form-control" id="ameliorer"></textarea>
+											 	 <f:textarea type="text" path="descriptionBien" id="descriptionBien" class="form-control "></f:textarea>
+							                    <div class="has-error">
+							                        <f:errors path="descriptionBien" class="help-inline"/>
+							                    </div>
 											</div>
 											</div>
 									   </div>
+									   <br>
+									     <div class="container">
 											<div class="form-group">
-											  <label>Ajouter des photos:</label>
-											  <div class="col-lg-12">
-											    	 <div class="col-lg-2">
-											        	<img src="" alt="Choisir une photo">
-											         </div>
-													 <div class="col-lg-2">
-														<img src="" alt="Choisir une photo">
-											         </div>
-													 <div class="col-lg-2">
-											        	<img src="" alt="Choisir une photo">
-											         </div>
-													 <div class="col-lg-2">
-											        	<img src="" alt="Choisir une photo">
-											         </div>
-													 <div class="col-lg-2">
-											        	<img src="" alt="Choisir une photo">
-											         </div>
-													 <div class="col-lg-2">
-											        	<img src="" alt="Choisir une photo">
-											         </div>
-											  </div>
+												<label class="col-lg-3">Disponibilite:</label>
+												<div class="col-lg-8">
+													 <f:select path="disponibilite" class="form-control " items="${listDisponibilite}">
+									   					</f:select>
+									                    <div class="has-error">
+									                        <f:errors path="disponibilite" class="help-inline"/>
+									                    </div>
+												</div>
 											</div>
-										<div class="cstyle02 row">
-										 <button type="submit" class="btn-search4 right mr30">Continuer</button>
 									   </div>
-									</form>
-								<!-- End of Tab hoteltab3 -->							
-								</div>
-							</div>
+									   </div>
+									  
+									  <div class=" row">
+							             <div class="form-group">
+							            
+							            <div class=" container col-lg-6">
+							             <a href="<c:url value='/AjouterAlbum'/>" class="btn-custom btn">Ajouter un album
+							             <span class="glyphicon glyphicon-picture"></span></a>
+							            </div>
+							           </div>
+							            </div>  
+							           
+										<div class=" row well">
+										<div class="form-group pull-right">
+										  
+												<div class=" container col-lg-6">
+													<button type="submit" class="btn-primary btn">Publier</button>
+												</div>
+												<div class="container col-lg-6">
+													<button type="reset" class="btn-custom btn">Annuler</button>
+												</div>
+									  </div>
+									   </div> 
+									</f:form>
 						</div>
 						  
 						
 						
 						</div>
 					  </div>
-					  <!-- END OF TAB 2 -->	
+<!-- TAB BIEN POUR UN FOURNISSEUR   -->
 					  
-					  <!-- TAB 3 -->					  
+ <!-- HISTORIQUE DES BIENS PAR FOURNISSEURS -->					  
 					  <div class="tab-pane active" id="history">
 						<div class="padding40">	
 						<div class="clearfix"></div>
 							<br/>
 							
-							<div class="col-md-3 bold">Date</div>
-							<div class="col-md-3 bold">Destination</div>
-							<div class="col-md-3 bold">Service</div>
-							<div class="col-md-3 bold textright">Action</div>
-							<div class="clearfix"></div>
-							<div class="line4"></div>
+							<table class="table table-striped table-bordered table-hover">
+								<thead>
+									<tr class="success">
+										<td class=" bold">Date de publication</td>
+										<td class=" bold">Titre du bien</td>
+										<td class=" bold">Quartier</td>
+										<td class=" bold">Action</td>
+									</tr>
+								</thead>
+								<tbody>
+								   <c:forEach  items="${listBiens}" var="biens">
+								  <tr>
+								  		
+								  			<td>${biens.datePubBien}</td>
+								  			<td>${biens.titreBien}</td>
+								  			<td>${biens.quartierBien}</td>
+								  			<td> 
+								  			    <button type="submit" class="btn-search5"><span class="glyphicon glyphicon-plus"></span></button>
+							                    <button type="submit" class="btn-search5"><span class="glyphicon glyphicon-trash"></span></button>
+							                </td>
+								  		
+								  </tr>
+								  </c:forEach>
+								</tbody>
+								
+							</table>
 							
-							<div class="col-md-3">01.05.09</div>
-							<div class="col-md-3">Grece - Zakynthos</div>
-							<div class="col-md-3">Hotel</div>
-							<div class="col-md-3 textright"><button type="submit" class="btn-search5"><span class="glyphicon glyphicon-plus"></span></button></div>
-							<div class="clearfix"></div>
 							
-							<div class="line4"></div>
+							
+							<!-- <div class="line4"></div>
 							<div class="col-md-3">17.07.10</div>
 							<div class="col-md-3">Spain - Malaga</div>
 							<div class="col-md-3">Flight Tickets</div>
@@ -677,63 +343,38 @@
 							<div class="col-md-3">Grand Britain - London</div>
 							<div class="col-md-3">Car + Hotel + Flight</div>
 							<div class="col-md-3 textright"><button type="submit" class="btn-search5"><span class="glyphicon glyphicon-plus"></span></button></div>
-							<div class="clearfix"></div>
+							<div class="clearfix"></div> -->
 							
 						</div>
 					  </div>
-					  <!-- END OF TAB 3 -->	
+ <!-- FIN HISTORIQUE DES BIENS PAR FOURNISSEURS -->
 					  
-					  <!-- TAB 4 -->					  
+ <!-- MOT DE PASSE DU FOURNISSEUR -->					  
 					  <div class="tab-pane" id="password">
 						<div class="padding40">
 						<div class="clearfix"></div>
 							<br/>
+							 
+							<legend class="red size20 bold">Changer de mot de passe</legend>
 							
-							<span class="dark size18">Change password</span>
-							<div class="line4"></div>
+							<f:form method="post" action ="profilePass-" class="well" modelAttribute="mdpform" >
+							Mot de Passe<br/>
+							<f:input path = "mdpFournisseur" type="text" class="form-control " placeholder=""/>
+							<br/>
+							Nouveau Mot de Pass<br/>
+							<f:input path="newMdpFournisseur" type="text" class="form-control " placeholder=""/>
+							<br/>
+							Confirmer<br/>
+							<input type="text" class="form-control " placeholder=""/>
+							<br/>
+							<button type="submit" class="btn btn-custom">Modifier</button>
+							</f:form>
+							<br/>
 							
-							Username<br/>
-							<input type="text" class="form-control " placeholder="">
-							<br/>
-							Old Password<br/>
-							<input type="text" class="form-control " placeholder="">
-							<br/>
-							New Password<br/>
-							<input type="text" class="form-control " placeholder="">
-							<br/>
-							<button type="submit" class="btn-search5">Save changes</button>
-							
-							<br/>
-							<br/>
-							<br/>
-							<span class="dark size18">Security</span>
-							<div class="line4"></div>
-							
-							What is your father's middle name?
-							<input type="password" class="form-control " placeholder="●●●●●●●●●">
-							
-							<br/>
-							Please choose a security question<br/>
-							<select class="form-control mySelectBoxClass hasCustomSelect cpwidth3">
-							  <option value="">What is your father's middle name?</option>
-							  <option value="">What was the name of your first pet</option>
-							  <option value="">What was your first telephone number</option>
-							</select>
-							
-							<br/>
-							<br/>
-							Please enter an answer<br/>
-							<input type="text" class="form-control " placeholder="">
-							
-							<br/>
-							 Please confirm your answer<br/>
-							<input type="text" class="form-control " placeholder="">
-							<br/>
-							<button type="submit" class="btn-search5">Save changes</button>
 							
 						</div>
 					  </div>
-					  <!-- END OF TAB 4 -->	
+<!-- MOT DE PASSE DU FOURNISSEUR -->
 			
 					  
 					</div>

@@ -1,5 +1,3 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="f" %>
 <%@ include file ="head.jsp" %>
 
   <body id="top">
@@ -14,51 +12,7 @@
 	-->
 	<div id="dajy" class="fullscreen-container mtslide sliderbg fixed">
 			<div class="fullscreenbanner">
-				<ul>
-
-					<!-- papercut fade turnoff flyin slideright slideleft slideup slidedown-->
 				
-				
-					<!-- FADE -->
-					<li data-transition="fade" data-slotamount="1" data-masterspeed="300"> 										
-						
-						<img src="resources/images/slider/slide1.jpg" alt=""/>
-						<div class="tp-caption scrolleffect sft"
-							 data-x="center"
-							 data-y="120"
-							 data-speed="1000"
-							 data-start="800"
-							 data-easing="easeOutExpo"  >
-						</div>	
-					</li>	
-					
-					<!-- FADE -->
-					<li data-transition="fade" data-slotamount="1" data-masterspeed="300"> 										
-						<img src="resources/images/slider/slide2.jpg" alt=""/>
-						<div class="tp-caption scrolleffect sft"
-							 data-x="center"
-							 data-y="120"
-							 data-speed="1000"
-							 data-start="800"
-							 data-easing="easeOutExpo">
-						</div>	
-					</li>	
-				
-					<!-- FADE -->
-					<li data-transition="fade" data-slotamount="1" data-masterspeed="300"> 										
-						<img src="resources/images/slider/slide3.jpg" alt=""/>
-						<div class="tp-caption scrolleffect sft"
-							 data-x="center"
-							 data-y="120"
-							 data-speed="1000"
-							 data-start="800"
-							 data-easing="easeOutExpo">
-						</div>	
-					</li>
-
-
-				</ul>
-				<div class="tp-bannertimer none"></div>
 			</div>
 		</div>
 
@@ -66,77 +20,7 @@
 		##############################
 		 - ACTIVATE THE BANNER HERE -
 		##############################
-		-->
-		<script type="text/javascript">
-
-			var tpj=jQuery;
-			tpj.noConflict();
-
-			tpj(document).ready(function() {
-
-			if (tpj.fn.cssOriginal!=undefined)
-				tpj.fn.css = tpj.fn.cssOriginal;
-
-				tpj('.fullscreenbanner').revolution(
-					{
-						delay:9000,
-						startwidth:1170,
-						startheight:600,
-
-						onHoverStop:"on",						// Stop Banner Timet at Hover on Slide on/off
-
-						thumbWidth:100,							// Thumb With and Height and Amount (only if navigation Tyope set to thumb !)
-						thumbHeight:50,
-						thumbAmount:3,
-
-						hideThumbs:0,
-						navigationType:"bullet",				// bullet, thumb, none
-						navigationArrows:"solo",				// nexttobullets, solo (old name verticalcentered), none
-
-						navigationStyle:false,				// round,square,navbar,round-old,square-old,navbar-old, or any from the list in the docu (choose between 50+ different item), custom
-
-
-						navigationHAlign:"left",				// Vertical Align top,center,bottom
-						navigationVAlign:"bottom",					// Horizontal Align left,center,right
-						navigationHOffset:30,
-						navigationVOffset:30,
-
-						soloArrowLeftHalign:"left",
-						soloArrowLeftValign:"center",
-						soloArrowLeftHOffset:20,
-						soloArrowLeftVOffset:0,
-
-						soloArrowRightHalign:"right",
-						soloArrowRightValign:"center",
-						soloArrowRightHOffset:20,
-						soloArrowRightVOffset:0,
-
-						touchenabled:"on",						// Enable Swipe Function : on/off
-
-
-						stopAtSlide:-1,							// Stop Timer if Slide "x" has been Reached. If stopAfterLoops set to 0, then it stops already in the first Loop at slide X which defined. -1 means do not stop at any slide. stopAfterLoops has no sinn in this case.
-						stopAfterLoops:-1,						// Stop Timer if All slides has been played "x" times. IT will stop at THe slide which is defined via stopAtSlide:x, if set to -1 slide never stop automatic
-
-						hideCaptionAtLimit:0,					// It Defines if a caption should be shown under a Screen Resolution ( Basod on The Width of Browser)
-						hideAllCaptionAtLilmit:0,				// Hide all The Captions if Width of Browser is less then this value
-						hideSliderAtLimit:0,					// Hide the whole slider, and stop also functions if Width of Browser is less than this value
-
-
-						fullWidth:"on",							// Same time only Enable FullScreen of FullWidth !!
-						fullScreen:"off",						// Same time only Enable FullScreen of FullWidth !!
-
-
-						shadow:0								//0 = no Shadow, 1,2,3 = 3 Different Art of Shadows -  (No Shadow in Fullwidth Version !)
-
-					});
-
-
-		});
-		</script>
 		
-
-		
-
 		<!-- WRAP -->
 	<div class="wrap cstyle03">
 		
@@ -145,7 +29,7 @@
 			<div class="col-md-12">
 				<div class="bs-example bs-example-tabs cstyle04">
 				
-					<ul class="nav nav-tabs myTab2pos" id="myTab2">
+					<ul class="nav nav-tabs myTab2pos btn-custom" id="myTab2">
 								<li onclick="mySelectUpdate()" class="active"><a data-toggle="tab" href="#airtab3"><span class="hidetext">Acheter</span>&nbsp;</a></li>
 								<li onclick="mySelectUpdate()" class=""><a data-toggle="tab" href="#hoteltab3"><span class="hidetext">Louer</span>&nbsp;</a></li>
 								<!--
@@ -160,15 +44,15 @@
 								
 									<f:form method="post" modelAttribute="formSearch" class="form-inline col-lg-12">
 								<div class="form-group col-lg-2">
-									<span class="opensans size13"><b>VILLE</b><br><br></span>
+									<span class="opensans size13"><b>VILLE</b><br></span>
 									<f:input type="text" path="ville" id="ville" class="form-control" style="text-align:left" placeholder="la ville" />
 									<div class="has-error">
                         				<f:errors path="ville" class="help-inline"/>
                   				    </div>
 								</div>	
 								
-								<div class="form-group col-lg-3">
-									<span class="opensans size13"><b>QUARTIER</b><br><br></span>
+								<div class="form-group col-lg-2">
+									<span class="opensans size13"><b>QUARTIER</b><br></span>
 									<div class="input-group">
 										<f:input path="quartierBien" id="quartierBien" type="text" class="form-control" style="text-align:left" placeholder="le quartier" />
 									</div>
@@ -177,8 +61,8 @@
                   				    </div>
 								</div>
 								
-								<div class="form-group col-lg-3">
-									<span class="opensans size13"><b>TYPE DE BIEN</b><br><br></span>
+								<div class="form-group col-lg-2">
+									<span class="opensans size13"><b>TYPE DE BIEN</b><br></span>
 									<f:select path="souscategorie" items="${listSousCategorie}" class="form-control ">
                                     </f:select>
                                     <div class="has-error">
@@ -187,7 +71,7 @@
 								</div>	
 								
 								<div class="form-group col-lg-2">
-									<span class="opensans size13"><b>PRIX MINIMUM</b><br><br></span>
+									<span class="opensans size13"><b>PRIX MINIMUM</b><br></span>
 									<div class="input-group">
 										<f:input path="prixBien" type="text" class="form-control" style="text-align:left" placeholder="prix min" />
 										<span class="input-group-addon">Fcfa</span>
@@ -198,7 +82,7 @@
 								</div>
 								
 								<div class="form-group col-lg-2">
-									<span class="opensans size13"><b>PRIX MAXIMUM</b><br><br></span>
+									<span class="opensans size13"><b>PRIX MAXIMUM</b><br></span>
 									<div class="input-group">
 										<f:input type="text" path="prixBien" class="form-control" style="text-align:left" placeholder="prix max" />
 										<span class="input-group-addon">Fcfa</span>
@@ -207,8 +91,11 @@
                   				    </div>
 									</div>
 								</div>	
-									<h2 class="left ca01">Mieux chercher, Mieux trouver</h2>
-									<button type="search" class="btn-search right mr30">Chercher</button>
+								 <div class=" form-group col-lg-2 ">
+								 <br>
+									<button type="search" class="btn btn-custom right col-lg-12">
+									  <span class="glyphicon glyphicon-search"></span> Chercher</button>
+								 </div>
 							</f:form>
 								</div>
 								<!-- End of Tab airtab3 -->
@@ -217,15 +104,15 @@
 								<div class="tab-pane " id="hoteltab3">
 							<f:form method="post" modelAttribute="formSearch" class="form-inline col-lg-12">
 								<div class="form-group col-lg-2">
-									<span class="opensans size13"><b>VILLE</b><br><br></span>
+									<span class="opensans size13"><b>VILLE</b><br></span>
 									<f:input type="text" path="ville" id="ville" class="form-control" style="text-align:left" placeholder="la ville" />
 									<div class="has-error">
                         				<f:errors path="ville" class="help-inline"/>
                   				    </div>
 								</div>	
 								
-								<div class="form-group col-lg-3">
-									<span class="opensans size13"><b>QUARTIER</b><br><br></span>
+								<div class="form-group col-lg-2">
+									<span class="opensans size13"><b>QUARTIER</b><br></span>
 									<div class="input-group">
 										<f:input path="quartierBien" id="quartierBien" type="text" class="form-control" style="text-align:left" placeholder="le quartier" />
 									</div>
@@ -234,8 +121,8 @@
                   				    </div>
 								</div>
 								
-								<div class="form-group col-lg-3">
-									<span class="opensans size13"><b>TYPE DE BIEN</b><br><br></span>
+								<div class="form-group col-lg-2">
+									<span class="opensans size13"><b>TYPE DE BIEN</b><br></span>
 									<f:select path="souscategorie" items="${listSousCategorie}" class="form-control">
                                     </f:select>
                                     <div class="has-error">
@@ -244,7 +131,7 @@
 								</div>	
 								
 								<div class="form-group col-lg-2">
-									<span class="opensans size13"><b>PRIX MINIMUM</b><br><br></span>
+									<span class="opensans size13"><b>PRIX MINIMUM</b><br></span>
 									<div class="input-group">
 										<f:input path="prixBien" type="text" class="form-control" style="text-align:left" placeholder="prix min" />
 										<span class="input-group-addon">Fcfa</span>
@@ -255,7 +142,7 @@
 								</div>
 								
 								<div class="form-group col-lg-2">
-									<span class="opensans size13"><b>PRIX MAXIMUM</b><br><br></span>
+									<span class="opensans size13"><b>PRIX MAXIMUM</b><br></span>
 									<div class="input-group">
 										<f:input type="text" path="prixBien" class="form-control" style="text-align:left" placeholder="prix max" />
 										<span class="input-group-addon">Fcfa</span>
@@ -264,8 +151,11 @@
                   				    </div>
 									</div>
 								</div>
-									<h2 class="left ca01">Mieux chercher, Mieux trouver</h2>
-									<button type="search" class="btn-search right mr30">Chercher</button>
+								 <div class="form-group col-lg-2">
+								 <br>
+									<button  href="<c:url value='/recherche'/>" class="btn btn-custom right col-lg-12">
+									<span class="glyphicon glyphicon-search"></span> Chercher</button>
+								</div>
 							</f:form>							
 						</div>
 					
@@ -286,7 +176,7 @@
 		</div>
 					<!---------- Start liste bien---------------->
 		<div class="container">
-		<div class="container pagecontainer offset-0">	
+		<div class="container pagecontainer mt-130 offset-0">	
 		<!--NE PAS SUPPRIMER POURRA SERVIR PROCHE
 			FILTERS
 			
@@ -368,7 +258,7 @@
 						</div>	
 						
 						<div class="clearfix"></div><br/>
-						
+						 
 						HOTELS TAB
 						<div class="hotelstab2 none">
 							<span class="opensans size13">Where do you want to go?</span>
@@ -1677,7 +1567,7 @@
 					<div class="col-md-4">
 					  <div class="list-box">
 						<div class="listitem">
-							<img src="${bien.album}" alt=""/>
+							<img src="resources/images/A46A0121.jpg" alt=""/>
 							<div class="liover"></div>
 						</div>
 						<div class="itemlabel">
@@ -1689,16 +1579,127 @@
 							<span class="right size20" >LOCATION</span>
 							<span class="size20">${bien.quartier} </span><br/><br/>
 							
-							<a href="<c:url value='/detailsBien-${bien.idBien}' />" class="btn btn-xs right btngrd">Detail</a>
+							<a href="<c:url value='/detailBien'/>" class="btn  right btn-custom">Detail</a>
+
 							<span class="size14">5<span class="glyphicon glyphicon-bed"></span></span>
 							<span class="size14">${bien.superfie}</span>
 						</div>
 						</div>
 					</div>
+
 					</c:forEach>
-				
+					<div class="col-md-4">
+					  <div class="list-box">
+						<div class="listitem">
+							<img src="resources/images/A46A0121.jpg" alt=""/>
+							<div class="liover"></div>
+						</div>
+						<div class="itemlabel">
+							<span class="right  lred2 size14 ">Mise à jour le:25/11/2015</span>
+							<span><span class="glyphicon glyphicon-camera" aria-hidden="true"></span>4</span></br><br>
+							<span class=" lightgrey right mt1 green size20 ">170000</span>
+							<span class=" size20">Appartement</span><br/></br>
+							
+							<span class="right size20" >Location</span>
+							<span class="size20">Rivera 2 </span><br/><br/>
+							
+							<a href="<c:url value='/detailBien'/>" class="btn  right btn-custom">Detail</a>
+							<span class="size14">5<span class="glyphicon glyphicon-bed"></span></span>
+							<span class="size14">Surface 65m2</span>
+						</div>
+						</div>
+					</div>
 					
 					
+					<div class="col-md-4">
+					  <div class="list-box">
+						<div class="listitem">
+							<img src="resources/images/A46A0121.jpg" alt=""/>
+							<div class="liover"></div>
+						</div>
+						<div class="itemlabel">
+							<span class="right  lred2 size14 ">Mise à jour le:25/11/2015</span>
+							<span><span class="glyphicon glyphicon-camera" aria-hidden="true"></span>4</span></br><br>
+							<span class=" lightgrey right mt1 green size20 ">170000</span>
+							<span class=" size20">Appartement</span><br/></br>
+							
+							<span class="right size20" >Location</span>
+							<span class="size20">Rivera 2 </span><br/><br/>
+							
+							<a href="<c:url value='/detailBien'/>" class="btn  right btn-custom">Detail</a>
+							<span class="size14">5<span class="glyphicon glyphicon-bed"></span></span>
+							<span class="size14">Surface 65m2</span>
+						</div>
+						</div>
+					</div>
+					
+					
+					<div class="col-md-4">
+					  <div class="list-box">
+						<div class="listitem">
+							<img src="resources/images/A46A0121.jpg" alt=""/>
+							<div class="liover"></div>
+						</div>
+						<div class="itemlabel">
+							<span class="right  lred2 size14 ">Mise à jour le:25/11/2015</span>
+							<span><span class="glyphicon glyphicon-camera" aria-hidden="true"></span>4</span></br><br>
+							<span class=" lightgrey right mt1 green size20 ">170000</span>
+							<span class=" size20">Appartement</span><br/></br>
+							
+							<span class="right size20" >Location</span>
+							<span class="size20">Rivera 2 </span><br/><br/>
+							
+							<a href="<c:url value='/detailBien'/>" class="btn  right btn-custom">Detail</a>
+							<span class="size14">5<span class="glyphicon glyphicon-bed"></span></span>
+							<span class="size14">Surface 65m2</span>
+						</div>
+						</div>
+					</div>
+					
+					<div class="col-md-4">
+					  <div class="list-box">
+						<div class="listitem">
+							<img src="resources/images/A46A0121.jpg" alt=""/>
+							<div class="liover"></div>
+						</div>
+						<div class="itemlabel">
+							<span class="right  lred2 size14 ">Mise à jour le:25/11/2015</span>
+							<span><span class="glyphicon glyphicon-camera" aria-hidden="true"></span>4</span></br><br>
+							<span class=" lightgrey right mt1 green size20 ">170000</span>
+							<span class=" size20">Appartement</span><br/></br>
+							
+							<span class="right size20" >Location</span>
+							<span class="size20">Rivera 2 </span><br/><br/>
+							
+							<a href="<c:url value='/detailBien'/>" class="btn  right btn-custom">Detail</a>
+							<span class="size14">5<span class="glyphicon glyphicon-bed"></span></span>
+							<span class="size14">Surface 65m2</span>
+						</div>
+						</div>
+					</div>
+					
+					<div class="col-md-4">
+					  <div class="list-box">
+						<div class="listitem">
+							<img src="resources/images/A46A0121.jpg" alt=""/>
+							<div class="liover"></div>
+						</div>
+						<div class="itemlabel">
+							<span class="right  lred2 size14 ">Mise à jour le:25/11/2015</span>
+							<span><span class="glyphicon glyphicon-camera" aria-hidden="true"></span>4</span></br><br>
+							<span class=" lightgrey right mt1 green size20 ">170000</span>
+							<span class=" size20">Appartement</span><br/></br>
+							
+							<span class="right size20" >Location</span>
+							<span class="size20">Rivera 2 </span><br/><br/>
+							
+							<button href="#" class="btn  right btn-custom">Detail</button>
+							<span class="size14">5<span class="glyphicon glyphicon-bed"></span></span>
+							<span class="size14">Surface 65m2</span>
+						</div>
+						</div>
+					</div>
+								
 				</div>	
 				<!-- End of offset1-->		
 
@@ -1713,63 +1714,7 @@
 	</div>
 			<!-- END OF CONTENT -->
 	         <!---footer-->
-     	<div class="footerbg">
-		<div class="container">		
-			<div class="col-md-3">
-				<span class="ftitle">Suivez toute l'actualité de smartImmo.net sur:</span>
-				<br/><br/>
-				<div class="scont">
-					<a href="#" class="social1b"><img src="resources/images/icon-facebook.png" alt=""/></a>
-					<a href="#" class="social2b"><img src="resources/images/icon-twitter.png" alt=""/></a>
-					<a href="#" class="social4b"><img src="resources/images/icon-youtube.png" alt=""/></a>
-					<br/><br/><br/>
-					<a href="#"><img src="resources/images/logo.png" alt="" /></a><br/>
-					<span class="grey2">&copy; 2015  |  <a href="#"> Tous droits réservé</a><br/>
-					</span>
-					<br/><br/>
-					
-				</div>
-			</div>
-			<!-- End of column 1-->
-			
-			<div class="col-md-3">
-				<span class="ftitle">Nos Annonces de vente</span>
-				<br/><br/>
-				<ul class="footerlistblack">
-					<li><a href="#">Vente de maison</a></li>
-					<li><a href="#">Vente de terrain</a></li>
-					<li><a href="#">Vente de local commercial</a></li>
-				</ul>
-			</div>
-			<!-- End of column 2-->		
-			
-			<div class="col-md-3">
-				<span class="ftitle">Nos annonces de location</span>
-				<br/><br/>
-				<ul class="footerlistblack">
-					<li><a href="#">Appartement</a></li>
-					<li><a href="#">Studio</a></li>
-					<li><a href="#">Villa</a></li>
-					<li><a href="#">Terrain</a></li>
-				</ul>				
-			</div>
-			<!-- End of column 3-->		
-			
-			<div class="col-md-3 grey">
-				<span class="ftitle">Recevez les meilleurs offres du marché</span>
-				<br/><br/>
-				<div class="relative">
-					<input type="email" class="form-control fccustom2" id="exampleInputEmail1" placeholder="Enter email">
-					<button type="submit" class="btn btn-default btncustom">Submit<img src="images/arrow.png" alt=""/></button>
-				</div>
-				<br/><br/>
-			</div>			
-			<!-- End of column 4-->			
-		
-			
-			
-		</div>	
-	</div>		
+     	
 <%@ include file="footer.jsp" %>>
     
 <%@ include file ="java.jsp" %>

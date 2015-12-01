@@ -12,9 +12,9 @@
 			<div class="left">
 				<ul class="bcrumbs">
 					<li>/</li>
-					<li><a href="#">Accueil</a></li>
+					<li><a href="<c:url value='/'/>">Accueil</a></li>
 					<li>/</li>
-					<li><a href="#">Resultats</a></li>								
+					<li><a href="<c:url value='/Resultat'/>">Resultats</a></li>								
 				</ul>				
 			</div>
 			<a class="backbtn right" href="#"></a>
@@ -25,7 +25,7 @@
 
 	<!-- CONTENT -->
 	<div class="container">
-		<div class="container pagecontainer offset-0">	
+		<div class="container pagecontainer space offset-0">	
 
 			<!-- LIST CONTENT-->
 			<div class="rightcontent col-md-12 offset-0">
@@ -54,11 +54,11 @@
 									<span class="green size18"><b>Prix</b></span><br/>
 									<span class="size11 grey">par mois</span><br/><br/><br/>
 									<form action="details.html">
-									 <button class="bookbtn mt1" type="submit">Decouvrir</button>	
+									 <button class="btn btn-custom" type="submit">Decouvrir</button>	
 									</form>	
 									<br/>
 									<form action="details.html">
-									 <button class="bookbtn mt1" type="submit">Contacter</button>	
+									 <button class="btn btn-custom" type="submit">Contacter</button>	
 									</form>	
 								</div>
 								<div class="labelleft2">			

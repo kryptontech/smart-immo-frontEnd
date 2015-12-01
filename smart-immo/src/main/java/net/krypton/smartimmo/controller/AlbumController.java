@@ -47,4 +47,10 @@ public class AlbumController {
 		return albumService.consulterAlbums();
 	}
 	
+	@RequestMapping("/AjouterAlbum")
+	 public String ajouterAlbums()
+	 {
+	  return "addalbum";
+	 }
+	
 }

@@ -9,8 +9,6 @@ import javax.persistence.Query;
 import net.krypton.smartimmo.dao.FournisseurDao;
 import net.krypton.smartimmo.entities.Fournisseur;
 
-import org.springframework.transaction.annotation.Transactional;
-
 
 public class FournisseurDaoImpl implements FournisseurDao{
 	@PersistenceContext
@@ -42,8 +40,8 @@ public class FournisseurDaoImpl implements FournisseurDao{
 	@Override
 	public Fournisseur consulterFournisseur(int idFournisseur)
 	{
-		Query req = em.createQuery("From Fournisseur where idFournisseur=:idFournisseur");
-		req.setParameter(idFournisseur, idFournisseur);
+		Query req = em.createQuery("From Fournisseur where idFournisseur=?1");
+		req.setParameter(1, idFournisseur);
 		Fournisseur Fournisseurs = (Fournisseur) req.getSingleResult();
 		return Fournisseurs;
 	}

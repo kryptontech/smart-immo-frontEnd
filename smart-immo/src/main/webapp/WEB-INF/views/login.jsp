@@ -1,3 +1,4 @@
+<%@include file="includes.jsp" %>
 <!DOCTYPE html>
 <html>
   <head>
@@ -42,16 +43,16 @@
 			<img src="resources/images/logo.png" class="login-img" alt="logo"/><br/>
 			<div class="login-c1">
 				<div class="cpadding50">
-					<input type="text" class="form-control logpadding" placeholder="Pseudo">
+					<input type="text" class="form-control logpadding" placeholder="Pseudo" required="true">
 					<br/>
-					<input type="password" class="form-control logpadding" placeholder="Mot de passe">
+					<input type="password" class="form-control logpadding" placeholder="Mot de passe" required="true">
 				</div>
 			</div>
 			<div class="login-c2">
 				<div class="logmargfix">
 					<div class="chpadding50">
 							<div class="alignbottom">
-								<button class="btngrd"  type="submit" onclick="errorMessage()">Valider</button>							
+								<a href="<c:url value='/profileAddBien-1'/>" class="btn btn-custom"  type="submit" onclick="errorMessage()">Valider</a>						
 							</div>
 							<div class="alignbottom2">
 							  <div class="checkbox">
@@ -64,7 +65,7 @@
 				</div>
 			</div>
 			<div class="login-c3 size12">
-				<div class="left"><a href="#" class="whitelink"><span></span>Acceuil</a></div>
+				<div class="left"><a href="<c:url value='/'/>" class="whitelink"><span></span>Acceuil</a></div>
 				<div class="right"><a href="#" class="whitelink">Mot de passe oublie?</a></div>
 			</div>			
 		</div>

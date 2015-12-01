@@ -23,20 +23,20 @@ public class Fournisseur implements Serializable{
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id_fournisseur")
 	private int idFournisseur;
-	@NotEmpty
+
 	private String pseudoFournisseur;
-	@NotEmpty
+	
 	private String nomFournisseur;
-	@NotEmpty
+
 	private String emailFournisseur;
-	@NotEmpty
+	
 	private String mdpFournisseur;
-	@NotNull
+	
 	private boolean statuFournisseur;
 	
-	@Size(min=8)
+	
 	private String telFixeFournisseur;
-	@NotEmpty
+	
 	private String telMobileFournisseur;
 	
 

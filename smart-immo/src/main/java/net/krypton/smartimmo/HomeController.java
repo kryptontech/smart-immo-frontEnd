@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import net.krypton.smartimmo.entities.Album;
 import net.krypton.smartimmo.entities.Bien;
+import net.krypton.smartimmo.entities.Fournisseur;
 import net.krypton.smartimmo.model.ImageModel;
 import net.krypton.smartimmo.service.AlbumService;
 import net.krypton.smartimmo.service.BienService;
@@ -105,6 +106,15 @@ public class HomeController {
 		
        model.addAttribute("listBiensHome", listdto);
 		
-		return "index";     
+      
+       
+       //return "form-inscription";
+		return "index";
+      // return "profile";
 	}	
+	
+	 @RequestMapping("/Apropos")
+	 public String profile() {
+	  return "about";
+	 }
 }

@@ -1,3 +1,5 @@
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="f"%>
 <%@ include file="head.jsp" %>>
  
   <body id="top" class="thebg" >
@@ -13,9 +15,9 @@
 			<div class="left">
 				<ul class="bcrumbs">
 					<li>/</li>
-					<li><a href="index.jsp">Accueil</a></li>
+					<li><a href="<c:url value='/' />"> Accueil</a></li>
 					<li>/</li>
-					<li><a href="#">Creér un compte</a></li>			
+					<li><a href="<c:url value='/Inscription' />">Creér un compte</a></li>			
 				</ul>				
 			</div>
 			<a class="backbtn right" href="#"></a>
@@ -26,152 +28,113 @@
 
 	<!-- CONTENT -->
 	<div class="container">
-		<div class="col-md-8 pagecontainer">	
-			<form class="form-horizontal col-lg-12 well">
+		
+<br>
+<br>
+		<div>
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Particulier</a></li>
+    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Agence</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content4">
+   
+    <div role="tabpanel" class="tab-pane active" id="home">
+    	<!--Tab Particulier-->
+		
+		<f:form method="POST" action="saveFournisseur" modelAttribute="formFournisseur" class="form-horizontal col-lg-12 well">
 			 </br>
-			  <div class="container">
-				<div class="form-group">
-					<Label>Creer un compte</label> 
-				</div>
-			  </div>
-			</br>
-			  <div class="container">
-			     <div class="col-lg-3">
-					<div class="form-group">
-						<Label class="radio">
-						 <input type="radio" name="fournisseur" value="1" id="option1" checked>
-						Particulier</label> 
-					</div>
-				  </div>
-				  
-				  <div class="col-lg-4 ">
-					<div class="form-group">
-						<Label class="radio">
-						 <input type="radio" name="fournisseur" value="2" id="option2">
-						Agent particulier</label> 
-					</div>
-				  </div>
-			  </div>
-			  <br/>
+			 <br/>
 			  <fieldset>
 			   <div class="container">
 			     <div class="col-lg-6">
 					<div class="form-group">
-						<Label for="nom" class="col-lg-3">Nom*</label> 
-						<div class="col-lg-12">
-						   <input type="text" class="form-control" id="nom">
+						<Label for="nomFournisseur" class="col-lg-3">Nom*</label> 
+							<div class="col-lg-12">
+								<f:input type="text" path="nomFournisseur" id="nomFournisseur" class="form-control input-sm" required="true"/>
+							</div>
+							<div class="has-error">
+								<f:errors path="nomFournisseur" class="help-inline" />
+							</div>
 						</div>
 					</div>
-				  </div>
+				 
 				  
 				   <div class="col-lg-6">
 					<div class="form-group">
-						<Label for="prenom" class="col-lg-3">Prenom*</label> 
-						<div class="col-lg-12">
-						   <input type="text" class="form-control" id="prenom">
+						<Label for="pseudoFournisseur" class="col-lg-3">Pseudo*</label> 
+					<div class="col-lg-12">
+					<f:input type="text" path="nomFournisseur"
+							id="pseudoFournisseur" class="form-control input-sm" required="true" />
+							<div class="has-error">
+							<f:errors path="pseudoFournisseur" class="help-inline" />
 						</div>
+						</div>
+						
 					</div>
 				  </div>
-			  </div>
+			  	 </div>
 			  </br>
 			  
 			   <div class="container">
 			    <div class="col-lg-6">
 					<div class="form-group">
-						<Label for="mobile" class="col-lg-3">Mobile</label> 
-						<div class="col-lg-12">
-						   <input type="text" class="form-control" id="mobile">
+						<Label for="mobile" class="col-lg-3">Mobile*</label>
+						<div class="col-lg-12"> 
+	                    <f:input type="tel" path="telMobileFournisseur" id="telMobileFournisseur" class="form-control input-sm" required="true" />
+						<div class="has-error">
+							<f:errors path="telMobileFournisseur" class="help-inline" />
 						</div>
+						</div>
+						
 					</div>
 				  </div>
 			     <div class="col-lg-6">
 					<div class="form-group">
-						<Label for="email" class="col-lg-3">Email</label> 
+						<Label for="email" class="col-lg-3">Email*</label> 
 						<div class="col-lg-12">
-						   <input type="email" class="form-control" id="email">
-						</div>
+						<f:input type="email" path="emailFournisseur" id="emailFournisseur"  class="form-control" required="true" />
+						   <div class="has-error">
+							<f:errors path="emailFournisseur" class="help-inline" />
+						  </div>
 					</div>
 				  </div>
+			  </div>
 			  </div>
 			  </br>
 			   <div class="container">
 			    <div class="col-lg-6">
 					<div class="form-group">
-						<Label for="password" class="col-lg-6">Mot de passe</label> 
+						<Label for="password" class="col-lg-6">Mot de passe*</label> 
 						<div class="col-lg-12">
-						   <input type="password" class="form-control" id="password">
-						</div>
-					</div>
+						   <f:input type="password" path="mdpFournisseur" id="mdpFournisseur"  required="true" class="form-control input-sm" />
+							<div class="has-error">
+							<f:errors path="mdpFournisseur" class="help-inline" />
+					        </div>
+				        </div>
+				  </div>
 				  </div>
 			     <div class="col-lg-6">
 					<div class="form-group">
 						<Label for="confirm" class="col-lg-10">Confirmer votre mot de passe</label> 
 						<div class="col-lg-12">
-						   <input type="password" class="form-control" id="confirm">
+						   <input type="password" class="form-control" id="confirm"   required="true"/>
 						</div>
 					</div>
 				  </div>
 			  </div>
 			 </fieldset>
 			 </br>
-			 <fieldset id="fieldset2">
-			    <legend>Agence agrée</legend>
-				<br>
-				<div class="container">
-			    <div class="col-lg-6">
-					<div class="form-group">
-						<Label for="agence" class="col-lg-6">Nom Agence*</label> 
-						<div class="col-lg-12">
-						   <input type="text" class="form-control" id="agence">
-						</div>
-					</div>
-				  </div>
-			     <div class="col-lg-6">
-					<div class="form-group">
-						<Label for="site" class="col-lg-10">Site web</label> 
-						<div class="col-lg-12">
-						   <input type="text" class="form-control" id="site">
-						</div>
-					</div>
-				  </div>
-			  </div>
-			  </br>
-			  <div class="container">
-			    <div class="col-lg-6">
-					<div class="form-group">
-						<Label for="adresse" class="col-lg-6">Adresse*</label> 
-						<div class="col-lg-12">
-						   <input type="text" class="form-control" id="adresse">
-						</div>
-					</div>
-				  </div>
-			     <div class="col-lg-6">
-					<div class="form-group">
-						<Label for="fixe" class="col-lg-10">Telephone fixe</label> 
-						<div class="col-lg-12">
-						   <input type="text" class="form-control" id="fixe">
-						</div>
-					</div>
-				  </div>
-			  </div>
-			  </br>
-			   <div class="container">
-			    <div class="col-lg-6">
-					<div class="form-group">
-						<Label for="logo" class="col-lg-6">Logo*</label> 
-						<div class="col-lg-12">
-						   <input type="file" id="logo" name="photo" enctype= "multipart/form-data">
-						</div>
-					</div>
-				 </div>
-			  </div>
-			 </fieldset>
+			 
 			 <br/>
 			  <div class="container">
 			   <div class="col-lg-12">
 					<div class="form-group">
 						<label class="checkbox">
-						  <input type="checkbox">I accept the Conditions générales d'utilisation pour notre site
+						  <input type="checkbox">j'accepte les Conditions générales d'utilisation de votre site
 						</label>
 					</div>
 				</div>
@@ -186,15 +149,137 @@
 			  <div class="container">
 			    <div class="col-lg-12">
 					<div class="form-group">
-						<input type="submit" class="btn btn-primary btn-default pull-right" value="CREER MON COMPTE">
+						<input type="submit" class="btn btn-custom pull-right" value="CREER MON COMPTE">
 					</div>
 				 </div>
 			  </div>
-			</form>
-		</div>
+			</f:form>
+    
+    <!-- end form founisseur  -->
+    
+    </div>
+    <div role="tabpanel" class="tab-pane" id="profile">
+		<f:form method="POST" action="saveAgence" modelAttribute="formAgence" class="form-horizontal col-lg-12 well">
+			 </br>
+			 <br/>
+			  <fieldset>
+			   <div class="container">
+			     <div class="col-lg-6">
+					<div class="form-group">
+						<Label for="nom" class="col-lg-3">Nom Agence*</label> 
+						<div class="col-lg-12">
+						   <input type="text" class="form-control" id="nom" required>
+						</div>
+					</div>
+				  </div>
+				  
+				   <div class="col-lg-6">
+					<div class="form-group">
+						<Label for="pseudo" class="col-lg-3">Pseudo*</label> 
+						<div class="col-lg-12">
+						   <input type="text" class="form-control" id="pseudo" required>
+						</div>
+					</div>
+				  </div>
+			  </div>
+			  </br>
+			  
+			   <div class="container">
+			    <div class="col-lg-6">
+					<div class="form-group">
+						<Label for="tel" class="col-lg-3">Mobile*</label> 
+						<div class="col-lg-12">
+						   <input type="text" class="form-control" id="mobile" required>
+						</div>
+					</div>
+				  </div>
+				  <div class="col-lg-6">
+					<div class="form-group">
+						<Label for="fixe" class="col-lg-4">Telephone fixe</label> 
+						<div class="col-lg-12">
+						   <input type="tel" class="form-control" id="fixe">
+						</div>
+					</div>
+				  </div>
+				  
+			  </div>
+			  </br>
+			   <div class="container">
+				 <div class="col-lg-6">
+					<div class="form-group">
+						<Label for="siteweb" class="col-lg-4">Site web agence</label> 
+						<div class="col-lg-12">
+						   <input type="text" class="form-control" id="siteweb">
+						</div>
+					</div>
+				  </div>
+				  
+				   <div class="col-lg-6">
+					<div class="form-group">
+						<Label for="email" class="col-lg-3">Email*</label> 
+						<div class="col-lg-12">
+						   <input type="email" class="form-control" id="email" required>
+						</div>
+					</div>
+				  </div>
+				</div>
+				  
+			    
+				 <div class="container">
+					<div class="col-lg-6">
+						<div class="form-group">
+							<Label for="password" class="col-lg-6">Mot de passe*</label> 
+							<div class="col-lg-12">
+							   <input type="password" class="form-control" id="password"  required>
+							</div>
+						</div>
+					  </div>
+					 <div class="col-lg-6">
+						<div class="form-group">
+							<Label for="confirm" class="col-lg-10">Confirmer votre mot de passe*</label> 
+							<div class="col-lg-12">
+							   <input type="password" class="form-control" id="confirm"  required>
+							</div>
+						</div>
+					  </div>
+			  </div>
+			 </fieldset>
+			 </br>
+			 
+			 <br/>
+			  <div class="container">
+			   <div class="col-lg-12">
+					<div class="form-group">
+						<label class="checkbox">
+						  <input type="checkbox">j'accepte les Conditions générales d'utilisation de votre site
+						</label>
+					</div>
+				</div>
+			    <div class="col-lg-12">
+					<div class="form-group">
+						<label class="checkbox">
+						  <input type="checkbox">Je souhaite recevoir la newsletter de SmartImmo pour rester connecté 
+								eux meilleures offres immobilières du marché</label>
+					</div>
+			  </div>
+			 </div>
+			  <div class="container">
+			    <div class="col-lg-12">
+					<div class="form-group">
+						<input type="submit" class="btn btn-custom pull-right" value="CREER MON COMPTE">
+					</div>
+				 </div>
+			  </div>
+	
+	</f:form>
+	</div>
+  </div>
+  
+</div>
 		
 			<!-- END OF container-->
 	</div>
+	
 	<!-- END OF CONTENT -->
 	
 <%@ include file="footer.jsp" %>>
