@@ -1567,7 +1567,7 @@
 					<div class="col-md-4">
 					  <div class="list-box">
 						<div class="listitem">
-							<img src="resources/images/A46A0121.jpg" alt=""/>
+							<img src="${bien.album}" alt=""/>
 							<div class="liover"></div>
 						</div>
 						<div class="itemlabel">
@@ -1579,7 +1579,7 @@
 							<span class="right size20" >LOCATION</span>
 							<span class="size20">${bien.quartier} </span><br/><br/>
 							
-							<a href="<c:url value='/detailBien'/>" class="btn  right btn-custom">Detail</a>
+							<a href="<c:url value='/detailsBien-${bien.idBien}'/>" class="btn  right btn-custom">Detail</a>
 
 							<span class="size14">5<span class="glyphicon glyphicon-bed"></span></span>
 							<span class="size14">${bien.superfie}</span>
@@ -1588,7 +1588,7 @@
 					</div>
 
 					</c:forEach>
-					<div class="col-md-4">
+					<!-- <div class="col-md-4">
 					  <div class="list-box">
 						<div class="listitem">
 							<img src="resources/images/A46A0121.jpg" alt=""/>
@@ -1700,7 +1700,7 @@
 						</div>
 					</div>
 								
-				</div>	
+				</div>	 -->
 				<!-- End of offset1-->		
 
 			</div>

@@ -49,7 +49,7 @@ public class HomeController {
 	@Autowired
 	DisponibiliteService disponibiliteService;
 	
-	
+	// controller pour appeler les bien sur la page accueil
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(ModelMap model) {
 		
@@ -106,7 +106,7 @@ public class HomeController {
 		
        model.addAttribute("listBiensHome", listdto);
 		
-      
+      //FIN DU CONTROLLER KI APPELLE LES IMAGE SUR LA PAGE ACCUEIL
        
        //return "form-inscription";
 		return "index";

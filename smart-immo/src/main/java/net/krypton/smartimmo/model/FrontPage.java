@@ -1,48 +1,62 @@
 package net.krypton.smartimmo.model;
 
-import java.util.Date;
 
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
-import org.hibernate.validator.constraints.NotEmpty;
 
 public class FrontPage {
 
 	
 	private String idBien;
-	@NotEmpty
-	@Size(min= 10)
+	
+	private String idFour;
+	
+
+
+	
+
+
+	public String getIdFour() {
+		return idFour;
+	}
+
+
+
+	public void setIdFour(String idFour) {
+		this.idFour = idFour;
+	}
+
+
+
 	private String titreBien;
-	@NotNull
+	
 	private double superficieBien;
-	@NotNull
+	
 	private double prixBien;
-	@NotEmpty
+	
 	private String quartierBien;
-	@NotEmpty
-	@Size(min=15)
+	
+	
 	private String descriptionBien;
 	
-	@NotNull
+	
 	private int nbPieceBien;
-	private boolean statutBien;
+	private boolean statutBien = false;
 
-	private Date datePubBien;
 	
-	@NotEmpty
-	private String fournisseur;
 	
-	@NotEmpty
+	
+	private String Fournisseur;
+	
+	
 	private String Ville;
 
 	
 	private String disponibilite;
 	
-	@NotEmpty
+	
 	private String typeoffre;
 	
-	@NotEmpty
+	
 	private String souscategorie;
 
 	private String exception;
@@ -157,26 +171,17 @@ public class FrontPage {
 
 
 
-	public Date getDatePubBien() {
-		return datePubBien;
-	}
-
-
-
-	public void setDatePubBien(Date datePubBien) {
-		this.datePubBien = datePubBien;
-	}
-
+	
 
 
 	public String getFournisseur() {
-		return fournisseur;
+		return Fournisseur;
 	}
 
 
 
 	public void setFournisseur(String fournisseur) {
-		this.fournisseur = fournisseur;
+		Fournisseur = fournisseur;
 	}
 
 

@@ -43,4 +43,10 @@ public class AdminController {
 	{
 		return adminService.consulterAdmins();
 	}
+	
+	// MAPPING DE LOGIN 
+	@RequestMapping("/SeConnecter")
+	 public String login() {
+	  return "login";
+	 }
 }

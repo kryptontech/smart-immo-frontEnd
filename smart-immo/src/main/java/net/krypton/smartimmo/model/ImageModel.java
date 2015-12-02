@@ -17,13 +17,16 @@ public class ImageModel {
 	private double prix;
 	private double superfie; 
 	private int idBien;
+	private String album;
+	
+	
 	public int getIdBien() {
 		return idBien;
 	}
 	public void setIdBien(int idBien) {
 		this.idBien = idBien;
 	}
-	private String album;
+	
 	public Date getDatePuBien() {
 		return datePuBien;
 	}
