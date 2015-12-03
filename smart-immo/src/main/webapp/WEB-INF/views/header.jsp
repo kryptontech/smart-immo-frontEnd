@@ -1,7 +1,7 @@
 <!-- Top wrapper -->
 	<div class="navbar-wrapper2 navbar-fixed-top">
       <div class="container">
-		<div class="navbar mtnav">
+		<div class="navbar">
 
 			<div class="container">
 			  <!-- Navigation-->

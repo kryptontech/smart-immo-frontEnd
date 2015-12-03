@@ -60,14 +60,14 @@ public class FournisseurController {
 	public String enregistrerFournisseur(@Valid Fournisseur v, BindingResult result, ModelMap model){
 		v.setMdpFournisseur(Test.md5(v.getMdpFournisseur()));
 		fournisseurService.ajouterFournisseur(v);
-		return "profile";
+		return "login";
 	}
 	@RequestMapping(value = "/saveFournisseur", method = RequestMethod.GET)
 	public String newFournisseur(ModelMap model){
 		Fournisseur fournisseur = new Fournisseur();
 		model.addAttribute("formFournisseur", fournisseur);
 		
-		return "form-inscription";
+		return "form-inscriptionParticulier";
 	}
 
 	@RequestMapping(value = "/deleteFournisseur-{idFournisseur}")
@@ -101,7 +101,7 @@ public class FournisseurController {
 		f.setTelMobileFournisseur(mfm.getTelMobileFournisseur());
 		fournisseurService.modifierFournisseur(f);
 		model.addAttribute("fFournisseur", mfm);
-		return "mesDonnees";
+		return "listebiensfournisseur";
 	}
 	
 	

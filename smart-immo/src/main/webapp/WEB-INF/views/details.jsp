@@ -17,8 +17,8 @@
    <div class="left">
     <ul class="bcrumbs">
      <li>/</li>
-     <li><a href="index.jsp">Accueil</a></li>
-     <li>/</li>
+     <li><a href="<c:url value='/' />"> Accueil</a></li>
+	<li>/</li>
      <li><a href="#">Bien</a></li>
     </ul>
    </div>
@@ -33,7 +33,7 @@
 
   <c:if test="${not empty unBien }">
 
-   <div class="container pagecontainer offset-0">
+   <div class="container pagecontainer  offset-0">
 
     <!-- SLIDER -->
     <div class="col-md-8 details-slider">
@@ -135,7 +135,7 @@
 
    <div class="container mt25 offset-0">
 
-    <div class="col-md-8 pagecontainer2 offset-0">
+    <div class="col-md-8 pagecontainer2 space offset-0">
      <div class="container cstyle12">
 
       <h2 class="padding-right:5px">Descriptif du Bien</h2>

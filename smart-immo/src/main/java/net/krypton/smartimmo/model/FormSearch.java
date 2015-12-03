@@ -1,26 +1,18 @@
 package net.krypton.smartimmo.model;
 
-import net.krypton.smartimmo.entities.SousCategorie;
-import net.krypton.smartimmo.entities.TypeOffre;
-import net.krypton.smartimmo.entities.Ville;
+
 
 public class FormSearch {
 	
-	private TypeOffre to;
-	private Ville ville;
-	private SousCategorie sousCategorie;
+	
+	private String ville;
+	private String sousCategorie;
 	private double prixMini;
 	private double prixMaxi;
 	private String quartier;
 	
 	
 	
-	public TypeOffre getTo() {
-		return to;
-	}
-	public void setTo(TypeOffre to) {
-		this.to = to;
-	}
 	
 	public String getQuartier() {
 		return quartier;
@@ -42,19 +34,23 @@ public class FormSearch {
 	}
 	
 	
-	public SousCategorie getSousCategorie() {
+	
+	public String getSousCategorie() {
 		return sousCategorie;
 	}
-	public void setSousCategorie(SousCategorie sousCategorie) {
+	public void setSousCategorie(String sousCategorie) {
 		this.sousCategorie = sousCategorie;
-	}
-	public Ville getVille() {
-		return ville;
-	}
-	public void setVille(Ville ville) {
-		this.ville = ville;
+		
 	}
 	
+	
+	
+	public String getVille() {
+		return ville;
+	}
+	public void setVille(String ville) {
+		this.ville = ville;
+	}
 	public FormSearch() {
 		super();
 		// TODO Auto-generated constructor stub

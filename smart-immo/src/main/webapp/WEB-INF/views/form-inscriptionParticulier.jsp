@@ -36,7 +36,7 @@
   <!-- Nav tabs -->
   <ul class="nav nav-tabs" role="tablist">
     <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Particulier</a></li>
-    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Agence</a></li>
+    <li role="presentation"><a href="<c:url value='/saveAgence' />" >Agence</a></li>
   </ul>
 
   <!-- Tab panes -->
@@ -67,7 +67,7 @@
 					<div class="form-group">
 						<Label for="pseudoFournisseur" class="col-lg-3">Pseudo*</label> 
 					<div class="col-lg-12">
-					<f:input type="text" path="nomFournisseur"
+					<f:input type="text" path="pseudoFournisseur"
 							id="pseudoFournisseur" class="form-control input-sm" required="true" />
 							<div class="has-error">
 							<f:errors path="pseudoFournisseur" class="help-inline" />
@@ -158,121 +158,7 @@
     <!-- end form founisseur  -->
     
     </div>
-    <div role="tabpanel" class="tab-pane" id="profile">
-		<f:form method="POST" action="saveAgence" modelAttribute="formAgence" class="form-horizontal col-lg-12 well">
-			 </br>
-			 <br/>
-			  <fieldset>
-			   <div class="container">
-			     <div class="col-lg-6">
-					<div class="form-group">
-						<Label for="nom" class="col-lg-3">Nom Agence*</label> 
-						<div class="col-lg-12">
-						   <input type="text" class="form-control" id="nom" required>
-						</div>
-					</div>
-				  </div>
-				  
-				   <div class="col-lg-6">
-					<div class="form-group">
-						<Label for="pseudo" class="col-lg-3">Pseudo*</label> 
-						<div class="col-lg-12">
-						   <input type="text" class="form-control" id="pseudo" required>
-						</div>
-					</div>
-				  </div>
-			  </div>
-			  </br>
-			  
-			   <div class="container">
-			    <div class="col-lg-6">
-					<div class="form-group">
-						<Label for="tel" class="col-lg-3">Mobile*</label> 
-						<div class="col-lg-12">
-						   <input type="text" class="form-control" id="mobile" required>
-						</div>
-					</div>
-				  </div>
-				  <div class="col-lg-6">
-					<div class="form-group">
-						<Label for="fixe" class="col-lg-4">Telephone fixe</label> 
-						<div class="col-lg-12">
-						   <input type="tel" class="form-control" id="fixe">
-						</div>
-					</div>
-				  </div>
-				  
-			  </div>
-			  </br>
-			   <div class="container">
-				 <div class="col-lg-6">
-					<div class="form-group">
-						<Label for="siteweb" class="col-lg-4">Site web agence</label> 
-						<div class="col-lg-12">
-						   <input type="text" class="form-control" id="siteweb">
-						</div>
-					</div>
-				  </div>
-				  
-				   <div class="col-lg-6">
-					<div class="form-group">
-						<Label for="email" class="col-lg-3">Email*</label> 
-						<div class="col-lg-12">
-						   <input type="email" class="form-control" id="email" required>
-						</div>
-					</div>
-				  </div>
-				</div>
-				  
-			    
-				 <div class="container">
-					<div class="col-lg-6">
-						<div class="form-group">
-							<Label for="password" class="col-lg-6">Mot de passe*</label> 
-							<div class="col-lg-12">
-							   <input type="password" class="form-control" id="password"  required>
-							</div>
-						</div>
-					  </div>
-					 <div class="col-lg-6">
-						<div class="form-group">
-							<Label for="confirm" class="col-lg-10">Confirmer votre mot de passe*</label> 
-							<div class="col-lg-12">
-							   <input type="password" class="form-control" id="confirm"  required>
-							</div>
-						</div>
-					  </div>
-			  </div>
-			 </fieldset>
-			 </br>
-			 
-			 <br/>
-			  <div class="container">
-			   <div class="col-lg-12">
-					<div class="form-group">
-						<label class="checkbox">
-						  <input type="checkbox">j'accepte les Conditions générales d'utilisation de votre site
-						</label>
-					</div>
-				</div>
-			    <div class="col-lg-12">
-					<div class="form-group">
-						<label class="checkbox">
-						  <input type="checkbox">Je souhaite recevoir la newsletter de SmartImmo pour rester connecté 
-								eux meilleures offres immobilières du marché</label>
-					</div>
-			  </div>
-			 </div>
-			  <div class="container">
-			    <div class="col-lg-12">
-					<div class="form-group">
-						<input type="submit" class="btn btn-custom pull-right" value="CREER MON COMPTE">
-					</div>
-				 </div>
-			  </div>
-	
-	</f:form>
-	</div>
+    <!--  AGENCE FORME   -->
   </div>
   
 </div>

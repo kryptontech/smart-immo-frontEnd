@@ -27,24 +27,30 @@ public class SearchController {
 	final double PRIX_MIN = 0;
 	
 	
-	@RequestMapping(value="recherche", method= RequestMethod.POST)
-	public String Recherche(@Valid FormSearch fs, Model model)
+	@RequestMapping(value="/rechercheVente", method= RequestMethod.POST)
+	public String RechercheVente(@Valid FormSearch fs, Model model)
 	{
 		List<Bien> listBiens=new ArrayList<Bien>();
-		String to = fs.getTo().getLibelleTypeOffre();
-		String ville = fs.getVille().getLibelleVille();
-		String sousCategorie = fs.getSousCategorie().getLibelleSousCat();
+		String to = "Vente";
+		String ville = fs.getVille();
+		String sousCategorie = fs.getSousCategorie();
 		double prixMini = fs.getPrixMini();
 		double prixMaxi = fs.getPrixMaxi();
 		String quartier = fs.getQuartier();
-		
-		if(ville.length()>0){
+		//if(ville.length()>0)
 			if(sousCategorie.length()>0){
+	System.out.println("taille char ville " + sousCategorie.length());
+			//if(sousCategorie.length()>0)
+			if(ville.length()>0){
+				System.out.println("taille char ville " + ville.length());
 				if(prixMini >= PRIX_MIN){
 					if (prixMaxi <= PRIX_MAX){
 						if (quartier.length()>0){
 							listBiens = AllMethods.listeDesBiensParVilleSousCatQuartierEtPrix(to, ville, sousCategorie, quartier, prixMini, prixMaxi);
 							model.addAttribute("listBiens", listBiens);
+							System.out.println(quartier);
+							System.out.println(prixMaxi);
+							System.out.println(prixMini);
 						}
 						else{
 							listBiens = AllMethods.listeDesBiensParVilleSousCatEtPrix(to, ville, sousCategorie, prixMini, prixMaxi);
@@ -239,6 +245,246 @@ public class SearchController {
 						else{
 							listBiens = bienService.consulterBiens();
 							model.addAttribute("listBiens", listBiens);
+							
+							System.out.println(listBiens.size());
+							System.out.println(listBiens.size());
+							System.out.println(listBiens.size());
+						}
+					}
+					
+			
+				}
+					
+			}
+		}
+		
+		return "bien-list";
+	}
+	
+	
+	// recherche location 
+	
+	@RequestMapping(value="/rechercheLocation", method= RequestMethod.POST)
+	public String RechercheLocation(@Valid FormSearch fs, Model model)
+	{
+		List<Bien> listBiens=new ArrayList<Bien>();
+		String to = "Location";
+		String ville = fs.getVille();
+		String sousCategorie = fs.getSousCategorie();
+		double prixMini = fs.getPrixMini();
+		double prixMaxi = fs.getPrixMaxi();
+		String quartier = fs.getQuartier();
+		
+		if(ville.length()>0){
+			if(sousCategorie.toString().length()>0){
+				
+				System.out.println("test"+sousCategorie.length());
+				if(prixMini >= PRIX_MIN){
+					if (prixMaxi <= PRIX_MAX){
+						if (quartier.length()>0){
+							listBiens = AllMethods.listeDesBiensParVilleSousCatQuartierEtPrix(to, ville, sousCategorie, quartier, prixMini, prixMaxi);
+							model.addAttribute("listBiens", listBiens);
+							System.out.println(quartier);
+							System.out.println(prixMaxi);
+							System.out.println(prixMini);
+						}
+						else{
+							listBiens = AllMethods.listeDesBiensParVilleSousCatEtPrix(to, ville, sousCategorie, prixMini, prixMaxi);
+							model.addAttribute("listBiens", listBiens);
+						}
+					}
+					else
+					{
+						if (quartier.length()>0){
+							listBiens = AllMethods.listeDesBiensParVilleSousCatQuartierEtPrixMin(to, ville, sousCategorie, quartier, prixMini);
+							model.addAttribute("listBiens", listBiens);
+						}
+						else{
+							listBiens = AllMethods.listeDesBiensParVilleSousCatEtPrixMin(to, ville, sousCategorie, prixMini);
+							model.addAttribute("listBiens", listBiens);
+						}
+							
+					}
+				}
+				else{
+						if (prixMaxi <= PRIX_MAX){
+							if(quartier.length()>0){
+								listBiens = AllMethods.listeDesBiensParVilleSousCatQuartierEtPrixMax(to, ville, sousCategorie, quartier, prixMaxi);
+								model.addAttribute("listBiens", listBiens);
+							}
+							else{
+								listBiens = AllMethods.listeDesBiensParVilleSousCatEtPrixMax(to, ville, sousCategorie, prixMaxi);
+								model.addAttribute("listBiens", listBiens);
+							}
+						}
+						else{
+							if(quartier.length()>0){
+								listBiens = AllMethods.listeDesBiensParVilleSousCatEtQuartier(to, ville, sousCategorie, quartier);
+								model.addAttribute("listBiens", listBiens);
+							}
+							else{
+								listBiens = AllMethods.listeDesBiensParVilleEtSousCat(to, ville, sousCategorie);
+								model.addAttribute("listBiens", listBiens);
+							}
+						}
+						
+				}
+			}
+			else{
+				if(prixMini >= PRIX_MIN){
+
+					if (prixMaxi <= PRIX_MAX){
+						if (quartier.length()>0){
+							listBiens = AllMethods.listeDesBiensParVilleQuartierEtPrix(to, ville, quartier, prixMini, prixMaxi);
+							model.addAttribute("listBiens", listBiens);
+						}
+						else{
+							listBiens = AllMethods.listeDesBiensParVilletEtPrix(to, ville, prixMini, prixMaxi);
+							model.addAttribute("listBiens", listBiens);
+						}
+					}
+					else
+					{
+						if (quartier.length()>0){
+							listBiens = AllMethods.listeDesBiensParVilleQuartierEtPrixMin(to, ville, quartier, prixMini);
+							model.addAttribute("listBiens", listBiens);
+						}
+						else{
+							listBiens = AllMethods.listeDesBiensParVilleEtPrixMin(to, ville, prixMini);
+							model.addAttribute("listBiens", listBiens);
+						}
+							
+					}
+				
+				}
+				else{
+
+					if (prixMaxi <= PRIX_MAX){
+						if(quartier.length()>0){
+							listBiens = AllMethods.listeDesBiensParVilleQuartierEtPrixMax(to, ville, quartier, prixMaxi);
+							model.addAttribute("listBiens", listBiens);
+						}
+						else{
+							listBiens = AllMethods.listeDesBiensParVilleEtPrixMax(to, ville, prixMaxi);
+							model.addAttribute("listBiens", listBiens);
+						}
+					}
+					else{
+						if(quartier.length()>0){
+							listBiens = AllMethods.listeDesBiensParVilleEtQuartier(to, ville, quartier);
+							model.addAttribute("listBiens", listBiens);
+						}
+						else{
+							listBiens = AllMethods.listeDesBiensParVille(to, ville);
+							model.addAttribute("listBiens", listBiens);
+						}
+					}
+					
+			
+				}
+					
+			}
+		}
+		else{
+			if(sousCategorie.toString().length()>0){
+				if(prixMini >= PRIX_MIN){
+					if (prixMaxi <= PRIX_MAX){
+						if (quartier.length()>0){
+							listBiens = AllMethods.listeDesBiensParSousCatQuartierEtPrix(to, sousCategorie, quartier, prixMini, prixMaxi);
+							model.addAttribute("listBiens", listBiens);
+						}
+						else{
+							listBiens = AllMethods.listeDesBiensParSousCatEtPrix(to, sousCategorie, prixMini, prixMaxi);
+							model.addAttribute("listBiens", listBiens);
+						}
+					}
+					else
+					{
+						if (quartier.length()>0){
+							listBiens = AllMethods.listeDesBiensParSousCatQuartierEtPrixMin(to, sousCategorie, quartier, prixMini);
+							model.addAttribute("listBiens", listBiens);
+						}
+						else{
+							listBiens = AllMethods.listeDesBiensParSousCatEtPrixMin(to, sousCategorie, prixMini);
+							model.addAttribute("listBiens", listBiens);
+						}
+							
+					}
+				}
+				else{
+						if (prixMaxi <= PRIX_MAX){
+							if(quartier.length()>0){
+								listBiens = AllMethods.listeDesBiensParSousCatQuartierEtPrixMax(to, sousCategorie, quartier, prixMaxi);
+								model.addAttribute("listBiens", listBiens);
+							}
+							else{
+								listBiens = AllMethods.listeDesBiensParSousCatEtPrixMax(to, ville, prixMaxi);
+								model.addAttribute("listBiens", listBiens);
+							}
+						}
+						else{
+							if(quartier.length()>0){
+								listBiens = AllMethods.listeDesBiensParSousCatEtQuartier(to, sousCategorie, quartier);
+								model.addAttribute("listBiens", listBiens);
+							}
+							else{
+								listBiens = AllMethods.listeDesBiensParSousCat(to, sousCategorie);
+								model.addAttribute("listBiens", listBiens);
+							}
+						}	
+				}
+			}
+			else{
+				if(prixMini >= PRIX_MIN){
+
+					if (prixMaxi <= PRIX_MAX){
+						if (quartier.length()>0){
+							listBiens = AllMethods.listeDesBiensParQuartierEtPrix(to, quartier, prixMini, prixMaxi);
+							model.addAttribute("listBiens", listBiens);
+						}
+						else{
+							listBiens = AllMethods.listeDesBiensParPrix(to, prixMini, prixMaxi);
+							model.addAttribute("listBiens", listBiens);
+						}
+					}
+					else
+					{
+						if (quartier.length()>0){
+							listBiens = AllMethods.listeDesBiensQuartierEtPrixMin(to, quartier, prixMini);
+							model.addAttribute("listBiens", listBiens);
+						}
+						else{
+							listBiens = AllMethods.listeDesBiensParPrixBas(to, prixMini);
+							model.addAttribute("listBiens", listBiens);
+						}
+							
+					}
+				
+				}
+				else{
+
+					if (prixMaxi <= PRIX_MAX){
+						if(quartier.length()>0){
+							listBiens = AllMethods.listeDesBiensQuartierEtPrixMax(to, quartier, prixMaxi);
+							model.addAttribute("listBiens", listBiens);
+						}
+						else{
+							listBiens = AllMethods.listeDesBiensParPrixMax(to, prixMaxi);
+							model.addAttribute("listBiens", listBiens);
+						}
+					}
+					else{
+						if(quartier.length()>0){
+							listBiens = AllMethods.listeDesBiensParQuartier(to, quartier);
+							model.addAttribute("listBiens", listBiens);
+						}
+						else{
+							listBiens = bienService.consulterBiens();
+							model.addAttribute("listBiens", listBiens);
+							
+							System.out.println(listBiens.size());
+							System.out.println(listBiens.size());
+							System.out.println(listBiens.size());
 						}
 					}
 					

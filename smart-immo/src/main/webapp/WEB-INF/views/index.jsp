@@ -40,9 +40,10 @@
 							<div class="tab-content2">
 							
 								<!-- Tab airtab3 -->
+								<!-- BARRE DE RECHERCHE POUR VENTE-->
 								<div class="tab-pane  active" id="airtab3">
 								
-									<f:form method="post" modelAttribute="formSearch" class="form-inline col-lg-12">
+									<f:form method="post" action="rechercheVente" modelAttribute="formSearch" class="form-inline col-lg-12">
 								<div class="form-group col-lg-2">
 									<span class="opensans size13"><b>VILLE</b><br></span>
 									<f:input type="text" path="ville" id="ville" class="form-control" style="text-align:left" placeholder="la ville" />
@@ -101,8 +102,10 @@
 								<!-- End of Tab airtab3 -->
 								
 								<!-- Tab hoteltab3 -->
+								
+								<!-- BARRE DE RECHERCHE POUR LOCATION  -->
 								<div class="tab-pane " id="hoteltab3">
-							<f:form method="post" modelAttribute="formSearch" class="form-inline col-lg-12">
+							<f:form method="post" action ="rechercheLocation" modelAttribute="formSearch" class="form-inline col-lg-12">
 								<div class="form-group col-lg-2">
 									<span class="opensans size13"><b>VILLE</b><br></span>
 									<f:input type="text" path="ville" id="ville" class="form-control" style="text-align:left" placeholder="la ville" />
@@ -123,8 +126,9 @@
 								
 								<div class="form-group col-lg-2">
 									<span class="opensans size13"><b>TYPE DE BIEN</b><br></span>
-									<f:select path="souscategorie" items="${listSousCategorie}" class="form-control">
-                                    </f:select>
+									<f:input path="souscategorie" type="text" class="form-control" style="text-align:left" placeholder="prix min" />
+									<!-- <f:select path="souscategorie" items="${listSousCategorie}" class="form-control">
+                                    </f:select> -->
                                     <div class="has-error">
                         				<f:errors path="souscategorie" class="help-inline"/>
                   				    </div>

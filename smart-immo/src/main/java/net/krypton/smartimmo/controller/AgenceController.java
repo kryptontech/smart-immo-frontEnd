@@ -35,17 +35,18 @@ public class AgenceController {
 Test Test = new Test();
 	
 	@RequestMapping(value="/saveAgence", method = RequestMethod.POST)
-	public String enregistrerFournisseur(@Valid Fournisseur v, BindingResult result, ModelMap model){
-		v.setMdpFournisseur(Test.md5(v.getMdpFournisseur()));
-		fournisseurService.ajouterFournisseur(v);
-		return "redirect:/profile";
+	public String enregistrerFournisseur(@Valid Agence v, BindingResult result, ModelMap model){
+		
+		agenceService.ajouterAgence(v);
+		
+		return "login";
 	}
 	@RequestMapping(value = "/saveAgence", method = RequestMethod.GET)
 	public String newFournisseur(ModelMap model){
-		Fournisseur fournisseur = new Fournisseur();
-		model.addAttribute("formAgence", fournisseur);
+		Agence agence = new Agence();
+		model.addAttribute("formAgence", agence);
 		
-		return "formAgence";
+		return "form-inscriptionAgence";
 	}
 	
 	@RequestMapping("/modifyAgence")
