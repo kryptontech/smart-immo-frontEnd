@@ -21,7 +21,15 @@ public class SousCategorie implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_souscategorie")
 	private int idSousCat;
-	private String libelleSousCat;
+	private String libelleSousCategorie;
+
+	public String getLibelleSousCategorie() {
+		return libelleSousCategorie;
+	}
+
+	public void setLibelleSousCategorie(String libelleSousCategorie) {
+		this.libelleSousCategorie = libelleSousCategorie;
+	}
 
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "id_categorie")
@@ -35,14 +43,9 @@ public class SousCategorie implements Serializable {
 		this.idSousCat = idSousCat;
 	}
 
-	public String getLibelleSousCat() {
-		return libelleSousCat;
-	}
 
-	public void setLibelleSousCat(String libelleSousCat) {
-		this.libelleSousCat = libelleSousCat;
-	}
-
+	
+	
 	public Categorie getCategorie() {
 		return categorie;
 	}
@@ -56,16 +59,16 @@ public class SousCategorie implements Serializable {
 		// TODO Auto-generated constructor stub
 	}
 
-	public SousCategorie(String libelleSousCat, Categorie categorie) {
+	public SousCategorie(String libelleSousCategorie, Categorie categorie) {
 		super();
-		this.libelleSousCat = libelleSousCat;
+		this.libelleSousCategorie = libelleSousCategorie;
 		this.categorie = categorie;
 	}
 
 	@Override
 	public String toString()
 	{
-		return getLibelleSousCat();
+		return getLibelleSousCategorie();
 	}
 
 }

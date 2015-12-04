@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import net.krypton.smartimmo.entities.Album;
 import net.krypton.smartimmo.entities.Bien;
 import net.krypton.smartimmo.entities.Fournisseur;
+import net.krypton.smartimmo.model.FormSearch;
 import net.krypton.smartimmo.model.ImageModel;
 import net.krypton.smartimmo.service.AlbumService;
 import net.krypton.smartimmo.service.BienService;
@@ -25,6 +26,9 @@ import net.krypton.smartimmo.service.VilleService;
 
 @Controller
 public class HomeController {
+	
+	final static double PRIX_MAX = 2000000000;
+	final static double PRIX_MIN = 0;
 	
 	@Autowired
 	SousCategorieService sousCategorieService;
@@ -51,7 +55,7 @@ public class HomeController {
 	
 	// controller pour appeler les bien sur la page accueil
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(ModelMap model) {
+	public String home(ModelMap model, FormSearch fm) {
 		
 		List<Bien> listbien =new ArrayList<Bien>();
 		listbien  = bienService.consulterBiens();
@@ -101,10 +105,14 @@ public class HomeController {
 		}
 	
 	  Bien b = new Bien();
-	  model.addAttribute("listSousCategorie", sousCategorieService.consulterSousCategories());
-	  model.addAttribute("formSearch", b);
+	  fm.setPrixMaxi(PRIX_MAX);
+	  fm.setPrixMini(PRIX_MIN);
+	  fm.setQuartierBien(b.getQuartierBien());
+	  fm.setSousCategorie("");
+	  fm.setVille("");
+	  model.addAttribute("formSearch", fm);
 		
-       model.addAttribute("listBiensHome", listdto);
+      model.addAttribute("listBiensHome", listdto);
 		
       //FIN DU CONTROLLER KI APPELLE LES IMAGE SUR LA PAGE ACCUEIL
        

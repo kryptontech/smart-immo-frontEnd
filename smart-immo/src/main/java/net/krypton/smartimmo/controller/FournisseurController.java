@@ -228,7 +228,7 @@ public class FournisseurController {
 			SousCategorie S = new SousCategorie();
 			S = SousCategories.get(i);
 
-			if (S.getLibelleSousCat().equals(scat)) {
+			if (S.getLibelleSousCategorie().equals(scat)) {
 				SousCategorie = S;
 			}
 		}

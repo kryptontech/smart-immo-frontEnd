@@ -107,7 +107,7 @@ public class BienController {
 	 b.setNbPieceBien(v.getNbPieceBien());
 	 b.setPrixBien(v.getPrixBien());
 	 b.setQuartierBien(v.getQuartierBien());
-	 b.setSouscategorie(findSousCategorieByLibelle(v.getSouscategorie()));
+	 b.setSousCategorie(findSousCategorieByLibelle(v.getSouscategorie()));
 	 b.setStatutBien(v.isStatutBien());
 	 b.setSuperficieBien(v.getSuperficieBien());
 	 b.setTitreBien(v.getTitreBien());
@@ -173,7 +173,7 @@ public class BienController {
 	 b.setNbPieceBien(v.getNbPieceBien());
 	 b.setPrixBien(v.getPrixBien());
 	 b.setQuartierBien(v.getQuartierBien());
-	 b.setSouscategorie(findSousCategorieByLibelle(v.getSouscategorie()));
+	 b.setSousCategorie(findSousCategorieByLibelle(v.getSouscategorie()));
 	 b.setStatutBien(v.isStatutBien());
 	 b.setSuperficieBien(v.getSuperficieBien());
 	 b.setTitreBien(v.getTitreBien());
@@ -235,7 +235,7 @@ public class BienController {
   im.setDatePubBien(b.getDatePubBien());
   im.setPrixBien(b.getPrixBien());
   im.setQuartierBien(b.getQuartierBien());
-  im.setSousCategorie(b.getSouscategorie().getLibelleSousCat());
+  im.setSousCategorie(b.getSousCategorie().getLibelleSousCategorie());
   im.setTypeOffre(b.getTypeoffre().getLibelleTypeOffre());
   im.setSuperficieBien(b.getSuperficieBien());
   im.setNbrePiece(b.getNbPieceBien());
@@ -337,7 +337,7 @@ public class BienController {
 			SousCategorie S = new SousCategorie();
 			S = SousCategories.get(i);
 
-			if (S.getLibelleSousCat().equals(scat)) {
+			if (S.getLibelleSousCategorie().equals(scat)) {
 				SousCategorie = S;
 			}
 		}
@@ -373,7 +373,16 @@ public class BienController {
 		}
 		return Disponibilite;
 	}
+	
+	
+	@RequestMapping("/Resultat")
+	  public String resultat() {
+	   return "bien-list";
+	  }
 
+	
+	
+	
  }
  
  

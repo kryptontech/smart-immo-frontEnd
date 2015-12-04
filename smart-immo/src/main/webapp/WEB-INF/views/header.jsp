@@ -15,8 +15,8 @@
 			  </div>
 			  <div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-				  <li><a href="<c:url value='/Resultat'/>">Acheter</a></li>
-				  <li><a href="<c:url value='/Resultat'/>">Louer</a></li>
+				  <li><a href="<c:url value='/Vente'/>">Acheter</a></li>
+				  <li><a href="<c:url value='/Location'/>">Louer</a></li>
 				  <li><a href="<c:url value='/Resultat'/>">Agences Agrées</a></li>	
 				  <li><a href="<c:url value='/Apropos'/>">Qui sommes-nous?</a></li>				  		
 				</ul>

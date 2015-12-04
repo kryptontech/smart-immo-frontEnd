@@ -48,12 +48,26 @@ public class BienDaoImpl implements BienDao{
 	}
 	
 	@Override
+	 public List<Bien> consulterBiens()
+	 {
+	  Query req = em.createQuery("select Bien");
+	  
+	  List<Bien> listBiens = req.getResultList();
+	  return listBiens;
+	 }
+	
+	/*@Override
 	public List<Bien> consulterBiens()
 	{
 		Query req = em.createQuery("select a From Bien a");
 		List<Bien> listBiens = req.getResultList();
 		return listBiens;
 	}
+	*/
+	
+
+	
+
 	
 	
 }

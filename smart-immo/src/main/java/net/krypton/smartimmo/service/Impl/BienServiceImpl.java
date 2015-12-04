@@ -49,5 +49,6 @@ public class BienServiceImpl implements BienService {
 		// TODO Auto-generated method stub
 		return dao.consulterBiens();
 	}
-
+	
+	
 }

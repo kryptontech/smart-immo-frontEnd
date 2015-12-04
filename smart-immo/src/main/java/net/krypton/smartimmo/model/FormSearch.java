@@ -1,6 +1,8 @@
 package net.krypton.smartimmo.model;
 
+import java.util.List;
 
+import net.krypton.smartimmo.entities.SousCategorie;
 
 public class FormSearch {
 	
@@ -9,16 +11,16 @@ public class FormSearch {
 	private String sousCategorie;
 	private double prixMini;
 	private double prixMaxi;
-	private String quartier;
+	private String quartierBien;
 	
 	
 	
 	
-	public String getQuartier() {
-		return quartier;
+	public String getQuartierBien() {
+		return quartierBien;
 	}
-	public void setQuartier(String quartier) {
-		this.quartier = quartier;
+	public void setQuartierBien(String quartierBien) {
+		this.quartierBien = quartierBien;
 	}
 	public double getPrixMini() {
 		return prixMini;
@@ -35,16 +37,13 @@ public class FormSearch {
 	
 	
 	
+	
 	public String getSousCategorie() {
 		return sousCategorie;
 	}
 	public void setSousCategorie(String sousCategorie) {
 		this.sousCategorie = sousCategorie;
-		
 	}
-	
-	
-	
 	public String getVille() {
 		return ville;
 	}

@@ -55,7 +55,7 @@ public class Bien implements Serializable {
 	
 	@ManyToOne(cascade = CascadeType.MERGE)
 	@JoinColumn(name="id_souscategorie")
-	private SousCategorie souscategorie;
+	private SousCategorie sousCategorie;
 
 	public int getIdBien() {
 		return idBien;
@@ -148,12 +148,14 @@ public class Bien implements Serializable {
 		this.typeoffre = typeoffre;
 	}
 
-	public SousCategorie getSouscategorie() {
-		return souscategorie;
+	
+
+	public SousCategorie getSousCategorie() {
+		return sousCategorie;
 	}
 
-	public void setSouscategorie(SousCategorie souscategorie) {
-		this.souscategorie = souscategorie;
+	public void setSousCategorie(SousCategorie sousCategorie) {
+		this.sousCategorie = sousCategorie;
 	}
 
 	public Bien(String titreBien, double superficieBien, int prixBien, String quartierBien, String descriptionBien,

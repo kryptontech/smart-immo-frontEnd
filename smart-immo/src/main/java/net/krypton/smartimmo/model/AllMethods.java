@@ -22,6 +22,8 @@ public class AllMethods {
 	{
 		
 		List<Bien> biens = bienService.consulterBiens();
+		
+		System.out.println(biens.size());
 		List<Bien> listBiens = new ArrayList<Bien>();
 		
 		for (int i=0; i < biens.size(); i++)
@@ -66,7 +68,7 @@ public class AllMethods {
 		{
 			Bien b = new Bien();
 			b = biens.get(i);
-			if (b.getSouscategorie().getLibelleSousCat().equals(libSousCat))
+			if (b.getSousCategorie().getLibelleSousCategorie().equals(libSousCat))
 			{
 				listBiens.add(i, b);
 			}
@@ -139,7 +141,7 @@ public class AllMethods {
 			Bien b = new Bien();
 			b = biens.get(i);
 			if (b.getVille().getLibelleVille().equals(libVille)) {
-				if  (b.getSouscategorie().getLibelleSousCat().equals(libSousCat)){
+				if  (b.getSousCategorie().getLibelleSousCategorie().equals(libSousCat)){
 						listBiens.add(i, b);
 				}
 			}
@@ -190,7 +192,7 @@ public class AllMethods {
 		{
 			Bien b = new Bien();
 			b = biens.get(i);
-			if (b.getSouscategorie().getLibelleSousCat().equals(libSousCat)) {
+			if (b.getSousCategorie().getLibelleSousCategorie().equals(libSousCat)) {
 				if  (b.getQuartierBien().equals(quartier)){
 						listBiens.add(i, b);
 				}
@@ -485,6 +487,7 @@ public class AllMethods {
 	public static List<Bien> listeDesBiensParPrix(String libTO, double prixMin, double prixMax)
 	{
 		List<Bien> biens = listeDesBiensParTypeOffre(libTO);
+		
 		List<Bien> listBiens = new ArrayList<Bien>();
 		
 		for (int i=0; i < biens.size(); i++)

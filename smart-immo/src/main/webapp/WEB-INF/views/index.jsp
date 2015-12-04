@@ -64,20 +64,20 @@
 								
 								<div class="form-group col-lg-2">
 									<span class="opensans size13"><b>TYPE DE BIEN</b><br></span>
-									<f:select path="souscategorie" items="${listSousCategorie}" class="form-control ">
-                                    </f:select>
+									<f:input path="sousCategorie"  id="sousCategorie"  class="form-control " />
+                                    
                                     <div class="has-error">
-                        				<f:errors path="souscategorie" class="help-inline"/>
+                        				<f:errors path="sousCategorie" class="help-inline"/>
                   				    </div>
 								</div>	
 								
 								<div class="form-group col-lg-2">
 									<span class="opensans size13"><b>PRIX MINIMUM</b><br></span>
 									<div class="input-group">
-										<f:input path="prixBien" type="text" class="form-control" style="text-align:left" placeholder="prix min" />
+										<f:input path="prixMini" type="text" class="form-control" style="text-align:left" placeholder="prix min" />
 										<span class="input-group-addon">Fcfa</span>
 										<div class="has-error">
-                        				<f:errors path="prixBien" class="help-inline"/>
+                        				<f:errors path="prixMini" class="help-inline"/>
                   				    </div>
 									</div>
 								</div>
@@ -85,10 +85,10 @@
 								<div class="form-group col-lg-2">
 									<span class="opensans size13"><b>PRIX MAXIMUM</b><br></span>
 									<div class="input-group">
-										<f:input type="text" path="prixBien" class="form-control" style="text-align:left" placeholder="prix max" />
+										<f:input type="text" path="prixMaxi" class="form-control" style="text-align:left" placeholder="prix max" />
 										<span class="input-group-addon">Fcfa</span>
 									<div class="has-error">
-                        				<f:errors path="prixBien" class="help-inline"/>
+                        				<f:errors path="prixMaxi" class="help-inline"/>
                   				    </div>
 									</div>
 								</div>	

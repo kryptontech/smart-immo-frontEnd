@@ -12,4 +12,8 @@ public interface BienDao {
 	public Bien consulterBien(int idBien);
 	public List<Bien> consulterBiens();
 	
+	/*// MA METHODE PERSO
+	public List<Bien> consulterParSearch();*/
+	
+	
 }
