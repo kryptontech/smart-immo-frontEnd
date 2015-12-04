@@ -35,25 +35,25 @@ public class Bien implements Serializable {
 	private boolean statutBien;
 	private Date datePubBien;
 	
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne(cascade = CascadeType.MERGE)
 	@JoinColumn(name="id_fournisseur")
 	private Fournisseur fournisseur;
 	
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne(cascade = CascadeType.MERGE)
 	@JoinColumn(name="Ville")
 	private Ville Ville;
 
 	
 	
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne(cascade = CascadeType.MERGE)
 	@JoinColumn(name="id_disponibilite")
 	private Disponibilite disponibilite;
 	
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne(cascade = CascadeType.MERGE)
 	@JoinColumn(name="id_typeoffre")
 	private TypeOffre typeoffre;
 	
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne(cascade = CascadeType.MERGE)
 	@JoinColumn(name="id_souscategorie")
 	private SousCategorie souscategorie;
 

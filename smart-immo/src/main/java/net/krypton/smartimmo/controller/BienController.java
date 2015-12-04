@@ -1,10 +1,18 @@
 package net.krypton.smartimmo.controller;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import net.krypton.smartimmo.entities.Album;
 import net.krypton.smartimmo.entities.Bien;
@@ -22,16 +30,6 @@ import net.krypton.smartimmo.service.FournisseurService;
 import net.krypton.smartimmo.service.SousCategorieService;
 import net.krypton.smartimmo.service.TypeOffreService;
 import net.krypton.smartimmo.service.VilleService;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.ui.ModelMap;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 
 @Controller
@@ -67,85 +65,137 @@ public class BienController {
   // AJOUTER UN BIEN PAR FURNISSEUR
 	 
  @RequestMapping(value = "/saveBien-{idFour}", method = RequestMethod.GET)
- public String enregistrerBien(@PathVariable int idFour, Model model){
-	 Bien b = new Bien();
+ public String formBien(@PathVariable int idFour, Model model){
 	 
-	 model.addAttribute("listDisponible",
-				disponibiliteService.consulterDisponibilites());	
- 
-		
-		model.addAttribute("listTypeOffre",
-				typeOffreService.consulterTypeOffres());
-		model.addAttribute("listVille", villeService.consulterVilles());
-		model.addAttribute("listSousCategorie",
-				sousCategorieService.consulterSousCategories());
-		model.addAttribute("listDisponibilite",
-				disponibiliteService.consulterDisponibilites());
-		model.addAttribute("formBien", b);
-		
-		
-		
-		
-		
-		/*model.addAttribute("idFour",
-				idFour);
-		model.addAttribute("date",
-				f.getDatePubBien());
-		model.addAttribute("statu",
-				f.isStatutBien());
-		model.addAttribute("formBien", b);
-		model.addAttribute("edit", false);
-	 */
-  return "publier-bien";
+	 Bien b = new Bien();
+	 FrontPage v = new FrontPage();
+	 v.setDescriptionBien(b.getDescriptionBien());
+	 v.setNbPieceBien(b.getNbPieceBien());
+	 v.setPrixBien(b.getPrixBien());
+	 v.setQuartierBien(b.getQuartierBien());
+	 v.setSuperficieBien(b.getSuperficieBien());
+	 v.setTitreBien(b.getTitreBien());
+	 
+	 Fournisseur f = new Fournisseur();
+	 f = findFournisseurById(idFour);
+	 v.setFournisseur(f.getIdFournisseur());
+	 
+	 model.addAttribute("listVille", villeService.consulterVilles());
+	 model.addAttribute("listTypeOffre", typeOffreService.consulterTypeOffres());
+	 model.addAttribute("listSousCategorie", sousCategorieService.consulterSousCategories());
+	 model.addAttribute("listDisponibilite", disponibiliteService.consulterDisponibilites());
+	 model.addAttribute("idFour", idFour);
+	 model.addAttribute("statuBien", v.isStatutBien());
+	 model.addAttribute("maDate", v.getDatePubBien());
+	 model.addAttribute("edit", false);
+	 model.addAttribute("frontPage", v);
+	 
+	 return "publier-bien"; 
+	 
  }
  
  
  @RequestMapping(value = "/saveBien-{idFour}", method = RequestMethod.POST)
  public String enregistrerBien(@Valid FrontPage v,
 			BindingResult result, ModelMap model, @PathVariable String idFour){
-
-		
+	 
+	 Bien b = new Bien();
+	 b.setDatePubBien(v.getDatePubBien());
+	 b.setDescriptionBien(v.getDescriptionBien());
+	 b.setDisponibilite(findDisponibiliteByLibelle(v.getDisponibilite()));
+	 b.setFournisseur(findFournisseurById(v.getFournisseur()));
+	 b.setNbPieceBien(v.getNbPieceBien());
+	 b.setPrixBien(v.getPrixBien());
+	 b.setQuartierBien(v.getQuartierBien());
+	 b.setSouscategorie(findSousCategorieByLibelle(v.getSouscategorie()));
+	 b.setStatutBien(v.isStatutBien());
+	 b.setSuperficieBien(v.getSuperficieBien());
+	 b.setTitreBien(v.getTitreBien());
+	 b.setTypeoffre(findTypeOffreByLibelle(v.getTypeoffre()));
+	 b.setVille(findVilleByName(v.getVille()));
+	 
+	 bienService.modifierBien(b);
+	 
+	 model.addAttribute("listVille", villeService.consulterVilles());
+	 model.addAttribute("listTypeOffre", typeOffreService.consulterTypeOffres());
+	 model.addAttribute("listSousCategorie", sousCategorieService.consulterSousCategories());
+	 model.addAttribute("listDisponibilite", disponibiliteService.consulterDisponibilites());
+	 model.addAttribute("idFour", idFour);
+	 model.addAttribute("statuBien", v.isStatutBien());
+	 model.addAttribute("maDate", v.getDatePubBien());
+	 model.addAttribute("idBien", v.getIdBien());
+	 model.addAttribute("edit", false);
+	 model.addAttribute("frontPage", v);
+	 
+	 return "listebiensfournisseur";
+ }
+ 
+ 
+ @RequestMapping(value = "/modifyBien-{idBien}", method = RequestMethod.GET)
+ public String modifyBien(@PathVariable int idBien, Model model){
+	 
+	 Bien b = new Bien();
+	 b = bienService.consulterBien(idBien);
+	 FrontPage v = new FrontPage();
+	 v.setDescriptionBien(b.getDescriptionBien());
+	 v.setNbPieceBien(b.getNbPieceBien());
+	 v.setPrixBien(b.getPrixBien());
+	 v.setQuartierBien(b.getQuartierBien());
+	 v.setSuperficieBien(b.getSuperficieBien());
+	 v.setTitreBien(b.getTitreBien());
+	 
 	
-			Bien bien = new Bien();
-			
-			bien.setDescriptionBien(v.getDescriptionBien());
-			bien.setNbPieceBien(v.getNbPieceBien());
-			bien.setPrixBien(v.getPrixBien());
-			bien.setQuartierBien(v.getQuartierBien());
-			bien.setStatutBien(v.isStatutBien());
-			bien.setSuperficieBien(v.getSuperficieBien());
-			bien.setTitreBien(v.getTitreBien());
-			
-			
-			
-			Fournisseur f = new Fournisseur();
-			f = findFournisseurById(v.getIdFour());
-			bien.setFournisseur(f);
-			                    
-			 System.out.println(v.getFournisseur());
-			 System.out.println(v.getFournisseur());
-			 
-			Ville V = new Ville();
-			V = findVilleByName(v.getVille());
-			bien.setVille(V);
-
-			TypeOffre T = new TypeOffre();
-			T = findTypeOffreByLibelle(v.getTypeoffre());
-			bien.setTypeoffre(T);
-
-			Disponibilite D = new Disponibilite();
-			D = findDisponibiliteByLibelle(v.getDisponibilite());
-			bien.setDisponibilite(D);
-
-			SousCategorie S = new SousCategorie();
-			S = findSousCategorieByLibelle(v.getSouscategorie());
-			bien.setSouscategorie(S);
-			model.addAttribute("formBien", v);
-			bienService.ajouterBien(bien);
-
-		
-		return "publier-bien";
-	}
+	 v.setFournisseur(b.getFournisseur().getIdFournisseur());
+	 
+	 model.addAttribute("listVille", villeService.consulterVilles());
+	 model.addAttribute("listTypeOffre", typeOffreService.consulterTypeOffres());
+	 model.addAttribute("listSousCategorie", sousCategorieService.consulterSousCategories());
+	 model.addAttribute("listDisponibilite", disponibiliteService.consulterDisponibilites());
+	 model.addAttribute("idFour",  v.getFournisseur());
+	 model.addAttribute("statuBien", v.isStatutBien());
+	 model.addAttribute("maDate", v.getDatePubBien());
+	 model.addAttribute("edit", true);
+	 model.addAttribute("frontPage", v);
+	 
+	 return "publier-bien"; 
+	 
+ }
+ 
+ @RequestMapping(value = "/modifyBien-{idFour}", method = RequestMethod.POST)
+ public String modifyBien(@Valid FrontPage v,
+			BindingResult result, ModelMap model, @PathVariable String idFour){
+	 
+	 Bien b = new Bien();
+	 b.setDatePubBien(v.getDatePubBien());
+	 b.setDescriptionBien(v.getDescriptionBien());
+	 b.setDisponibilite(findDisponibiliteByLibelle(v.getDisponibilite()));
+	 b.setFournisseur(findFournisseurById(v.getFournisseur()));
+	 b.setNbPieceBien(v.getNbPieceBien());
+	 b.setPrixBien(v.getPrixBien());
+	 b.setQuartierBien(v.getQuartierBien());
+	 b.setSouscategorie(findSousCategorieByLibelle(v.getSouscategorie()));
+	 b.setStatutBien(v.isStatutBien());
+	 b.setSuperficieBien(v.getSuperficieBien());
+	 b.setTitreBien(v.getTitreBien());
+	 b.setTypeoffre(findTypeOffreByLibelle(v.getTypeoffre()));
+	 b.setVille(findVilleByName(v.getVille()));
+	 
+	 bienService.modifierBien(b);
+	 
+	 model.addAttribute("listVille", villeService.consulterVilles());
+	 model.addAttribute("listTypeOffre", typeOffreService.consulterTypeOffres());
+	 model.addAttribute("listSousCategorie", sousCategorieService.consulterSousCategories());
+	 model.addAttribute("listDisponibilite", disponibiliteService.consulterDisponibilites());
+	 model.addAttribute("idFour", idFour);
+	 model.addAttribute("statuBien", v.isStatutBien());
+	 model.addAttribute("maDate", v.getDatePubBien());
+	 model.addAttribute("idBien", v.getIdBien());
+	 model.addAttribute("edit", true);
+	 model.addAttribute("frontPage", v);
+	 
+	 return "listebiensfournisseur";
+ }
+ 
  
  
  @RequestMapping("/modifyBien")
@@ -153,12 +203,17 @@ public class BienController {
   return bienService.modifierBien(a);
  }
  
- @RequestMapping("/deleteBien")
- public void supprimerBien(int idBien){
-  
-  bienService.supprimerBien(idBien);
+ @RequestMapping("/deleteBien-{idBien}")
+ public String supprimerBien(@PathVariable int idBien) {
+
+		try {
+			bienService.supprimerBien(idBien);
+			return "listebiensfournisseur";
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+			return "listebiensfournisseur";
+		}
  }
- 
  
  @RequestMapping("/viewBien")
  public Bien consulterBien(int idBien)
@@ -289,7 +344,7 @@ public class BienController {
 		return SousCategorie;
 	}
 
-	public Fournisseur findFournisseurById(String id) {
+	public Fournisseur findFournisseurById(int idFour) {
 		  List<Fournisseur> Fournisseurs = fournisseurService
 		    .consulterFournisseurs();
 		  Fournisseur Fournisseur = new Fournisseur();
@@ -297,7 +352,7 @@ public class BienController {
 		   Fournisseur F = new Fournisseur();
 		   F = Fournisseurs.get(i);
 
-		   if (F.getIdFournisseur()==Integer.valueOf(id)) {
+		   if (F.getIdFournisseur()==Integer.valueOf(idFour)) {
 		    Fournisseur = F;
 		   }
 		  }

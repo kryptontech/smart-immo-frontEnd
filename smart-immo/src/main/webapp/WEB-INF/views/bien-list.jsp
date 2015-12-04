@@ -54,7 +54,7 @@
 									<span class="green size18"><b>Prix</b></span><br/>
 									<span class="size11 grey">par mois</span><br/><br/><br/>
 									<form action="details.html">
-									 <button class="btn btn-custom" type="submit">Decouvrir</button>	
+									 <a href="<c:url value='/detailsBien-{idBien}'/>" class="btn btn-custom" type="submit">Decouvrir</a>	
 									</form>	
 									<br/>
 									<form action="details.html">

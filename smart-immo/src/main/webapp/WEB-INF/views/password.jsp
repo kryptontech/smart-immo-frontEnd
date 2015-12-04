@@ -9,8 +9,6 @@
 			<div class="left">
 				<ul class="bcrumbs">
 					<li>/</li>
-					<li><a href="<c:url value='/' />"> Accueil</a></li>
-					<li>/</li>
 					<li><a href="#" class="active">Mon Compte</a></li>					
 				</ul>				
 			</div>

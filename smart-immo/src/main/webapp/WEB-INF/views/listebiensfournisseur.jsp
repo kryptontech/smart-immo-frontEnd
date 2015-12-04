@@ -10,8 +10,6 @@
 			<div class="left">
 				<ul class="bcrumbs">
 					<li>/</li>
-					<li><a href="<c:url value='/' />"> Accueil</a></li>
-					<li>/</li>
 					<li><a href="#" class="active">Mon Compte</a></li>					
 				</ul>				
 			</div>
@@ -88,15 +86,17 @@
 								<tbody>
 								  <c:forEach items="${listBiens}" var="biens">
 								  <tr>
-								  		
 								  			<td>${biens.datePubBien}</td>
 								  			<td>${biens.titreBien}</td>
 								  			<td>${biens.quartierBien}</td>
 								  			<td> 
-								  			    <button type="submit" class="btn-search5"><span class="glyphicon glyphicon-plus"></span></button>
-							                    <button type="submit" class="btn-search5"><span class="glyphicon glyphicon-trash"></span></button>
-							                </td>
-								  		
+								  			    <a class="btn btn-info" data-toggle="modal" href="<c:url value='/modifyBien-${biens.idBien}' />">
+								  			    <i class="glyphicon glyphicon-pencil"></i></a> 
+								  			    <a class="btn btn-danger" data-toggle="modal" href="<c:url value='/deleteBien-${biens.idBien}' />">
+								  			    <i class="glyphicon glyphicon-trash"></i></a> 
+												<a class="btn btn-success" data-toggle="modal" href="<c:url value='/saveAlbum-${biens.idBien}'/>">
+												<i class="glyphicon glyphicon-camera"></i></a>
+							                </td>	
 								  </tr>
 								  </c:forEach>
 								</tbody>

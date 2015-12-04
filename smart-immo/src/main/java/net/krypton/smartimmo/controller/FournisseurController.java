@@ -62,6 +62,7 @@ public class FournisseurController {
 		fournisseurService.ajouterFournisseur(v);
 		return "login";
 	}
+	
 	@RequestMapping(value = "/saveFournisseur", method = RequestMethod.GET)
 	public String newFournisseur(ModelMap model){
 		Fournisseur fournisseur = new Fournisseur();
@@ -69,7 +70,6 @@ public class FournisseurController {
 		
 		return "form-inscriptionParticulier";
 	}
-
 	@RequestMapping(value = "/deleteFournisseur-{idFournisseur}")
 	public String supprimerFournisseur(@PathVariable int idFournisseur){
 		
@@ -101,7 +101,7 @@ public class FournisseurController {
 		f.setTelMobileFournisseur(mfm.getTelMobileFournisseur());
 		fournisseurService.modifierFournisseur(f);
 		model.addAttribute("fFournisseur", mfm);
-		return "listebiensfournisseur";
+		return "mesDonnees";
 	}
 	
 	
@@ -143,16 +143,29 @@ public class FournisseurController {
 		f.setTelMobileFournisseur(mf.getTelMobileFournisseur());
 		
 		model.addAttribute("fFournisseur", mf);	
-		fournisseurService.modifierFournisseur(f);
-		
-		 	
+		fournisseurService.modifierFournisseur(f);	 	
 		// AJOUT DE BIEN PAR LE FOURNISSEUR POST
 		//******************************
-		
-	    
-
 	
-		return "redirect:/profile-{idFour}";
+		return "mesDonnees";
+	    
+	    
+	}
+	
+	@RequestMapping(value = "/profile-{idFour}", method = RequestMethod.GET)
+	public String update(ModelMap model, @PathVariable int idFour)
+	{
+		ModifierFourModel mf = new ModifierFourModel();
+		Fournisseur f = new Fournisseur();
+		
+		f = fournisseurService.consulterFournisseur(idFour);
+		mf.setEmailFournisseur(f.getEmailFournisseur());
+		mf.setNomFournisseur(f.getNomFournisseur());
+		mf.setPseudoFournisseur(f.getPseudoFournisseur());
+		mf.setTelMobileFournisseur(f.getTelMobileFournisseur());
+		model.addAttribute("fFournisseur", mf);	 	
+	
+		return "mesDonnees";
 	    
 	    
 	}

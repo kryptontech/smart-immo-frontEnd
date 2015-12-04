@@ -28,9 +28,9 @@
 			<div class="col-md-12 pagecontainer2 space offset-0">
 				<div class="container">
 					<div class="row-fluid sortable box">	
-						<form method="POST"  class="form-horizontal well" enctype = "multipart/form-data">
-						<input type="hidden" path="idAlbum" id="idAlbum"/>
-						<input type="hidden" path="idBien" id="idBien"/>
+						<f:form method="POST" action="multipleSave" class="form-horizontal well" enctype = "multipart/form-data">
+						
+						<input type="hidden" value ="${idBien}" id="id"/>
 						<br>
 						<br> 
 										
@@ -47,7 +47,7 @@
 								 </div>
 								  <br/>
 								  <div class="row-fluid">
-									<input type="file"/>
+									<input id="upload_file" type="file" name="file"> <br />
 								 </div>
 							 </div>	
 							  <div class="row-fluid span4">
@@ -57,7 +57,7 @@
 								 </div>
 								  <br/>
 								  <div class="row-fluid">
-									<input type="file"/>
+									<input id="upload_file" type="file" name="file"> <br />
 								 </div>
 							 </div>	
 							  <div class="row-fluid span4">
@@ -67,7 +67,7 @@
 								 </div>
 								  <br/>
 								  <div class="row-fluid">
-									<input type="file"/>
+									<input id="upload_file" type="file" name="file"> <br />
 								 </div>
 							 </div>	
 							  <div class="row-fluid span4">
@@ -77,7 +77,7 @@
 								 </div>
 								  <br/>
 								  <div class="row-fluid">
-									<input type="file"/>
+									<input id="upload_file" type="file" name="file"> <br />
 								 </div>
 							 </div>	
 							  <div class="row-fluid span4">
@@ -87,7 +87,7 @@
 								 </div>
 								  <br/>
 								  <div class="row-fluid">
-									<input type="file"/>
+									<input id="upload_file" type="file" name="file"> <br />
 								 </div>
 							 </div>	
 							 <div class="row-fluid span4">
@@ -97,7 +97,7 @@
 								 </div>
 								  <br/>
 								  <div class="row-fluid">
-									<input type="file"/>
+									<input id="upload_file" type="file" name="file"> <br />
 								 </div>
 							 </div>	
 							  <div class="row-fluid span4">
@@ -107,7 +107,7 @@
 								 </div>
 								  <br/>
 								  <div class="row-fluid">
-									<input type="file"/>
+									<input id="upload_file" type="file" name="file"> <br />
 								 </div>
 							 </div>	
 							  <div class="row-fluid span4">
@@ -117,7 +117,7 @@
 								 </div>
 								  <br/>
 								  <div class="row-fluid">
-									<input type="file"/>
+									<input id="upload_file" type="file" name="file"> <br />
 								 </div>
 							 </div>	
 						</div>
@@ -129,15 +129,21 @@
 						<div class="form-group pull-right">
 										  
 												<div class=" container col-lg-6">
-													<a href="<c:url value='/Profile'/>" value="Enregister" class="btn btn-primary"> Enregistrer<a/> 
+													<c:choose>
+                    									<c:when test="${edit}">
+                        									<input type="submit" value="Modifier" class="btn btn-danger btn-sm"/>
+                    									</c:when>
+                    									<c:otherwise>
+                        									<input type="submit" value="Enregister" class="btn btn-danger btn-sm"/>
+                    									</c:otherwise>
+                									</c:choose>
 												</div>
 												<div class="container col-lg-6">
-													<a class="btn btn-danger" href="<c:url value='/viewAlbums'/>">Annuler</a>
+													<button type = "reset" class="btn btn-danger">Annuler</button>
 												</div>
-										
 						</div>
 					</div>
-				</form>
+				</f:form>
              </div>
 				</div>
 			</div>

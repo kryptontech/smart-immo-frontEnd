@@ -10,8 +10,6 @@
 			<div class="left">
 				<ul class="bcrumbs">
 					<li>/</li>
-					<li><a href="<c:url value='/' />"> Accueil</a></li>
-					<li>/</li>
 					<li><a href="#" class="active">Mon Compte</a></li>					
 				</ul>				
 			</div>
@@ -78,10 +76,12 @@
 							<br/>
 							
 							<div class="relative margtop10">
-							 <f:form method="POST" modelAttribute="formBien" class="form-horizontal col-lg-12">
-								 <f:input type="text" value="${idFour}" path="idFour" class="form-control input-sm"/> 
-								<!-- <f:input type="text" value="${date}" path="statutBien" class="form-control input-sm"/>
-								<f:input type="text" value="${statu}" path="datePubBien" class="form-control input-sm"/> -->
+							 <f:form method="POST" modelAttribute="frontPage" class="form-horizontal col-lg-12">
+								 <f:input type="hidden" value="${idFour}" path="fournisseur" class="form-control input-sm"/> 
+								<f:input type="hidden" value="${date}" path="datePubBien" class="form-control input-sm"/>
+								<f:input type="hidden" value="${date}" path="statutBien" class="form-control input-sm"/>
+								 <f:input type="hidden" value="${idBien}" path="idBien" class="form-control input-sm"/> 
+								
 									   <div class=" row well">
 									   <div class="container">
 											<div class="form-group">
@@ -197,18 +197,18 @@
 											</div>
 									   </div>
 									   </div>
-									  
-									  
-							           
 										<div class=" row well">
-										<div class="form-group pull-right">
-										  
-												<div class=" container col-lg-6">
-													<button  type="submit" class="btn-custom btn">Ajouter un album
-							            			 <span class="glyphicon glyphicon-picture"></span></button>
-												</div>
+										<div class="form-group pull-right"> 
+												<c:choose>
+                    								<c:when test="${edit}">
+                        								<input type="submit" value="Modifier" class="btn btn-danger btn-sm"/>
+                    								</c:when>
+                    							<c:otherwise>
+                        							<input type="submit" value="Enregister" class="btn btn-danger btn-sm"/>
+                    							</c:otherwise>
+               									 </c:choose>
 												<div class="container col-lg-6">
-													<button type="reset" class="btn-custom btn">Annuler</button>
+													<button type="reset" class="btn bnt-success">Annuler</button>
 												</div>
 									  </div>
 									   </div> 
