@@ -125,4 +125,11 @@ public class HomeController {
 	 public String profile() {
 	  return "about";
 	 }
+	 
+	 @RequestMapping("/login")
+	 public String login() {
+	  return "login";
+	 }
+	 
+	 
 }

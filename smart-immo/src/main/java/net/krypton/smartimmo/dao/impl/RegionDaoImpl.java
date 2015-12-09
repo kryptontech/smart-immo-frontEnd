@@ -52,7 +52,7 @@ public class RegionDaoImpl implements RegionDao{
 	@Override
 	public List<Region> consulterRegions()
 	{
-		Query req = em.createQuery("select a From Region a");
+		Query req = em.createQuery("From Region ");
 		List<Region> listRegions = req.getResultList();
 		return listRegions;
 	}

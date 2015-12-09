@@ -50,7 +50,7 @@
 			 <br/>
 			  <fieldset>
 			   <div class="container">
-			     <div class="col-lg-6">
+			     <div class="col-lg-4">
 					<div class="form-group">
 						<Label for="nomFournisseur" class="col-lg-3">Nom*</label> 
 							<div class="col-lg-12">
@@ -61,9 +61,9 @@
 							</div>
 						</div>
 					</div>
-				 
+				   <div class="col-lg-1"></div>
 				  
-				   <div class="col-lg-6">
+				   <div class="col-lg-4">
 					<div class="form-group">
 						<Label for="pseudoFournisseur" class="col-lg-3">Pseudo*</label> 
 					<div class="col-lg-12">
@@ -76,11 +76,12 @@
 						
 					</div>
 				  </div>
+				    <div class="col-lg-1"></div>
 			  	 </div>
 			  </br>
 			  
 			   <div class="container">
-			    <div class="col-lg-6">
+			    <div class="col-lg-4">
 					<div class="form-group">
 						<Label for="mobile" class="col-lg-3">Mobile*</label>
 						<div class="col-lg-12"> 
@@ -92,7 +93,8 @@
 						
 					</div>
 				  </div>
-			     <div class="col-lg-6">
+				    <div class="col-lg-1"></div>
+			     <div class="col-lg-4">
 					<div class="form-group">
 						<Label for="email" class="col-lg-3">Email*</label> 
 						<div class="col-lg-12">
@@ -103,10 +105,11 @@
 					</div>
 				  </div>
 			  </div>
+			    <div class="col-lg-1"></div>
 			  </div>
 			  </br>
 			   <div class="container">
-			    <div class="col-lg-6">
+			    <div class="col-lg-4">
 					<div class="form-group">
 						<Label for="password" class="col-lg-6">Mot de passe*</label> 
 						<div class="col-lg-12">
@@ -117,7 +120,8 @@
 				        </div>
 				  </div>
 				  </div>
-			     <div class="col-lg-6">
+				  <div class="col-lg-1"></div>
+			     <div class="col-lg-4">
 					<div class="form-group">
 						<Label for="confirm" class="col-lg-10">Confirmer votre mot de passe</label> 
 						<div class="col-lg-12">
@@ -127,6 +131,7 @@
 				  </div>
 			  </div>
 			 </fieldset>
+			   <div class="col-lg-1"></div>
 			 </br>
 			 
 			 <br/>
@@ -147,7 +152,7 @@
 			  </div>
 			 </div>
 			  <div class="container">
-			    <div class="col-lg-12">
+			    <div class="col-lg-11">
 					<div class="form-group">
 						<input type="submit" class="btn btn-custom pull-right" value="CREER MON COMPTE">
 					</div>
@@ -168,6 +173,6 @@
 	
 	<!-- END OF CONTENT -->
 	
-<%@ include file="footer.jsp" %>>
+<%@ include file="footer.jsp" %>
     
 <%@ include file ="java.jsp" %>

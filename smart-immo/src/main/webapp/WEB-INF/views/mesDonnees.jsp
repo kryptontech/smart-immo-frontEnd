@@ -2,7 +2,7 @@
 
 <%@ include file ="head.jsp" %>
   <body id="top" class="thebg" >
-    <%@ include file="header.jsp" %>
+    <%@ include file="headers.jsp" %>
 	<!-- /Top wrapper -->
 	<div class="container breadcrub">
 	    <div>
@@ -30,30 +30,31 @@
 			<div class="col-md-12 pagecontainer2 space offset-0">
 				
 				<!-- LEFT MENU -->
-				<div class="col-md-1 offset-0">
+				<div class="col-md-2 offset-0">
 					<!-- Nav tabs -->
 					<ul class="nav profile-tabs">
 					 
 					  <li >
-						  <a href=" <c:url value='/vosBiens'/> " >
+						  <a href=" <c:url value='/secure/listeBiensFour'/> " >
 						  <span class="history-icon"></span>								  
 						   historiques de vos annonces
 						  </a></li>
 						  
 					 <li>
-						  <a href=" <c:url value='/publier'/>">
+						  <a href=" <c:url value='/secure/saveBien'/>">
 						  <span class="bookings-icon"></span>						  
 						  Publier un nouveau bien
 						  </a></li>
+						  
 					 
 					  <li class="active">
-						  <a href="#profile" data-toggle="tab" onclick="mySelectUpdate()">
+						  <a href="<c:url value='/secure/profiles'/>">
 						  <span class="settings-icon"></span>								  
 						  Modifier vos informations
 						  </a></li>
 					  
 					  <li>
-						  <a href="<c:url value='/change-password'/> ">
+						  <a href="<c:url value='/secure/modifyMdpFournisseur'/> ">
 						  <span class="password-icon"></span>							  
 						  Changer votre mot de passe
 						  </a></li>
@@ -63,7 +64,7 @@
 				<!-- LEFT MENU -->
 					
 				<!-- RIGHT CPNTENT -->
-				<div class="col-md-11 offset-0">
+				<div class="col-md-10 offset-0">
 					<!-- Tab panes from left menu -->
 					<div class="tab-content5">
 					
@@ -82,22 +83,27 @@
 						  
 
 						<!-- COL 1 -->
-						<f:form method="post" modelAttribute="fFournisseur" class="well" >
-						<div class="col-md-12 offset-0">
+						<f:form method="post" modelAttribute="fFournisseur"  >
+							<div class="col-md-3 offset-0" class="well"></div>
+						<div class="col-md-6 offset-0" class="well">
 							
 							<br/>
 							Nom*:
-							<f:input path="nomFournisseur" id="nomFournisseur" type="text" class="form-control" placeholder="John Doe" rel="popover"  data-content="This field is mandatory" data-original-title="Here you can edit your name"/>
 							<br/>
+							<f:input path="nomFournisseur" id="nomFournisseur" type="text" class="form-control" placeholder="John Doe" rel="popover"  data-content="This field is mandatory" data-original-title="Here you can edit your name"/>
+							<hr/>
 							Pseudo*:
+							<br/>
 							<f:input path="pseudoFournisseur"
 							id="pseudoFournisseur" type="text" class="form-control" placeholder="Jack" rel="popover"  data-content="This field is mandatory" data-original-title="Here you can edit your username"/>						  
-							<br/>
+							<hr/>
 							E-mail*:
+							<br/>
 							<f:input path="emailFournisseur"
 							id="emailFournisseur" type="text" class="form-control" placeholder="office@email.com"  data-content="This field is mandatory" data-original-title="Edit your email address"/>
-							<br/>
+							<hr/>
 							telephone:
+							<br/>
 							<f:input path="telMobileFournisseur"
 							id="telMobileFournisseur" type="text" class="form-control" placeholder=""/>	
 							
@@ -134,6 +140,6 @@
 
 	
 	
-<%@ include file="footer.jsp" %>>
+<%@ include file="footer.jsp" %>
     
 <%@ include file ="java.jsp" %>

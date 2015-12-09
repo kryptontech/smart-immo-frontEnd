@@ -1,7 +1,7 @@
 <!--FORMULAIRE DE CHANGEMENT DE MOT DE PASS -->
 <%@ include file ="head.jsp" %>
   <body id="top" class="thebg" >
-    <%@ include file="header.jsp" %>
+    <%@ include file="headers.jsp" %>
 	<!-- /Top wrapper -->
 	<div class="container breadcrub">
 	    <div>
@@ -29,40 +29,34 @@
 			<div class="col-md-12 pagecontainer2 space offset-0">
 				
 				<!-- LEFT MENU -->
-				<div class="col-md-1 offset-0">
+				<div class="col-md-2 offset-0">
 					<!-- Nav tabs -->
-					<ul class="nav profile-tabs">
-					 
-					  <li>
-						  <a href=" <c:url value='/vosBiens'/>">
-						  <span class="history-icon"></span>								  
-						   historiques de vos annonces
-						  </a></li>
-						  
-					 <li>
-						  <a href=" <c:url value='/publier'/>">
-						  <span class="bookings-icon"></span>						  
-						  Publier un nouveau bien
-						  </a></li>
-					 
-					  <li>
-						  <a href="<c:url value='/mesDonnees'/>">
-						  <span class="settings-icon"></span>								  
-						  Modifier vos informations
-						  </a></li>
-					  
-					  <li class="active">
-						  <a href="#password" data-toggle="tab" onclick="mySelectUpdate()">
-						  <span class="password-icon"></span>							  
-						  Changer votre mot de passe
-						  </a></li>
+				<ul class="nav profile-tabs">
+
+						<li><a href=" <c:url value='/secure/listeBiensFour'/> ">
+								<span class="history-icon"></span> historiques de vos annonces
+						</a></li>
+
+						<li ><a href=" <c:url value='/secure/saveBien'/>"> <span
+								class="bookings-icon"></span> Publier un nouveau bien
+						</a></li>
+
+
+						<li ><a
+							href="<c:url value='/secure/profiles'/>"> <span
+								class="settings-icon"></span> Modifier vos informations
+						</a></li>
+
+						<li class="active"><a href="<c:url value='/secure/modifyMdpFournisseur'/> ">
+								<span class="password-icon"></span> Changer votre mot de passe
+						</a></li>
 					</ul>
 					<div class="clearfix"></div>
 				</div>
 				<!-- LEFT MENU -->
 					
 				<!-- RIGHT CPNTENT -->
-				<div class="col-md-11 offset-0">
+				<div class="col-md-10 offset-0">
 					<!-- Tab panes from left menu -->
 					<div class="tab-content5">
 									  
@@ -116,6 +110,6 @@
 
 	
 	
-<%@ include file="footer.jsp" %>>
+<%@ include file="footer.jsp" %>
     
 <%@ include file ="java.jsp" %>

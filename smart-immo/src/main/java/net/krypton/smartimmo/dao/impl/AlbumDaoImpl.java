@@ -52,7 +52,7 @@ public class AlbumDaoImpl implements AlbumDao{
 	@Override
 	public List<Album> consulterAlbums()
 	{
-		Query req = em.createQuery("select a From Album a");
+		Query req = em.createQuery("From Album ");
 		List<Album> listAlbums = req.getResultList();
 		return listAlbums;
 	}

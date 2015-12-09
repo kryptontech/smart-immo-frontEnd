@@ -50,7 +50,7 @@ public class AdminDaoImpl implements AdminDao{
 	@Override
 	public List<Admin> consulterAdmins()
 	{
-		Query req = em.createQuery("select a From Admin a");
+		Query req = em.createQuery(" From Admin ");
 		List<Admin> listAdmins = req.getResultList();
 		return listAdmins;
 	}

@@ -1,8 +1,5 @@
 package net.krypton.smartimmo.model;
 
-import java.util.List;
-
-import net.krypton.smartimmo.entities.SousCategorie;
 
 public class FormSearch {
 	

@@ -40,8 +40,8 @@ public class FournisseurDaoImpl implements FournisseurDao{
 	@Override
 	public Fournisseur consulterFournisseur(int idFournisseur)
 	{
-		Query req = em.createQuery("From Fournisseur where idFournisseur=?1");
-		req.setParameter(1, idFournisseur);
+		Query req = em.createQuery("From Fournisseur where idFournisseur=:idFournisseur");
+		req.setParameter("idFournisseur", idFournisseur);
 		Fournisseur Fournisseurs = (Fournisseur) req.getSingleResult();
 		return Fournisseurs;
 	}
@@ -49,8 +49,16 @@ public class FournisseurDaoImpl implements FournisseurDao{
 	@Override
 	public List<Fournisseur> consulterFournisseurs()
 	{
-		Query req = em.createQuery("select a From Fournisseur a");
+		Query req = em.createQuery("From Fournisseur ");
 		List<Fournisseur> listFournisseurs = req.getResultList();
 		return listFournisseurs;
+	}
+
+	@Override
+	public Fournisseur consulterFournisseurByName(String Fournisseur) {
+		Query req = em.createQuery("From Fournisseur where emailFournisseur=:Fournisseur");
+		req.setParameter("Fournisseur", Fournisseur);
+		Fournisseur Fournisseurs = (Fournisseur) req.getSingleResult();
+		return Fournisseurs;
 	}
 }

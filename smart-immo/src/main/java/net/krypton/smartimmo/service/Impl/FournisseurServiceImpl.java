@@ -49,6 +49,13 @@ public class FournisseurServiceImpl implements FournisseurService {
 	public List<Fournisseur> consulterFournisseurs() {
 		// TODO Auto-generated method stub
 		return dao.consulterFournisseurs();
+		
+	}
+
+	@Override
+	public Fournisseur consulterFournisseurByName(String m) {
+		// TODO Auto-generated method stub
+		return dao.consulterFournisseurByName(m);
 	}
 
 }

@@ -1,6 +1,8 @@
 package net.krypton.smartimmo.controller;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import javax.validation.Valid;
 
@@ -29,18 +31,54 @@ public class AlbumController {
 	
 	@Autowired
 	BienService bienService;
+	
+	@RequestMapping(value = "/secure/viewAlbums-{idAlbum}")
+	public String consulterAlbum(@PathVariable int idAlbum,
+			Map<String, Object> map) {
+		map.put("listBien", bienService.consulterBiens());
 
-	@RequestMapping(value = "/saveAlbum-{idBien}", method = RequestMethod.GET)
+		Bien bien = new Bien();
+
+		bien = bienService.consulterBien(Integer.valueOf(idAlbum));
+
+		List<Album> al = new ArrayList<Album>();
+		List<Album> als = new ArrayList<Album>();
+		als = albumService.consulterAlbums();
+		for (int i = 0; i < als.size(); i++) {
+			Album Album = new Album();
+
+			Album = als.get(i);
+
+			if (Album.getBien().getIdBien() == (idAlbum)
+					&& Album.getBien().getDescriptionBien()
+							.equals(bien.getDescriptionBien())) {
+				al.add(Album);
+			}
+		}
+
+		map.put("listAlbum", al);
+		return "album";
+	}
+	
+	
+	
+	
+
+	@RequestMapping(value = "/secure/saveAlbum-{idBien}", method = RequestMethod.GET)
 	public ModelAndView enregistrerAlbum(@PathVariable int idBien, ModelMap model){
 		
 		AlbumModel album = new AlbumModel();
 		ModelAndView mav = new ModelAndView("addalbum");
 
-		mav.addObject("idBien", idBien);
+		mav.addObject("idBien", Integer.toString(idBien));
 		mav.addObject("formAlbum", album);
 		mav.addObject("edit", false);
 		return mav;
 	}
+
+	
+	
+	
 	
 	@RequestMapping(value = "/saveAlbum-{idBien}", method = RequestMethod.POST)
 	public String saveAlbum(@Valid AlbumModel am, @PathVariable int idBien, ModelMap model){
@@ -61,7 +99,7 @@ public class AlbumController {
 	
 	
 	
-	@RequestMapping(value = "/modifyAlbum-{idAlbum}", method = RequestMethod.GET)
+	@RequestMapping(value = "/secure/modifyAlbum-{idAlbum}", method = RequestMethod.GET)
 	public String editAlbum(@PathVariable int idAlbum, ModelMap model){
 		Album album = albumService.consulterAlbum(idAlbum);
 		
@@ -71,17 +109,17 @@ public class AlbumController {
 		return "publier-bien";
 	}
 	
-	@RequestMapping(value = "/modifyAlbum-{idAlbum}", method = RequestMethod.POST)
+	@RequestMapping(value = "/secure/modifyAlbum-{idAlbum}", method = RequestMethod.POST)
 	public String modifierAlbum(@Valid Album a, BindingResult result, ModelMap model, @PathVariable int idAlbum){
 		albumService.modifierAlbum(a);
 		return "publier-bien";
 	}
 	
-	@RequestMapping(value = "/deleteAlbum-{idAlbum}", method = RequestMethod.GET)
+	@RequestMapping(value = "/secure/deleteAlbum-{idAlbum}", method = RequestMethod.GET)
 	public String supprimerAlbum(@PathVariable int idAlbum){
 		
 		albumService.supprimerAlbum(idAlbum);
-		return "publier-bien";
+		return "redirect:/secure/listeBiensFour";
 	}
 	
 	

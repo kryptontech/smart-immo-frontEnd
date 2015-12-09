@@ -52,7 +52,7 @@ public class DisponibiliteDaoImpl implements DisponibiliteDao{
 	@Override
 	public List<Disponibilite> consulterDisponibilites()
 	{
-		Query req = em.createQuery("select a From Disponibilite a");
+		Query req = em.createQuery("From Disponibilite ");
 		List<Disponibilite> listDisponibilites = req.getResultList();
 		return listDisponibilites;
 	}

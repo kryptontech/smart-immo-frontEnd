@@ -52,7 +52,7 @@ public class CategorieDaoImpl implements CategorieDao{
 	@Override
 	public List<Categorie> consulterCategories()
 	{
-		Query req = em.createQuery("select a From Categorie a");
+		Query req = em.createQuery("From Categorie");
 		List<Categorie> listCategories = req.getResultList();
 		return listCategories;
 	}

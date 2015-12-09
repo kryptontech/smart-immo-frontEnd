@@ -1,27 +1,30 @@
-package net.krypton.smartimmo.model;
+package net.krypton.smartimmo;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 import net.krypton.smartimmo.entities.Bien;
 import net.krypton.smartimmo.service.BienService;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+@Controller
 public class AllMethods {
 	
 	
-	private final static double PRIX_MAX = 2000000000;
-	private final static double PRIX_MIN = 0;
+	private final double PRIX_MAX = 2000000000;
+	private final double PRIX_MIN = 0;
 	
 	@Autowired
-	static BienService bienService;
+	BienService bienService;
 	
 	
-	public static List<Bien> listeDesBiensParTypeOffre(String libTO)
+	public List<Bien> listeDesBiensParTypeOffre(String libTO)
 	{
 		
-		List<Bien> biens = bienService.consulterBiens();
+		List<Bien> biens = new ArrayList<Bien>();
+				
+		biens = 	bienService.consulterBiens();
 		
 		System.out.println(biens.size());
 		List<Bien> listBiens = new ArrayList<Bien>();
@@ -39,7 +42,7 @@ public class AllMethods {
 	}
 	
 	
-	public static List<Bien> listeDesBiensParQuartier(String libTO, String quartier)
+	public List<Bien> listeDesBiensParQuartier(String libTO, String quartier)
 	{
 		
 		List<Bien> biens = listeDesBiensParTypeOffre(libTO);
@@ -58,7 +61,7 @@ public class AllMethods {
 	}
 	
 	
-	public static List<Bien> listeDesBiensParSousCat(String libTO, String libSousCat)
+	public List<Bien> listeDesBiensParSousCat(String libTO, String libSousCat)
 	{
 		
 		List<Bien> biens = listeDesBiensParTypeOffre(libTO);
@@ -77,7 +80,7 @@ public class AllMethods {
 	}
 	
 	
-	public static List<Bien> listeDesBiensParPrixBas(String libTO, double prixMin)
+	public List<Bien> listeDesBiensParPrixBas(String libTO, double prixMin)
 	{
 		List<Bien> biens = listeDesBiensParTypeOffre(libTO);
 		List<Bien> listBiens = new ArrayList<Bien>();
@@ -95,7 +98,7 @@ public class AllMethods {
 	}
 	
 	
-	public static List<Bien> listeDesBiensParPrixMax(String libTO, double prixMax)
+	public List<Bien> listeDesBiensParPrixMax(String libTO, double prixMax)
 	{
 		List<Bien> biens = listeDesBiensParTypeOffre(libTO);
 		List<Bien> listBiens = new ArrayList<Bien>();
@@ -113,7 +116,7 @@ public class AllMethods {
 	}
 	
 	
-	public static List<Bien> listeDesBiensParVille(String libTO, String libVille)
+	public List<Bien> listeDesBiensParVille(String libTO, String libVille)
 	{
 		List<Bien> biens = listeDesBiensParTypeOffre(libTO);
 		List<Bien> listBiens = new ArrayList<Bien>();
@@ -131,7 +134,7 @@ public class AllMethods {
 	}
 	
 	
-	public static List<Bien> listeDesBiensParVilleEtSousCat(String libTO, String libVille, String libSousCat)
+	public List<Bien> listeDesBiensParVilleEtSousCat(String libTO, String libVille, String libSousCat)
 	{
 		List<Bien> biens = listeDesBiensParTypeOffre(libTO);
 		List<Bien> listBiens = new ArrayList<Bien>();
@@ -149,7 +152,7 @@ public class AllMethods {
 		return listBiens;
 	}
 	
-	public static List<Bien> listeDesBiensParVilleEtQuartier(String libTO, String libVille, String quartier)
+	public List<Bien> listeDesBiensParVilleEtQuartier(String libTO, String libVille, String quartier)
 	{
 		List<Bien> biens = listeDesBiensParTypeOffre(libTO);
 		List<Bien> listBiens = new ArrayList<Bien>();
@@ -167,7 +170,7 @@ public class AllMethods {
 		return listBiens;
 	}
 	
-	public static List<Bien> listeDesBiensParVilleSousCatEtQuartier(String libTO, String libVille, String libSousCat, String quartier)
+	public List<Bien> listeDesBiensParVilleSousCatEtQuartier(String libTO, String libVille, String libSousCat, String quartier)
 	{
 		List<Bien> BVS = listeDesBiensParVilleEtSousCat(libTO, libVille, libSousCat);
 		List<Bien> listBiens = new ArrayList<Bien>();
@@ -183,7 +186,7 @@ public class AllMethods {
 		  return listBiens; 
 	}
 	
-	public static List<Bien> listeDesBiensParSousCatEtQuartier(String libTO, String libSousCat, String quartier)
+	public List<Bien> listeDesBiensParSousCatEtQuartier(String libTO, String libSousCat, String quartier)
 	{
 		List<Bien> biens = listeDesBiensParTypeOffre(libTO);
 		List<Bien> listBiens = new ArrayList<Bien>();
@@ -202,7 +205,7 @@ public class AllMethods {
 	}
 	
 	////////////////////////////////////////////
-	public static List<Bien> listeDesBiensQuartierEtPrixMin(String libTO, String quartier, double prixMin)
+	public List<Bien> listeDesBiensQuartierEtPrixMin(String libTO, String quartier, double prixMin)
 	{
 		List<Bien> BVS = listeDesBiensParQuartier(libTO, quartier);
 		List<Bien> listBiens = new ArrayList<Bien>();
@@ -219,7 +222,7 @@ public class AllMethods {
 		  return listBiens; 
 	}
 	////////////////////////////////////////	
-	public static List<Bien> listeDesBiensQuartierEtPrixMax(String libTO, String quartier, double prixMax)
+	public List<Bien> listeDesBiensQuartierEtPrixMax(String libTO, String quartier, double prixMax)
 	{
 		List<Bien> BVS = listeDesBiensParQuartier(libTO, quartier);
 		List<Bien> listBiens = new ArrayList<Bien>();
@@ -237,7 +240,7 @@ public class AllMethods {
 	}
 		
 	///////2
-	public static List<Bien> listeDesBiensParVilleSousCatQuartierEtPrixMin(String libTO, String libVille, String libSousCat, String quartier, double prixMin)
+	public List<Bien> listeDesBiensParVilleSousCatQuartierEtPrixMin(String libTO, String libVille, String libSousCat, String quartier, double prixMin)
 	{
 		List<Bien> BVS = listeDesBiensParVilleSousCatEtQuartier(libTO, libVille, libSousCat, quartier);
 		List<Bien> listBiens = new ArrayList<Bien>();
@@ -255,7 +258,7 @@ public class AllMethods {
 	}
 	
 	//////3
-	public static List<Bien> listeDesBiensParVilleSousCatQuartierEtPrixMax(String libTO, String libVille, String libSousCat, String quartier, double prixMax)
+	public List<Bien> listeDesBiensParVilleSousCatQuartierEtPrixMax(String libTO, String libVille, String libSousCat, String quartier, double prixMax)
 	{
 		List<Bien> BVS = listeDesBiensParVilleSousCatEtQuartier(libTO, libVille, libSousCat, quartier);
 		List<Bien> listBiens = new ArrayList<Bien>();
@@ -273,7 +276,7 @@ public class AllMethods {
 	}
 	
 	//////4
-	public static List<Bien> listeDesBiensParVilleSousCatQuartierEtPrix(String libTO, String libVille, String libSousCat, String quartier,  double prixMin, double prixMax)
+	public List<Bien> listeDesBiensParVilleSousCatQuartierEtPrix(String libTO, String libVille, String libSousCat, String quartier,  double prixMin, double prixMax)
 	{
 		List<Bien> BVS = listeDesBiensParVilleSousCatEtQuartier(libTO, libVille, libSousCat, quartier);
 		List<Bien> listBiens = new ArrayList<Bien>();
@@ -291,7 +294,7 @@ public class AllMethods {
 	}
 	
 	/////500000000000000
-	public static List<Bien> listeDesBiensParVilleQuartierEtPrix(String libTO, String libVille, String quartier,  double prixMin, double prixMax)
+	public List<Bien> listeDesBiensParVilleQuartierEtPrix(String libTO, String libVille, String quartier,  double prixMin, double prixMax)
 	{
 		List<Bien> BVS = listeDesBiensParVilleEtQuartier(libTO, libVille, quartier);
 		List<Bien> listBiens = new ArrayList<Bien>();
@@ -310,7 +313,7 @@ public class AllMethods {
 	
 	
 	////0000000000000
-	public static List<Bien> listeDesBiensParSousCatQuartierEtPrix(String libTO, String libSousCat, String quartier,  double prixMin, double prixMax)
+	public List<Bien> listeDesBiensParSousCatQuartierEtPrix(String libTO, String libSousCat, String quartier,  double prixMin, double prixMax)
 	{
 		List<Bien> BVS = listeDesBiensParSousCatEtQuartier(libTO, libSousCat, quartier);
 		List<Bien> listBiens = new ArrayList<Bien>();
@@ -328,7 +331,7 @@ public class AllMethods {
 	}
 	
 	////0000000000000
-	public static List<Bien> listeDesBiensParSousCatQuartierEtPrixMin(String libTO, String libSousCat, String quartier,  double prixMin)
+	public List<Bien> listeDesBiensParSousCatQuartierEtPrixMin(String libTO, String libSousCat, String quartier,  double prixMin)
 	{
 		List<Bien> BVS = listeDesBiensParSousCatEtQuartier(libTO, libSousCat, quartier);
 		List<Bien> listBiens = new ArrayList<Bien>();
@@ -345,7 +348,7 @@ public class AllMethods {
 		  return listBiens; 
 	}
 	///////////////0000000000000000000
-	public static List<Bien> listeDesBiensParVilleQuartierEtPrixMin(String libTO, String libVille, String quartier,  double prixMin)
+	public List<Bien> listeDesBiensParVilleQuartierEtPrixMin(String libTO, String libVille, String quartier,  double prixMin)
 	{
 		List<Bien> BVS = listeDesBiensParVilleEtQuartier(libTO, libVille, quartier);
 		List<Bien> listBiens = new ArrayList<Bien>();
@@ -362,7 +365,7 @@ public class AllMethods {
 		  return listBiens; 
 	}
 	/////////////////////0000000000000000000000000000000
-	public static List<Bien> listeDesBiensParSousCatQuartierEtPrixMax(String libTO, String libSousCat, String quartier, double prixMax)
+	public List<Bien> listeDesBiensParSousCatQuartierEtPrixMax(String libTO, String libSousCat, String quartier, double prixMax)
 	{
 		List<Bien> BVS = listeDesBiensParSousCatEtQuartier(libTO, libSousCat, quartier);
 		List<Bien> listBiens = new ArrayList<Bien>();
@@ -379,7 +382,7 @@ public class AllMethods {
 		  return listBiens; 
 	}
 	///////////////0000000000000000000
-	public static List<Bien> listeDesBiensParVilleQuartierEtPrixMax(String libTO, String libVille, String quartier, double prixMax)
+	public List<Bien> listeDesBiensParVilleQuartierEtPrixMax(String libTO, String libVille, String quartier, double prixMax)
 	{
 		List<Bien> BVS = listeDesBiensParVilleEtQuartier(libTO, libVille, quartier);
 		List<Bien> listBiens = new ArrayList<Bien>();
@@ -397,7 +400,7 @@ public class AllMethods {
 	}
 	
 	//aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-	public static List<Bien> listeDesBiensParVilleSousCatEtPrixMin(String libTO, String libVille, String libSousCat, double prixMin)
+	public List<Bien> listeDesBiensParVilleSousCatEtPrixMin(String libTO, String libVille, String libSousCat, double prixMin)
 	 {
 	  List<Bien> BVS = listeDesBiensParVilleEtSousCat(libTO, libVille, libSousCat);
 	  List<Bien> listBiens = new ArrayList<Bien>();
@@ -415,7 +418,7 @@ public class AllMethods {
 	 }
 	
 	//aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-	public static List<Bien> listeDesBiensParVilleSousCatEtPrixMax(String libTO, String libVille, String libSousCat, double prixMax)
+	public List<Bien> listeDesBiensParVilleSousCatEtPrixMax(String libTO, String libVille, String libSousCat, double prixMax)
 	 {
 	  List<Bien> BVS = listeDesBiensParVilleEtSousCat(libTO, libVille, libSousCat);
 	  List<Bien> listBiens = new ArrayList<Bien>();
@@ -433,7 +436,7 @@ public class AllMethods {
 	 }
 	
 	
-	public static List<Bien> listeDesBiensParVilleSousCatEtPrix(String libTO, String libVille, String libSousCat, double prixMin, double prixMax)
+	public List<Bien> listeDesBiensParVilleSousCatEtPrix(String libTO, String libVille, String libSousCat, double prixMin, double prixMax)
 	 {
 	  List<Bien> BVS = listeDesBiensParVilleEtSousCat(libTO, libVille, libSousCat);
 	  List<Bien> listBiens = new ArrayList<Bien>();
@@ -451,7 +454,7 @@ public class AllMethods {
 	 }
 
 	
-	public static List<Bien> listeDesBiensParVilletEtPrix(String libTO, String libVille, double prixMin, double prixMax) 
+	public List<Bien> listeDesBiensParVilletEtPrix(String libTO, String libVille, double prixMin, double prixMax) 
 	{
 
 		  List<Bien> BVP = listeDesBiensParPrix(libTO,prixMin, prixMax);
@@ -468,7 +471,7 @@ public class AllMethods {
 		  return listBiens; 
 	}
 	
-	public static List<Bien> listeDesBiensParSousCatEtPrix(String libTO, String libSousCat, double prixMin, double prixMax)
+	public List<Bien> listeDesBiensParSousCatEtPrix(String libTO, String libSousCat, double prixMin, double prixMax)
 	{
 		 List<Bien> BVP = listeDesBiensParPrix(libTO, prixMin, prixMax);
 		  List<Bien> listBiens = new ArrayList<Bien>();
@@ -484,7 +487,7 @@ public class AllMethods {
 		  return listBiens; 
 	}
 	
-	public static List<Bien> listeDesBiensParPrix(String libTO, double prixMin, double prixMax)
+	public List<Bien> listeDesBiensParPrix(String libTO, double prixMin, double prixMax)
 	{
 		List<Bien> biens = listeDesBiensParTypeOffre(libTO);
 		
@@ -506,7 +509,7 @@ public class AllMethods {
 	
 	
 	//wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-	public static List<Bien> listeDesBiensParVilleEtPrixMin(String libTO, String libVille, double prixMin)
+	public List<Bien> listeDesBiensParVilleEtPrixMin(String libTO, String libVille, double prixMin)
 	 {
 	  List<Bien> BVS = listeDesBiensParVille(libTO, libVille);
 	  List<Bien> listBiens = new ArrayList<Bien>();
@@ -523,7 +526,7 @@ public class AllMethods {
 	  return listBiens; 
 	 }
 	//wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-	public static List<Bien> listeDesBiensParSousCatEtPrixMin(String libTO, String libSousCat, double prixMin)
+	public List<Bien> listeDesBiensParSousCatEtPrixMin(String libTO, String libSousCat, double prixMin)
 	 {
 	  List<Bien> BVS = listeDesBiensParSousCat(libTO, libSousCat);
 	  List<Bien> listBiens = new ArrayList<Bien>();
@@ -540,7 +543,7 @@ public class AllMethods {
 	  return listBiens; 
 	 }
 	//wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-	public static List<Bien> listeDesBiensParVilleEtPrixMax(String libTO, String libVille, double prixMax)
+	public List<Bien> listeDesBiensParVilleEtPrixMax(String libTO, String libVille, double prixMax)
 	 {
 	  List<Bien> BVS = listeDesBiensParVille(libTO, libVille);
 	  List<Bien> listBiens = new ArrayList<Bien>();
@@ -557,7 +560,7 @@ public class AllMethods {
 	  return listBiens; 
 	 }
 	//wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-	public static List<Bien> listeDesBiensParSousCatEtPrixMax(String libTO, String libVille, double prixMax)
+	public List<Bien> listeDesBiensParSousCatEtPrixMax(String libTO, String libVille, double prixMax)
 	 {
 	  List<Bien> BVS = listeDesBiensParSousCat(libTO, libVille);
 	  List<Bien> listBiens = new ArrayList<Bien>();
@@ -574,7 +577,7 @@ public class AllMethods {
 	  return listBiens; 
 	 }
 
-	public static List<Bien> listeDesBiensParQuartierEtPrix(String libTO, String quartier, double prixMin, double prixMax)
+	public List<Bien> listeDesBiensParQuartierEtPrix(String libTO, String quartier, double prixMin, double prixMax)
 	{
 		List<Bien> BVP = listeDesBiensParPrix(libTO, prixMin, prixMax);
 		  List<Bien> listBiens = new ArrayList<Bien>();

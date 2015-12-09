@@ -48,7 +48,7 @@ public class FileUploadController {
 		return "/multipleUpload";
 	}
 
-	@RequestMapping(value = "/multipleSave", method = RequestMethod.POST)
+	@RequestMapping(value = "/secure/multipleSave", method = RequestMethod.POST)
 	public  String multipleSave(
 			@RequestParam("file") MultipartFile[] files,
 			@RequestParam("id") String id) {
@@ -67,12 +67,14 @@ public class FileUploadController {
 				try {
 					fileName = files[i].getOriginalFilename();
 					MultipartFile file = files[i];
+					if (file != null && file.isEmpty() ==false) {
 					 name = Update.addVideo(file);
 					Album Album = new Album();
 					Album.setBien(bien);
-					Album.setPathAlbum(URIConstants.url_depot+name);
+					Album.setPathAlbum(URIConstants.url_depot3+name);
 					
 					albumService.modifierAlbum(Album);
+					}
 
 				} catch (Exception e) {
 					return "You failed to upload " + name + ": "
@@ -84,7 +86,7 @@ public class FileUploadController {
 			//return "Unable to upload. File is empty.";
 		}
 
-		return "redirect:/viewAlbums";
+		return "redirect:/secure/listeBiensFour";
 	}
 
 	@RequestMapping(value = { "/uploadFile" }, method = RequestMethod.POST)

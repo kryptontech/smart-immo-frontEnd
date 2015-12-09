@@ -51,7 +51,7 @@ public class SousCategorieDaoImpl implements SousCategorieDao{
 	@Override
 	public List<SousCategorie> consulterSousCategories()
 	{
-		Query req = em.createQuery("select a From SousCategorie a");
+		Query req = em.createQuery(" From SousCategorie ");
 		List<SousCategorie> listSousCategories = req.getResultList();
 		return listSousCategories;
 	}

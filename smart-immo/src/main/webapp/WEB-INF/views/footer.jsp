@@ -21,9 +21,9 @@
     <span class="ftitle">Nos Annonces de vente</span>
     <br/><br/>
     <ul class="footerlistblack">
-     <li><a href="<c:url value='/Resultat'/>">Vente de maison</a></li>
-     <li><a href="<c:url value='/Resultat'/>">Vente de terrain</a></li>
-     <li><a href="<c:url value='/Resultat'/>">Vente de local commercial</a></li>
+     <li><a href="<c:url value='/vente'/>">Vente de maison</a></li>
+     <li><a href="<c:url value='/vente'/>">Vente de terrain</a></li>
+     <li><a href="<c:url value='/vente'/>">Vente de local commercial</a></li>
     </ul>
    </div>
    <!-- End of column 2-->  
@@ -32,10 +32,10 @@
     <span class="ftitle">Nos annonces de location</span>
     <br/><br/>
     <ul class="footerlistblack">
-     <li><a href="<c:url value='/Resultat'/>">Appartement</a></li>
-     <li><a href="<c:url value='/Resultat'/>">Studio</a></li>
-     <li><a href="<c:url value='/Resultat'/>">Villa</a></li>
-     <li><a href="<c:url value='/Resultat'/>">Terrain</a></li>
+     <li><a href="<c:url value='/louer'/>">Appartement</a></li>
+     <li><a href="<c:url value='/louer'/>">Studio</a></li>
+     <li><a href="<c:url value='/louer'/>">Villa</a></li>
+     <li><a href="<c:url value='/louer'/>">Terrain</a></li>
     </ul>    
    </div>
    <!-- End of column 3-->  

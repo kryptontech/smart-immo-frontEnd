@@ -26,7 +26,7 @@ public class Album implements Serializable {
 	@Column(name="id_album")
 	private int idAlbum;
 	private String pathAlbum;
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne(cascade = CascadeType.MERGE)
 	@JoinColumn(name="id_bien")
 	private Bien bien;
 	

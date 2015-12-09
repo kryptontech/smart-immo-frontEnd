@@ -43,7 +43,7 @@ class CommuneDaoImpl implements CommuneDao {
 
 	@Override
 	public List<Commune> consulterCommunes() {
-		Query req = em.createQuery("select a From Commune a");
+		Query req = em.createQuery("From Commune ");
 		List<Commune> listCommunes = req.getResultList();
 		return listCommunes;
 	}

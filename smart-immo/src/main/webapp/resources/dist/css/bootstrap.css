@@ -41,7 +41,7 @@ audio:not([controls]) {
 }
 
 html {
-  font-family: sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
@@ -94,7 +94,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, serif;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 1em;
 }
 
@@ -302,11 +302,11 @@ html {
 }
 
 body {
-font-family: "Raleway",sans-serif;
+ font-family: 'Ubuntu', 'Ubuntu', sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
   color: #333333;
-background-color:;
+  background-color:;
   font-weight:400;
   font-style:normal;
 }
@@ -459,7 +459,7 @@ cite {
 .text-center {
   text-align: center;
 }
-
+span,
 h1,
 h2,
 h3,
@@ -472,7 +472,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family:  'Ubuntu', sans-serif;
   font-weight: 500;
   line-height: 1.1;
 }
@@ -711,7 +711,7 @@ address {
 
 code,
 pre {
-  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 code {
@@ -1536,7 +1536,7 @@ table th[class*="col-"] {
 .table > thead > tr.success > th,
 .table > tbody > tr.success > th,
 .table > tfoot > tr.success > th {
-  background-color: #dff0d8;
+  background-color: #E1E1E1;
   border-color: #d6e9c6;
 }
 
@@ -1927,7 +1927,7 @@ textarea.input-lg {
 
 .has-success .input-group-addon {
   color: #468847;
-  background-color: #dff0d8;
+  background-color: #E1E1E1;
   border-color: #468847;
 }
 
@@ -5137,7 +5137,7 @@ a.thumbnail:focus {
 
 .alert-success {
   color: #468847;
-  background-color: #dff0d8;
+  background-color: #E1E1E1;
   border-color: #d6e9c6;
 }
 
@@ -5580,7 +5580,7 @@ a.list-group-item:focus {
 
 .panel-success > .panel-heading {
   color: #468847;
-  background-color: #dff0d8;
+  background-color: #E1E1E1;
   border-color: #d6e9c6;
 }
 

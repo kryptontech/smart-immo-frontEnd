@@ -11,4 +11,5 @@ public interface FournisseurService {
 	public void supprimerFournisseur (int idFournisseur);
 	public Fournisseur consulterFournisseur(int idFournisseur);
 	public List<Fournisseur> consulterFournisseurs();
+	public Fournisseur consulterFournisseurByName(String Fournisseur);
 }

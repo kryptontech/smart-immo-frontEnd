@@ -4,14 +4,6 @@ import java.util.List;
 
 import javax.validation.Valid;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-
 import net.krypton.smartimmo.entities.Bien;
 import net.krypton.smartimmo.entities.Disponibilite;
 import net.krypton.smartimmo.entities.Fournisseur;
@@ -28,6 +20,18 @@ import net.krypton.smartimmo.service.FournisseurService;
 import net.krypton.smartimmo.service.SousCategorieService;
 import net.krypton.smartimmo.service.TypeOffreService;
 import net.krypton.smartimmo.service.VilleService;
+import net.krypton.smartimmo.service.Impl.UserDetailsServiceImpl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.security.core.userdetails.User;
 
 @Controller
 public class FournisseurController {
@@ -36,10 +40,9 @@ public class FournisseurController {
 	FournisseurService fournisseurService;
 	@Autowired
 	AgenceService agenceService;
-	
+
 	@Autowired
 	BienService bienService;
-	
 
 	@Autowired
 	TypeOffreService typeOffreService;
@@ -52,36 +55,35 @@ public class FournisseurController {
 
 	@Autowired
 	DisponibiliteService disponibiliteService;
-	
-	
+
 	Test Test = new Test();
-	
-	@RequestMapping(value="/saveFournisseur", method = RequestMethod.POST)
-	public String enregistrerFournisseur(@Valid Fournisseur v, BindingResult result, ModelMap model){
+
+	@RequestMapping(value = "/saveFournisseur", method = RequestMethod.POST)
+	public String enregistrerFournisseur(@Valid Fournisseur v,
+			BindingResult result, ModelMap model) {
 		v.setMdpFournisseur(Test.md5(v.getMdpFournisseur()));
 		fournisseurService.ajouterFournisseur(v);
 		return "login";
 	}
-	
+
 	@RequestMapping(value = "/saveFournisseur", method = RequestMethod.GET)
-	public String newFournisseur(ModelMap model){
+	public String newFournisseur(ModelMap model) {
 		Fournisseur fournisseur = new Fournisseur();
 		model.addAttribute("formFournisseur", fournisseur);
-		
+
 		return "form-inscriptionParticulier";
 	}
-	@RequestMapping(value = "/deleteFournisseur-{idFournisseur}")
-	public String supprimerFournisseur(@PathVariable int idFournisseur){
-		
+
+	@RequestMapping(value = "/secure-deleteFournisseur-{idFournisseur}")
+	public String supprimerFournisseur(@PathVariable int idFournisseur) {
+
 		fournisseurService.supprimerFournisseur(idFournisseur);
 		return "redirect:/viewFournisseurs";
 	}
-	
-	
-	
-	//MODIFICATION DES INFOS PERSO DU FOURNISSEUR
-	@RequestMapping(value = "/modifyFournisseur-{idFour}", method = RequestMethod.GET)
-	public String editFournisseur(@PathVariable int idFour, ModelMap model){	
+
+	// MODIFICATION DES INFOS PERSO DU FOURNISSEUR
+	@RequestMapping(value = "/secure-modifyFournisseur-{idFour}", method = RequestMethod.GET)
+	public String editFournisseur(@PathVariable int idFour, ModelMap model) {
 		Fournisseur f = fournisseurService.consulterFournisseur(idFour);
 		ModifierFourModel mfm = new ModifierFourModel();
 		mfm.setEmailFournisseur(f.getEmailFournisseur());
@@ -91,9 +93,10 @@ public class FournisseurController {
 		model.addAttribute("fFournisseur", mfm);
 		return "mesDonnees";
 	}
-	
-	@RequestMapping(value = "/modifyFournisseur-{idFour}", method = RequestMethod.POST)
-	public String modifierFournisseur(@Valid ModifierFourModel mfm, BindingResult result, ModelMap model, @PathVariable int idFour){
+
+	@RequestMapping(value = "/secure/modifyFournisseur-{idFour}", method = RequestMethod.POST)
+	public String modifierFournisseur(@Valid ModifierFourModel mfm,
+			BindingResult result, ModelMap model, @PathVariable int idFour) {
 		Fournisseur f = fournisseurService.consulterFournisseur(idFour);
 		f.setEmailFournisseur(mfm.getEmailFournisseur());
 		f.setNomFournisseur(mfm.getNomFournisseur());
@@ -103,37 +106,66 @@ public class FournisseurController {
 		model.addAttribute("fFournisseur", mfm);
 		return "mesDonnees";
 	}
-	
-	
-	//MODIFICATION MOT DE PASSE DU FOURNISSEUR
-	@RequestMapping(value = "/modifyMdpFournisseur-{idFour}", method = RequestMethod.GET)
-	public String modifierMdpFournisseur(ModelMap model, @PathVariable int idFour){
-		Fournisseur f = fournisseurService.consulterFournisseur(idFour);
+
+	// MODIFICATION MOT DE PASSE DU FOURNISSEUR
+	@RequestMapping(value = "/secure/modifyMdpFournisseur", method = RequestMethod.GET)
+	public String modifierMdpFournisseur(ModelMap model) {
+		User user = (User) SecurityContextHolder.getContext()
+				.getAuthentication().getPrincipal();
+		// String name = user.getClass(); // get logged in username
+
+		Fournisseur f = new Fournisseur();
+		f = fournisseurService.consulterFournisseurByName(user.getUsername());
 		MdpModel mdp = new MdpModel();
 		mdp.setMdpHideFournisseur(f.getMdpFournisseur());
 		model.addAttribute("mdpForm", mdp);
 		return "password";
 	}
-	
-	
-		@RequestMapping(value = "/modifyMdpFournisseur-{idFour}", method = RequestMethod.POST)
-		public String modifierMdpFournisseur(@Valid MdpModel mdp, BindingResult result, ModelMap model, @PathVariable int idFour){
-			Fournisseur f = fournisseurService.consulterFournisseur(idFour);
-			
-			if (f.getMdpFournisseur().equals(mdp.getMdpFournisseur())){
-				f.setMdpFournisseur(mdp.getNewMdpFournisseur());
-			}
-			fournisseurService.modifierFournisseur(f);
-			model.addAttribute("mdpForm", mdp);
-			return "password";
-		}
-	
-	
-	
 
-	@RequestMapping(value = "/profile-{idFour}", method = RequestMethod.POST)
-	public String update(@Valid ModifierFourModel mf, BindingResult result, ModelMap model, @PathVariable int idFour)
-	{
+	@RequestMapping(value = "/secure/modifyMdpFournisseur-{idFour}", method = RequestMethod.POST)
+	public String modifierMdpFournisseur(@Valid MdpModel mdp,
+			BindingResult result, ModelMap model) {
+		User user = (User) SecurityContextHolder.getContext()
+				.getAuthentication().getPrincipal();
+		// String name = user.getClass(); // get logged in username
+
+		Fournisseur f = new Fournisseur();
+		f = fournisseurService.consulterFournisseurByName(user.getUsername());
+
+		if (f.getMdpFournisseur().equals(mdp.getMdpFournisseur())) {
+			f.setMdpFournisseur(mdp.getNewMdpFournisseur());
+		}
+		fournisseurService.modifierFournisseur(f);
+		model.addAttribute("mdpForm", mdp);
+		return "password";
+	}
+
+	@RequestMapping(value = "/link")
+	public String link() {
+
+		return "redirect:/secure/profiles";
+	}
+
+	@RequestMapping(value = "/secure/profiles", method = RequestMethod.GET)
+	public String grt(Model model) {
+
+		User user = (User) SecurityContextHolder.getContext()
+				.getAuthentication().getPrincipal();
+		// String name = user.getClass(); // get logged in username
+
+		Fournisseur Fournisseur = new Fournisseur();
+		Fournisseur = fournisseurService.consulterFournisseurByName(user
+				.getUsername());
+
+		model.addAttribute("fFournisseur", Fournisseur);
+
+		return "mesDonnees";
+
+	}
+
+	@RequestMapping(value = "/secure-profile-{idFour}", method = RequestMethod.POST)
+	public String update(@Valid ModifierFourModel mf, BindingResult result,
+			ModelMap model, @PathVariable int idFour) {
 
 		Fournisseur f = new Fournisseur();
 		f = fournisseurService.consulterFournisseur(idFour);
@@ -141,44 +173,34 @@ public class FournisseurController {
 		f.setNomFournisseur(mf.getNomFournisseur());
 		f.setPseudoFournisseur(mf.getPseudoFournisseur());
 		f.setTelMobileFournisseur(mf.getTelMobileFournisseur());
-		
-		model.addAttribute("fFournisseur", mf);	
-		fournisseurService.modifierFournisseur(f);	 	
+
+		model.addAttribute("fFournisseur", mf);
+		fournisseurService.modifierFournisseur(f);
 		// AJOUT DE BIEN PAR LE FOURNISSEUR POST
-		//******************************
-	
+		// ******************************
+
 		return "mesDonnees";
-	    
-	    
+
 	}
-	
-	@RequestMapping(value = "/profile-{idFour}", method = RequestMethod.GET)
-	public String update(ModelMap model, @PathVariable int idFour)
-	{
+
+	@RequestMapping(value = "/secure-profile-{idFour}", method = RequestMethod.GET)
+	public String update(ModelMap model, @PathVariable int idFour) {
 		ModifierFourModel mf = new ModifierFourModel();
 		Fournisseur f = new Fournisseur();
-		
+
 		f = fournisseurService.consulterFournisseur(idFour);
 		mf.setEmailFournisseur(f.getEmailFournisseur());
 		mf.setNomFournisseur(f.getNomFournisseur());
 		mf.setPseudoFournisseur(f.getPseudoFournisseur());
 		mf.setTelMobileFournisseur(f.getTelMobileFournisseur());
-		model.addAttribute("fFournisseur", mf);	 	
-	
+		model.addAttribute("fFournisseur", mf);
+
 		return "mesDonnees";
-	    
-	    
+
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	// LES METHODES POUR L AJOUT DU BIEN PAR LE FOURNISSEUR 
-	
+
+	// LES METHODES POUR L AJOUT DU BIEN PAR LE FOURNISSEUR
+
 	public Bien findBienByTitre(String titre) {
 		List<Bien> biens = bienService.consulterBiens();
 		Bien bien = new Bien();
@@ -264,9 +286,5 @@ public class FournisseurController {
 		}
 		return Disponibilite;
 	}
-		
-	
-	
-	
-	
+
 }

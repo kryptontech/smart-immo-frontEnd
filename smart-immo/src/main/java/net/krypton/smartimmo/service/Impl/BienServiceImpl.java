@@ -6,6 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import net.krypton.smartimmo.dao.BienDao;
 import net.krypton.smartimmo.entities.Bien;
+import net.krypton.smartimmo.entities.Fournisseur;
 import net.krypton.smartimmo.service.BienService;
 
 @Transactional
@@ -48,6 +49,12 @@ public class BienServiceImpl implements BienService {
 	public List<Bien> consulterBiens() {
 		// TODO Auto-generated method stub
 		return dao.consulterBiens();
+	}
+
+	@Override
+	public List<Bien> consulterBienByFournisseur(Fournisseur f) {
+		// TODO Auto-generated method stub
+		return dao.consulterBienByFournisseur( f) ;
 	}
 	
 	

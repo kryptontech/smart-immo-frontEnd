@@ -244,6 +244,6 @@
 	
 
 	
-<%@ include file="footer.jsp" %>>
+<%@ include file="footer.jsp" %>
     
 <%@ include file ="java.jsp" %>

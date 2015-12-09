@@ -50,7 +50,7 @@ public class UserDaoImpl implements UserDao {
 	@Override
 	public List<User> consulterUsers()
 	{
-		Query req = em.createQuery("select a From User a");
+		Query req = em.createQuery("From User");
 		List<User> listUsers = req.getResultList();
 		return listUsers;
 	}

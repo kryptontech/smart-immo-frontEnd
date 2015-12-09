@@ -53,7 +53,7 @@ public class TypeOffreDaoImpl implements TypeOffreDao{
 	@Override
 	public List<TypeOffre> consulterTypeOffres()
 	{
-		Query req = em.createQuery("select a From TypeOffre a");
+		Query req = em.createQuery(" From TypeOffre ");
 		List<TypeOffre> listTypeOffres = req.getResultList();
 		return listTypeOffres;
 	}

@@ -10,5 +10,6 @@ public interface FournisseurDao {
 	public Fournisseur modifierFournisseur(Fournisseur m);
 	public void supprimerFournisseur (int idFournisseur);
 	public Fournisseur consulterFournisseur(int idFournisseur);
+	public Fournisseur consulterFournisseurByName(String Fournisseur);
 	public List<Fournisseur> consulterFournisseurs();
 }

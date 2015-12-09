@@ -44,7 +44,7 @@ public class VilleDaoImpl implements VilleDao {
 
 	@Override
 	public List<Ville> consulterVilles() {
-		Query req = em.createQuery("select a From Ville a");
+		Query req = em.createQuery("From Ville ");
 		List<Ville> listVilles = req.getResultList();
 		return listVilles;
 	}

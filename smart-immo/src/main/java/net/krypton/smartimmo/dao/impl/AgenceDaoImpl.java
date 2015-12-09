@@ -51,7 +51,7 @@ public class AgenceDaoImpl implements AgenceDao{
 	@Override
 	public List<Agence> consulterAgences()
 	{
-		Query req = em.createQuery("select a From Agence a");
+		Query req = em.createQuery("From Agence ");
 		List<Agence> listAgences = req.getResultList();
 		return listAgences;
 	}
