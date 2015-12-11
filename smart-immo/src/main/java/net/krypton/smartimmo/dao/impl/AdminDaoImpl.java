@@ -41,8 +41,8 @@ public class AdminDaoImpl implements AdminDao{
 	@Override
 	public Admin consulterAdmin(int idAdmin)
 	{
-		Query req = em.createQuery("From Admin where idAdmin=:idAdmin");
-		req.setParameter(idAdmin, idAdmin);
+		Query req = em.createQuery("From Admin where idAdmin= ?1");
+		req.setParameter(1, idAdmin);
 		Admin admins = (Admin) req.getSingleResult();
 		return admins;
 	}

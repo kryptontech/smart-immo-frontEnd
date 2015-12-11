@@ -59,8 +59,8 @@ public class BienController {
 
 	// AJOUTER UN BIEN PAR FURNISSEUR
 
-	@RequestMapping(value = "/secure/saveBien", method = RequestMethod.GET)
-	public String formBien(Model model) {
+	@RequestMapping(value = "/secure/saveBien-{idFour}", method = RequestMethod.GET)
+	public String formBien(Model model, @PathVariable int idFour) {
 
 		Bien b = new Bien();
 		FrontPage v = new FrontPage();
@@ -86,7 +86,7 @@ public class BienController {
 				sousCategorieService.consulterSousCategories());
 		model.addAttribute("listDisponibilite",
 				disponibiliteService.consulterDisponibilites());
-		model.addAttribute("idFour", f.getIdFournisseur());
+		model.addAttribute("idFour", idFour);
 		model.addAttribute("statuBien", v.isStatutBien());
 		model.addAttribute("maDate", v.getDatePubBien());
 		model.addAttribute("edit", false);
@@ -98,7 +98,7 @@ public class BienController {
 
 	@RequestMapping(value = "/secure/saveBien-{idFour}", method = RequestMethod.POST)
 	public String enregistrerBien(@Valid FrontPage v, BindingResult result,
-			ModelMap model, @PathVariable String idFour) {
+			ModelMap model, @PathVariable int idFour) {
 
 		Bien b = new Bien();
 		b.setDatePubBien(v.getDatePubBien());
@@ -130,7 +130,7 @@ public class BienController {
 		model.addAttribute("idBien", v.getIdBien());
 		model.addAttribute("edit", false);
 		model.addAttribute("frontPage", v);
-
+		
 		return "redirect:/secure/listeBiensFour";
 	}
 
@@ -166,11 +166,11 @@ public class BienController {
 
 	}
 
-	@RequestMapping(value = "/secure/modifyBien-{idFour}", method = RequestMethod.POST)
+	@RequestMapping(value = "/secure/modifyBien-{idBien}", method = RequestMethod.POST)
 	public String modifyBien(@Valid FrontPage v, BindingResult result,
-			ModelMap model, @PathVariable String idFour) {
+			ModelMap model, @PathVariable int idBien) {
 
-		Bien b = new Bien();
+		Bien b = bienService.consulterBien(idBien);
 		b.setDatePubBien(v.getDatePubBien());
 		b.setDescriptionBien(v.getDescriptionBien());
 		b.setDisponibilite(findDisponibiliteByLibelle(v.getDisponibilite()));
@@ -185,8 +185,6 @@ public class BienController {
 		b.setTypeoffre(findTypeOffreByLibelle(v.getTypeoffre()));
 		b.setVille(findVilleByName(v.getVille()));
 
-		bienService.modifierBien(b);
-
 		model.addAttribute("listVille", villeService.consulterVilles());
 		model.addAttribute("listTypeOffre",
 				typeOffreService.consulterTypeOffres());
@@ -194,13 +192,13 @@ public class BienController {
 				sousCategorieService.consulterSousCategories());
 		model.addAttribute("listDisponibilite",
 				disponibiliteService.consulterDisponibilites());
-		model.addAttribute("idFour", idFour);
 		model.addAttribute("statuBien", v.isStatutBien());
 		model.addAttribute("maDate", v.getDatePubBien());
 		model.addAttribute("idBien", v.getIdBien());
 		model.addAttribute("edit", true);
 		model.addAttribute("frontPage", v);
-
+		
+		bienService.modifierBien(b);
 		return "listebiensfournisseur";
 	}
 

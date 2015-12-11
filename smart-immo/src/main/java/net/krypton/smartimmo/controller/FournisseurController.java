@@ -4,6 +4,17 @@ import java.util.List;
 
 import javax.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
 import net.krypton.smartimmo.entities.Bien;
 import net.krypton.smartimmo.entities.Disponibilite;
 import net.krypton.smartimmo.entities.Fournisseur;
@@ -13,6 +24,7 @@ import net.krypton.smartimmo.entities.Ville;
 import net.krypton.smartimmo.model.MdpModel;
 import net.krypton.smartimmo.model.ModifierFourModel;
 import net.krypton.smartimmo.model.Test;
+import net.krypton.smartimmo.service.AdminService;
 import net.krypton.smartimmo.service.AgenceService;
 import net.krypton.smartimmo.service.BienService;
 import net.krypton.smartimmo.service.DisponibiliteService;
@@ -20,24 +32,16 @@ import net.krypton.smartimmo.service.FournisseurService;
 import net.krypton.smartimmo.service.SousCategorieService;
 import net.krypton.smartimmo.service.TypeOffreService;
 import net.krypton.smartimmo.service.VilleService;
-import net.krypton.smartimmo.service.Impl.UserDetailsServiceImpl;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.ui.ModelMap;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.security.core.userdetails.User;
 
 @Controller
 public class FournisseurController {
 
 	@Autowired
 	FournisseurService fournisseurService;
+	
+	@Autowired
+	AdminService adminService;
+	
 	@Autowired
 	AgenceService agenceService;
 
@@ -62,7 +66,9 @@ public class FournisseurController {
 	public String enregistrerFournisseur(@Valid Fournisseur v,
 			BindingResult result, ModelMap model) {
 		v.setMdpFournisseur(Test.md5(v.getMdpFournisseur()));
-		fournisseurService.ajouterFournisseur(v);
+		v.setAdmin(adminService.consulterAdmin(1));
+		model.addAttribute("formFournisseur", v);
+		fournisseurService.modifierFournisseur(v);
 		return "login";
 	}
 
@@ -108,8 +114,8 @@ public class FournisseurController {
 	}
 
 	// MODIFICATION MOT DE PASSE DU FOURNISSEUR
-	@RequestMapping(value = "/secure/modifyMdpFournisseur", method = RequestMethod.GET)
-	public String modifierMdpFournisseur(ModelMap model) {
+	@RequestMapping(value = "/secure/modifyMdpFournisseur-{idFour}", method = RequestMethod.GET)
+	public String modifierMdpFournisseur(ModelMap model, @PathVariable int idFour) {
 		User user = (User) SecurityContextHolder.getContext()
 				.getAuthentication().getPrincipal();
 		// String name = user.getClass(); // get logged in username
@@ -124,7 +130,7 @@ public class FournisseurController {
 
 	@RequestMapping(value = "/secure/modifyMdpFournisseur-{idFour}", method = RequestMethod.POST)
 	public String modifierMdpFournisseur(@Valid MdpModel mdp,
-			BindingResult result, ModelMap model) {
+			BindingResult result, ModelMap model, @PathVariable int idFour) {
 		User user = (User) SecurityContextHolder.getContext()
 				.getAuthentication().getPrincipal();
 		// String name = user.getClass(); // get logged in username

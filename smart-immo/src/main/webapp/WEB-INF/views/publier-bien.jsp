@@ -76,7 +76,7 @@
 											class="form-control input-sm" />
 										<f:input type="hidden" value="${date}" path="datePubBien"
 											class="form-control input-sm" />
-										<f:input type="hidden" value="${date}" path="statutBien"
+										<f:input type="hidden" value="${statuBien}" path="statutBien"
 											class="form-control input-sm" />
 										<f:input type="hidden" value="${idBien}" path="idBien"
 											class="form-control input-sm" />

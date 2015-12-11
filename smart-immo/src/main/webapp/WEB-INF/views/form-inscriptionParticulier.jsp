@@ -129,10 +129,11 @@
 						</div>
 					</div>
 				  </div>
+						<f:input path="admin" type="hidden" value = "1" class="form-control" id="confirm"   required="true"/>
 			  </div>
 			 </fieldset>
 			   <div class="col-lg-1"></div>
-			 </br>
+			 <br/>
 			 
 			 <br/>
 			  <div class="container">

@@ -38,7 +38,7 @@ public class Fournisseur implements Serializable{
 	
 	private String telMobileFournisseur;
 	
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne(cascade = CascadeType.MERGE)
 	@JoinColumn(name="id_admin")
 	private Admin admin;
 	
